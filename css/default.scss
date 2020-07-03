@@ -71,6 +71,39 @@ header {
     .intro {}
 }
 
+.terminal{
+    margin: 1rem;
+    background-color: #333;
+    .terminal-preview{
+        color: white;
+        height: 10vh;
+        font-family: monospace;
+        font-size: 1rem;
+        overflow-y: scroll;
+        .terminal-preview-text{
+            color: white;
+            font-family: monospace;
+        }
+    }
+    .terminal-input-container{
+        display: flex;
+        font-family: monospace;
+        color: white;
+        flex-wrap: nowrap;
+        font-size: 1.2rem;
+        .terminal-input{
+            font-family: monospace;
+            font-size: inherit;
+            color: inherit;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            width: 100%;
+            caret-color: white;
+        }
+    }
+}
+
 .wrapper{
     .projects{
         display: flex;
@@ -92,12 +125,19 @@ header {
             }
         }
     }
-    .contact{
-        .social{
-            .social-icon-container{
-                .social-icon{
-                    
-                }
+}
+.contact{
+    padding: 1rem;
+    .social{
+        display: flex;
+        justify-content: center;
+        .social-icon-container{
+            width: auto;
+            display: block;
+            .social-icon{
+                width: 40px;
+                max-height: 100px;
+                margin: 1rem;
             }
         }
     }
