@@ -1,0 +1,126 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.light-opacity {
+  opacity: 0.5;
+}
+
+.card {
+  width: 90%;
+  margin: 1rem auto;
+  padding: 1rem;
+  -webkit-box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+}
+
+.card .card-heading {
+  margin: 0.7rem auto;
+  width: 100%;
+}
+
+.card .sub-card {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  -webkit-box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  overflow: hidden;
+  background-color: #999;
+}
+
+.card .sub-card img {
+  width: 100%;
+}
+
+.card .sub-card .sub-card-content {
+  padding: 0.5em;
+}
+
+.card .sub-card .sub-card-content h3, .card .sub-card .sub-card-content h4 {
+  margin: 0.25em auto;
+}
+
+.card .sub-card .sub-card-content .duration, .card .sub-card .sub-card-content .ingredients, .card .sub-card .sub-card-content .repo-link {
+  font-size: 0.9rem;
+  margin: 0.15rem;
+}
+
+header,
+footer {
+  background-color: burlywood;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .dp-container {
+  width: 30%;
+}
+
+header .dp-container .dafhauh {
+  padding: 20%;
+  width: 100%;
+}
+
+header .dp-container .dafhauh img {
+  border: 0.5vw solid #333;
+  padding: 1px;
+  border-radius: 50%;
+  display: block;
+  width: 100%;
+}
+
+.wrapper .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrapper .projects .sub-card {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+}
+
+.wrapper .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .skills .skill-container {
+  width: auto;
+}
+
+.wrapper .skills .skill-container .skill-icon {
+  width: 100%;
+  max-height: 100px;
+}
+
+@media all and (max-width: 600px) {
+  .wrapper .projects .sub-card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+/*# sourceMappingURL=default.css.map */

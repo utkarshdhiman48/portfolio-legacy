@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    // overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+.light-opacity{
+    opacity: 0.5;
+}
+.card {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+    box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    .card-heading{
+        margin: 0.7rem auto;
+        width: 100%;
+    }
+    .sub-card{
+        width: 100%;
+        margin: 1rem auto;
+        padding: 1rem;
+        box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.2);
+        border: 1px solid #ccc;
+        overflow: hidden;
+        background-color: #999;
+        img{
+            width: 100%;
+        }
+        .sub-card-content{
+            padding: 0.5em;
+            h3, h4{
+                margin: 0.25em auto;
+            }
+            .duration, .ingredients, .repo-link{
+                font-size: 0.9rem;
+                margin: 0.15rem;
+            }
+        }
+    }
+}
+
+header,
+footer {
+    background-color: burlywood;
+}
+
+header {
+    display: flex;
+    align-items: center;
+
+    .dp-container {
+        width: 30%;
+
+        .dafhauh {
+            padding: 20%;
+            width: 100%;
+
+            img {
+                border: 0.5vw solid #333;
+                padding: 1px;
+                border-radius: 50%;
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    .intro {}
+}
+
+.wrapper{
+    .projects{
+        display: flex;
+        flex-wrap: wrap;
+        .sub-card{
+            flex-basis: 45%;
+        }
+    }
+    .skills{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .skill-container{
+            width: auto;
+            // flex-basis: ;
+            .skill-icon{
+                width: 100%;
+                max-height: 100px;
+            }
+        }
+    }
+    .contact{
+        .social{
+            .social-icon-container{
+                .social-icon{
+                    
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 600px){
+    .wrapper{
+        .projects{
+            .sub-card{
+                flex-basis: 100%;
+            }
+        }
+    }
+}
