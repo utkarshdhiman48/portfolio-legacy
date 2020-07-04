@@ -7,10 +7,6 @@
   color: #333;
 }
 
-.ut-color {
-  color: yellowgreen;
-}
-
 .light-opacity {
   opacity: 0.5;
 }
@@ -91,6 +87,7 @@ header .dp-container .dafhauh img {
 .terminal {
   margin: 1rem;
   background-color: #333;
+  padding: 0.2rem;
 }
 
 .terminal .terminal-preview {
@@ -199,5 +196,26 @@ header .dp-container .dafhauh img {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
+}
+
+.ut-color, .cyan, .sky-blue, .yellowgreen {
+  font-family: monospace;
+  font-size: inherit;
+}
+
+.ut-color {
+  color: orangered;
+}
+
+.cyan {
+  color: cyan;
+}
+
+.sky-blue {
+  color: skyblue;
+}
+
+.yellowgreen {
+  color: yellowgreen;
 }
 /*# sourceMappingURL=default.css.map */

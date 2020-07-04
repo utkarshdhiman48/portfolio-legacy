@@ -7,12 +7,22 @@ class KeyWord{
     }
 };
 
-let keywords = [new KeyWord("about", "Here's about him", "cyan", ""), new KeyWord("connect", "You can connect here", "cyan", "")];
-
-const prefix = `<br><span class="terminal-preview-text">mock@terminal:~$ `;
+let keywords = [
+    new KeyWord("help", "Help is on the way...", "cyan", ""),
+    new KeyWord("education", "Redirecting to his institutions...", "cyan", ""),
+    new KeyWord("projects", "Redirecting to projects...", "cyan", ""),
+    new KeyWord("connect", "You can connect here", "cyan", ""),
+    new KeyWord("about", "Here is something about him...", "cyan", "")
+];
+const utcolor="ut-color";
+const prefix = `<br><span class="terminal-preview-text"><span class="yellowgreen">mock@terminal</span><span class="sky-blue">~</span>$ `;
 const suffix = `</span>`;
 const terminalPreview = document.querySelector("div.terminal-preview");
 const terminalInput = document.querySelector("input.terminal-input");
+
+terminalPreview.innerHTML=`<span class="yellowgreen">mock@terminal</span><span class="sky-blue">~</span>$ Type 'ut help' to get a list of all commands${suffix}`;
+
+
 
 terminalInput.addEventListener("keydown",(e)=>{
     let inputField = e.target;
@@ -21,9 +31,9 @@ terminalInput.addEventListener("keydown",(e)=>{
         let textChunks = inputField.value.split(" ");
         if((textChunks[0] ==="ut" || textChunks[0] === "UT") && textChunks.length === 2 ) {
             let [found] = keywords.filter((f)=>{
-                f.command === textChunks[1];
-            })
-            let output = `${prefix}<span class="${utcolor}">${textChunks[0]}</span> <span class="${found.clas}">${textChunks[1]}</span><br>${response}${suffix}`;
+                return f.command === textChunks[1];
+            });
+            let output = `${prefix}<span class="${utcolor}">${textChunks[0]}</span> <span class="${found.clas}">${textChunks[1]}</span><br>${found.response}${suffix}`;
             terminalPreview.innerHTML=`${prevCommands}${output}`;
         }
         else{
