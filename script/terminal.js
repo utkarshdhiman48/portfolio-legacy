@@ -12,12 +12,12 @@ let keywords = [
     new KeyWord("education", "Redirecting to his institutions...", "cyan", ""),
     new KeyWord("projects", "Redirecting to projects...", "cyan", ""),
     new KeyWord("connect", "You can connect here", "cyan", ""),
-    new KeyWord("about", "Here is something about him...", "cyan", ""),
     new KeyWord("facebook", "Redirecting to facebook profile...", "cyan", ""),
     new KeyWord("twitter", "Redirecting to twitter profile...", "cyan", ""),
     new KeyWord("linkedin", "Redirecting to linkedin profile...", "cyan", ""),
     new KeyWord("github", "Redirecting to github profile...", "cyan", ""),
     new KeyWord("email", "Configuring pre email settings, Opening...", "cyan", ""),
+    new KeyWord(RegExp("about","i"), "Here is something about him...", "cyan", "")
 ];
 
 
@@ -42,7 +42,7 @@ terminalInput.addEventListener("keydown",(e)=>{
         let textChunks = inputField.value.split(" ");
         if((textChunks[0] ==="ut" || textChunks[0] === "UT") && textChunks.length === 2 ) {
             let [found] = keywords.filter((f)=>{
-                return f.command === textChunks[1];
+                return textChunks[1].match(f.command);
             });
             if(!found) {
                 let output = `${prefix}"${inputField.value}" is not a valid command${suffix}`;
