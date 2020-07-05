@@ -1,3 +1,7 @@
+@font-face{
+    font-family: "SourceCodePro-Regular";
+    src: url("../assets/SourceCodePro-Regular.ttf") format('truetype');
+}
 * {
     box-sizing: border-box;
     padding: 0;
@@ -79,22 +83,22 @@ header {
     .terminal-preview{
         color: white;
         height: 10vh;
-        font-family: monospace;
+        font-family: "SourceCodePro-Regular", monospace;
         font-size: 1.1rem;
         overflow-y: auto;
         .terminal-preview-text{
             color: white;
-            font-family: monospace;
+            font-family: "SourceCodePro-Regular", monospace;
         }
     }
     .terminal-input-container{
         display: flex;
-        font-family: monospace;
+        font-family: "SourceCodePro-Regular", monospace;
         color: white;
         flex-wrap: nowrap;
         font-size: 1.1rem;
         .terminal-input{
-            font-family: monospace;
+            font-family: "SourceCodePro-Regular", monospace;
             font-size: inherit;
             color: inherit;
             border: none;
@@ -158,8 +162,8 @@ header {
 }
 
 // colors
-.ut-color, .cyan, .orangered, .flags, .orchid, .sky-blue,.custom-color1, .yellowgreen{
-    font-family: monospace;
+.ut-color, .cyan, .lime, .orangered, .flags, .orchid, .sky-blue,.custom-color1, .yellowgreen, .fb-color, .tw-color, .ln-color, .gh-color{
+    font-family: "SourceCodePro-Regular", monospace;
     font-size: inherit;
 }
 .ut-color{
@@ -185,4 +189,19 @@ header {
 }
 .custom-color1{
     color: rgb(255, 228, 77);
+}
+.lime{
+    color: lime;
+}
+.fb-color{
+    color: #3b5998;
+}
+.tw-color{
+    color: #00acee;
+}
+.ln-color{
+    color: #0e76a8;
+}
+.gh-color{
+    color: #211F1F;
 }

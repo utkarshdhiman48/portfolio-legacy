@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "SourceCodePro-Regular";
+  src: url("../assets/SourceCodePro-Regular.ttf") format("truetype");
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -93,21 +98,21 @@ header .dp-container .dafhauh img {
 .terminal .terminal-preview {
   color: white;
   height: 10vh;
-  font-family: monospace;
+  font-family: "SourceCodePro-Regular", monospace;
   font-size: 1.1rem;
   overflow-y: auto;
 }
 
 .terminal .terminal-preview .terminal-preview-text {
   color: white;
-  font-family: monospace;
+  font-family: "SourceCodePro-Regular", monospace;
 }
 
 .terminal .terminal-input-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: monospace;
+  font-family: "SourceCodePro-Regular", monospace;
   color: white;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
@@ -115,7 +120,7 @@ header .dp-container .dafhauh img {
 }
 
 .terminal .terminal-input-container .terminal-input {
-  font-family: monospace;
+  font-family: "SourceCodePro-Regular", monospace;
   font-size: inherit;
   color: inherit;
   border: none;
@@ -198,8 +203,8 @@ header .dp-container .dafhauh img {
   }
 }
 
-.ut-color, .cyan, .orangered, .flags, .orchid, .sky-blue, .custom-color1, .yellowgreen {
-  font-family: monospace;
+.ut-color, .cyan, .lime, .orangered, .flags, .orchid, .sky-blue, .custom-color1, .yellowgreen, .fb-color, .tw-color, .ln-color, .gh-color {
+  font-family: "SourceCodePro-Regular", monospace;
   font-size: inherit;
 }
 
@@ -233,5 +238,25 @@ header .dp-container .dafhauh img {
 
 .custom-color1 {
   color: #ffe44d;
+}
+
+.lime {
+  color: lime;
+}
+
+.fb-color {
+  color: #3b5998;
+}
+
+.tw-color {
+  color: #00acee;
+}
+
+.ln-color {
+  color: #0e76a8;
+}
+
+.gh-color {
+  color: #211F1F;
 }
 /*# sourceMappingURL=default.css.map */
