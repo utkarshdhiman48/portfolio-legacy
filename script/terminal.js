@@ -17,7 +17,7 @@ let keywords = [
     new KeyWord(new RegExp("linkedin","i"), "Redirecting to linkedin profile...", "cyan", ""),
     new KeyWord(new RegExp("github","i"), "Redirecting to github profile...", "cyan", ""),
     new KeyWord(new RegExp("email","i"), "Configuring pre email settings, Opening...", "cyan", ""),
-    new KeyWord(new RegExp("about","i"), "Here is something about him...", "cyan", "")
+    new KeyWord(new RegExp("about","i"), "Here is something about him...", "cyan", ()=>{document.querySelector("#hesoyam").scrollIntoView({block: 'end', behavior: "smooth"});})
 ];
 
 
@@ -51,6 +51,9 @@ terminalInput.addEventListener("keydown",(e)=>{
             else{
                 let output = `${prefix}<span class="${utcolor}">${textChunks[0]}</span> <span class="${found.clas}">${textChunks[1]}</span><br>${found.response}${suffix}`;
                 terminalPreview.innerHTML=`${prevCommands}${output}`;
+                setTimeout(()=>{
+                    found.action();
+                },500);
             }
             terminalPreview.lastChild.scrollIntoView(false);
         }
