@@ -94,8 +94,8 @@ header .dp-container .dafhauh img {
   color: white;
   height: 10vh;
   font-family: monospace;
-  font-size: 1rem;
-  overflow-y: scroll;
+  font-size: 1.1rem;
+  overflow-y: auto;
 }
 
 .terminal .terminal-preview .terminal-preview-text {
@@ -111,7 +111,7 @@ header .dp-container .dafhauh img {
   color: white;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .terminal .terminal-input-container .terminal-input {
@@ -198,13 +198,13 @@ header .dp-container .dafhauh img {
   }
 }
 
-.ut-color, .cyan, .sky-blue, .yellowgreen {
+.ut-color, .cyan, .orangered, .flags, .orchid, .sky-blue, .custom-color1, .yellowgreen {
   font-family: monospace;
   font-size: inherit;
 }
 
 .ut-color {
-  color: orangered;
+  color: #40a9ff;
 }
 
 .cyan {
@@ -217,5 +217,21 @@ header .dp-container .dafhauh img {
 
 .yellowgreen {
   color: yellowgreen;
+}
+
+.orangered {
+  color: orangered;
+}
+
+.flags {
+  color: peachpuff;
+}
+
+.orchid {
+  color: orchid;
+}
+
+.custom-color1 {
+  color: #ffe44d;
 }
 /*# sourceMappingURL=default.css.map */

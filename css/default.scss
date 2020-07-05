@@ -80,8 +80,8 @@ header {
         color: white;
         height: 10vh;
         font-family: monospace;
-        font-size: 1rem;
-        overflow-y: scroll;
+        font-size: 1.1rem;
+        overflow-y: auto;
         .terminal-preview-text{
             color: white;
             font-family: monospace;
@@ -92,7 +92,7 @@ header {
         font-family: monospace;
         color: white;
         flex-wrap: nowrap;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         .terminal-input{
             font-family: monospace;
             font-size: inherit;
@@ -158,12 +158,12 @@ header {
 }
 
 // colors
-.ut-color, .cyan, .sky-blue, .yellowgreen{
+.ut-color, .cyan, .orangered, .flags, .orchid, .sky-blue,.custom-color1, .yellowgreen{
     font-family: monospace;
     font-size: inherit;
 }
 .ut-color{
-    color: orangered;
+    color: rgb(64, 169, 255);
 }
 .cyan{
     color: cyan;
@@ -173,4 +173,16 @@ header {
 }
 .yellowgreen{
     color: yellowgreen;
+}
+.orangered{
+    color: orangered;
+}
+.flags{
+    color: peachpuff;
+}
+.orchid{
+    color: orchid;
+}
+.custom-color1{
+    color: rgb(255, 228, 77);
 }

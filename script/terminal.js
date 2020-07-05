@@ -8,16 +8,16 @@ class KeyWord{
 };
 
 let keywords = [
-    new KeyWord("help", "Help is on the way...", "cyan", ""),
-    new KeyWord("education", "Redirecting to his institutions...", "cyan", ""),
-    new KeyWord("projects", "Redirecting to projects...", "cyan", ""),
-    new KeyWord("connect", "You can connect here", "cyan", ""),
-    new KeyWord("facebook", "Redirecting to facebook profile...", "cyan", ""),
-    new KeyWord("twitter", "Redirecting to twitter profile...", "cyan", ""),
-    new KeyWord("linkedin", "Redirecting to linkedin profile...", "cyan", ""),
-    new KeyWord("github", "Redirecting to github profile...", "cyan", ""),
-    new KeyWord("email", "Configuring pre email settings, Opening...", "cyan", ""),
-    new KeyWord(RegExp("about","i"), "Here is something about him...", "cyan", "")
+    new KeyWord(new RegExp("help","i"), "Help is on the way...", "cyan", ""),
+    new KeyWord(new RegExp("education","i"), "Redirecting to his institutions...", "custom-color1", ""),
+    new KeyWord(new RegExp("projects","i"), "Redirecting to projects...", "cyan", ""),
+    new KeyWord(new RegExp("connect","i"), "You can connect here", "cyan", ""),
+    new KeyWord(new RegExp("facebook","i"), "Redirecting to facebook profile...", "cyan", ""),
+    new KeyWord(new RegExp("twitter","i"), "Redirecting to twitter profile...", "cyan", ""),
+    new KeyWord(new RegExp("linkedin","i"), "Redirecting to linkedin profile...", "cyan", ""),
+    new KeyWord(new RegExp("github","i"), "Redirecting to github profile...", "cyan", ""),
+    new KeyWord(new RegExp("email","i"), "Configuring pre email settings, Opening...", "cyan", ""),
+    new KeyWord(new RegExp("about","i"), "Here is something about him...", "cyan", "")
 ];
 
 
