@@ -82,7 +82,8 @@ header {
     padding: 0.2rem;
     .terminal-preview{
         color: white;
-        height: 10vh;
+        height: 30vh;
+        max-height: 480px;
         font-family: "UbuntuMono-Regular", monospace;
         font-size: 1rem;
         overflow-y: auto;
@@ -215,6 +216,6 @@ header {
 .ln-color{
     color: #0e76a8;
 }
-.gh-color{
-    color: #211F1F;
+.apricot{
+    color: #F4CBB2;
 }
