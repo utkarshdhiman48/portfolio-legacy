@@ -6,9 +6,8 @@
     --uiCol0: rgb(0, 102, 255);
     --uiCol1: rgb(13, 86, 196);
     --uiCol2: rgb(68, 155, 255);
-    --uiCol3: rgb(21, 104, 182);
-    --uiCol4: rgb(0, 26, 112);
-    --theBgGradient: radial-gradient(circle at top left,var(--uiCol2) 5% , var(--uiCol0) 15%, var(--uiCol1) 15%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 60%, var(--uiCol1) 60%, var(--uiCol4) 100%);
+    --uiCol3: rgb(0, 26, 112);
+    --theBgGradient: radial-gradient(circle at top left,var(--uiCol2) 5% , var(--uiCol0) 15%, var(--uiCol1) 15%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 60%, var(--uiCol1) 60%, var(--uiCol3) 100%);
     
 }
 * {
@@ -63,7 +62,15 @@
 header,
 footer {
     background-image: var(--backgroundVar0);
+    overflow: hidden;
     animation: bganime 20s ease infinite !important;
+    font-family: Arial, Helvetica, sans-serif;
+    h1{
+        color: white;
+    }
+    h4{
+        color: white;
+    }
 }
 
 header {
@@ -86,9 +93,10 @@ header {
             }
         }
     }
-    .intro {}
+    .intro {
+    }
 }
-
+main{}
 .terminal{
     margin: 1rem;
     background-color: #333;
@@ -194,7 +202,9 @@ header {
     }
 }
 footer{
+    
     .social{
+        margin: auto;
         padding: 1rem;
         a{
             svg:hover{
