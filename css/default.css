@@ -33,7 +33,7 @@ body {
 .card {
   width: 90%;
   margin: 1rem auto;
-  padding: 1rem;
+  padding: 0.36rem;
   -webkit-box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.15);
           box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.15);
   border: 1px solid #ccc;
@@ -48,7 +48,7 @@ body {
   position: relative;
   width: 100%;
   margin: 1rem auto;
-  padding: 1rem;
+  padding: 0.36rem;
   -webkit-box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.15);
           box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.15);
   border: 1px solid #ccc;
@@ -164,70 +164,42 @@ header .dp-container .dafhauh img {
   background-color: var(--uiCol1);
 }
 
-.super-scroll nav.nav-responsive {
-  display: none;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+.super-scroll nav.nav-responsive .comp-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.super-scroll nav.nav-responsive .hamburger {
+.super-scroll nav.nav-responsive .comp-line .hamburger {
+  height: 3rem;
   padding: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 3rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.super-scroll nav.nav-responsive .hamburger div {
-  background-color: white;
+.super-scroll nav.nav-responsive .comp-line .hamburger .bar1 {
   width: 30px;
   height: 3px;
+  background-color: white;
 }
 
-.super-scroll nav.nav-responsive .hamburger:hover {
+.super-scroll nav.nav-responsive .comp-line .hamburger:hover {
   background-color: var(--uiCol1);
 }
 
-.super-scroll nav.nav-responsive .nav-r-fc {
-  list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.super-scroll nav.nav-responsive .nav-r-fc li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  width: auto;
-}
-
-.super-scroll nav.nav-responsive .nav-r-fc li a.nav-links {
-  padding: 1rem 1rem;
-  margin: auto;
-  text-align: center;
+.super-scroll nav.nav-responsive .comp-line .nav-r-right a.nav-links {
   display: block;
   color: white;
+  padding: 1rem;
   text-decoration: none;
-}
-
-.super-scroll nav.nav-responsive .nav-r-fc li a:hover {
-  background-color: var(--uiCol1);
+  font-weight: bold;
 }
 
 main {

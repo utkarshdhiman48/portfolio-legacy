@@ -28,7 +28,7 @@ body{
 .card {
     width: 90%;
     margin: 1rem auto;
-    padding: 1rem;
+    padding: 0.36rem;
     box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.15);
     border: 1px solid #ccc;
     .card-heading{
@@ -39,7 +39,7 @@ body{
         position: relative;
         width: 100%;
         margin: 1rem auto;
-        padding: 1rem;
+        padding: 0.36rem;
         box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.15);
         border: 1px solid #ccc;
         overflow: visible;
@@ -129,46 +129,32 @@ header {
         }
     }
     nav.nav-responsive{
-        display: none;
-        justify-content: flex-start;
-        .hamburger{
-            padding: 0.5rem;
+        .comp-line{
             display: flex;
-            justify-content: space-evenly;
-            flex-direction: column;
-            height: 3rem;
-            align-items: center;
-            div{
-                background-color: white;
-                width: 30px;
-                height: 3px;
+            .hamburger{
+                height: 3rem;
+                padding: 0.5rem;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+                .bar1{
+                    width: 30px;
+                    height: 3px;
+                    background-color: white;
+                }
             }
-        }
-        .hamburger:hover{
-            background-color: var(--uiCol1);
-        }
-        .nav-r-fc{
-            list-style-type: none;
-            display: flex;
-            flex-direction: column;
-            li{
-                flex: 1;
-                width: auto;
+            .hamburger:hover{
+                background-color: var(--uiCol1);
+            }
+            .nav-r-right{
                 a.nav-links{
-                        padding: 1rem 1rem;
-                    margin: auto;
-                    text-align: center;
                     display: block;
                     color: white;
+                    padding: 1rem;
                     text-decoration: none;
+                    font-weight: bold;
                 }
-                a:hover{
-                    background-color: var(--uiCol1);
-                }            
             }
-        }
-        ul.nav-r-fc{
-            // display: ;
         }
     }
 }
