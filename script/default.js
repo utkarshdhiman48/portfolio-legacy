@@ -20,12 +20,11 @@ window.addEventListener("scroll",()=>{
 });
 
 
-hamburger.addEventListener("click",(e)=>{
-    console.log(navRFc.style.display);
-    if(navRFc.style.display === "none"){
+hamburger.addEventListener("click",()=>{
+    if(navRFc.style.display === "none" || navRFc.style.display === ""){
         navRFc.style.display = "block";
     }
-    if(navRFc.style.display === "block"){
+    else if(navRFc.style.display === "block"){
         navRFc.style.display = "none";
     }
 })
