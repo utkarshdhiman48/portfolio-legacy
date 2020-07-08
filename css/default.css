@@ -26,10 +26,6 @@ body {
           animation: bganime 20s ease infinite !important;
 }
 
-.light-opacity {
-  opacity: 0.5;
-}
-
 .card {
   width: 90%;
   margin: 1rem auto;
@@ -168,6 +164,9 @@ header .dp-container .dafhauh img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .super-scroll nav.nav-responsive .comp-line .hamburger {
@@ -190,16 +189,39 @@ header .dp-container .dafhauh img {
   background-color: white;
 }
 
-.super-scroll nav.nav-responsive .comp-line .hamburger:hover {
+.super-scroll nav.nav-responsive .comp-line .hamburger:hover, .super-scroll nav.nav-responsive .comp-line .hamburger:active {
   background-color: var(--uiCol1);
 }
 
-.super-scroll nav.nav-responsive .comp-line .nav-r-right a.nav-links {
+.super-scroll nav.nav-responsive .comp-line .to-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.super-scroll nav.nav-responsive .comp-line .to-right .nav-r-right a.nav-links {
   display: block;
   color: white;
   padding: 1rem;
   text-decoration: none;
   font-weight: bold;
+}
+
+.super-scroll nav.nav-responsive .nav-r-fc {
+  display: none;
+  list-style-type: none;
+}
+
+.super-scroll nav.nav-responsive .nav-r-fc a.nav-links {
+  display: block;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.super-scroll nav.nav-responsive .nav-r-fc a.nav-links:hover {
+  background-color: var(--uiCol1);
 }
 
 main {
@@ -389,11 +411,6 @@ footer .social a svg:hover * {
   .super-scroll nav.nav-normal {
     display: none;
   }
-  .super-scroll nav.nav-responsive {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .wrapper .projects .sub-card {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -491,5 +508,9 @@ footer .social a svg:hover * {
     background-image: var(--theBgGradient);
     background-size: 100%;
   }
+}
+
+.light-opacity {
+  opacity: 0.5;
 }
 /*# sourceMappingURL=default.css.map */

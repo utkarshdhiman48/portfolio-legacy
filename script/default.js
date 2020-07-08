@@ -1,4 +1,7 @@
 const superScroll =  document.querySelector(".super-scroll");
+const hamburger = document.querySelector(".hamburger");
+const navRFc = document.querySelector(".nav-r-fc");
+
 
 window.addEventListener("scroll",()=>{
     if(window.scrollY>=260){
@@ -15,3 +18,14 @@ window.addEventListener("scroll",()=>{
         //hide buttons
     }
 });
+
+
+hamburger.addEventListener("click",(e)=>{
+    console.log(navRFc.style.display);
+    if(navRFc.style.display === "none"){
+        navRFc.style.display = "block";
+    }
+    if(navRFc.style.display === "block"){
+        navRFc.style.display = "none";
+    }
+})
