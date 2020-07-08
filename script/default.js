@@ -1,24 +1,17 @@
-const scrollVisibleBtns = document.querySelector(".scroll-visible-btns");
-const main = document.querySelector("main");
-const rect = main.getBoundingClientRect();
 const superScroll =  document.querySelector(".super-scroll");
 
 window.addEventListener("scroll",()=>{
     if(window.scrollY>=260){
         //show nav bar
-        superScroll.style.display= "block";
+        // superScroll.style.display= "block";
+        superScroll.style.top= 0;
         //show buttons
         
     }
     else{
         //hide nav bar
-        superScroll.style.display= "none";
+        // superScroll.style.display= "none";
+        superScroll.style.top= "-4rem";
         //hide buttons
     }
-    if(rect.bottom <= window.scrollY+window.innerHeight){
-        scrollVisibleBtns.style.flexDirection="row";
-    }
-    else{
-        scrollVisibleBtns.style.flexDirection="column";
-    }
-})
+});
