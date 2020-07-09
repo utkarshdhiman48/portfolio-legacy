@@ -192,13 +192,8 @@ article.card .sub-card {
   margin: 0.25rem;
 }
 
-article.card:hover {
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
-}
-
 main {
-  background-color: var(--notBodyText);
+  background-color: white;
   padding: 0.5rem;
 }
 
@@ -210,7 +205,7 @@ main .terminal {
 }
 
 main .terminal .terminal-preview {
-  color: var(--notBodyText);
+  color: white;
   height: 30vh;
   max-height: 480px;
   font-family: "UbuntuMono-Regular", monospace;
@@ -221,7 +216,7 @@ main .terminal .terminal-preview {
 }
 
 main .terminal .terminal-preview .terminal-preview-text {
-  color: var(--notBodyText);
+  color: white;
   font-family: "UbuntuMono-Regular", monospace;
 }
 
@@ -244,7 +239,7 @@ main .terminal .terminal-input-container {
   display: -ms-flexbox;
   display: flex;
   font-family: "UbuntuMono-Regular", monospace;
-  color: var(--notBodyText);
+  color: white;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   font-size: 1rem;
@@ -258,7 +253,7 @@ main .terminal .terminal-input-container .terminal-input {
   outline: none;
   background-color: transparent;
   width: 100%;
-  caret-color: var(--notBodyText);
+  caret-color: white;
 }
 
 main div.wrapper article.projects {
@@ -301,8 +296,6 @@ main div.wrapper article.projects section.sub-card a img {
   height: auto;
   width: 100%;
   display: block;
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
 main div.wrapper article.projects section.sub-card .sub-card-content {
@@ -312,10 +305,6 @@ main div.wrapper article.projects section.sub-card .sub-card-content {
 main div.wrapper article.projects section.sub-card .sub-card-content .project-name {
   font-size: 1.2rem;
   font-weight: 600;
-}
-
-main div.wrapper article.projects section.sub-card .sub-card-content .project-name a {
-  color: var(--bodyText);
 }
 
 main div.wrapper article.projects section.sub-card .sub-card-content .proj-ingredients, main div.wrapper article.projects section.sub-card .sub-card-content .proj-description {
@@ -328,16 +317,10 @@ main div.wrapper article.projects section.sub-card .sub-card-content .repo-link 
 
 main div.wrapper article.projects section.sub-card .sub-card-content .repo-link a {
   font-size: 0.8rem;
-  background-image: var(--theSelectorGrad);
-  color: white;
   text-decoration: none;
   display: inline-block;
   padding: 0.5rem;
   border-radius: 20px;
-}
-
-main div.wrapper article.projects section.sub-card .sub-card-content .repo-link a:hover {
-  background-image: var(--theSelectorGradHover);
 }
 
 main div.wrapper article.skills {
@@ -353,10 +336,6 @@ main div.wrapper article.skills {
 main div.wrapper article.skills div.skill-container {
   margin: 0.25rem;
   width: 50px;
-}
-
-main div.wrapper article.skills div.skill-container svg path {
-  fill: #333;
 }
 
 main div.wrapper figure.sub-card {
@@ -383,8 +362,6 @@ main div.wrapper figure.sub-card picture img.sub-card-circle-pic {
   display: block;
   width: auto;
   max-height: 150px;
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
 }
 
@@ -407,7 +384,6 @@ main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-dura
 }
 
 footer.contact {
-  color: var(--notBodyText);
   padding: 0.5rem;
 }
 
@@ -425,7 +401,6 @@ footer.contact .social {
 footer.contact .social .social-icon-container {
   width: auto;
   text-align: center;
-  color: var(--notBodyText);
   text-decoration: none;
   display: block;
   font-size: 0.6rem;
@@ -435,7 +410,6 @@ footer.contact .social .social-icon-container {
 footer.contact .social .social-icon-container .social-icon {
   padding: 0.5rem;
   margin: auto;
-  fill: var(--notBodyText);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,17 +423,8 @@ footer.contact .social .social-icon-container .social-icon {
   max-height: 100px;
 }
 
-footer.contact .social .social-icon-container:hover {
-  color: var(--bodyText);
-}
-
-footer.contact .social .social-icon-container:hover .social-icon {
-  fill: var(--bodyText);
-}
-
 footer.contact div.signate {
   text-align: center;
-  color: var(--notBodyText);
   font-family: "Allison Tessa Oblique", cursive;
 }
 
@@ -488,9 +453,6 @@ footer.contact div.signate {
   main div.wrapper article.skills div.skill-container {
     margin: 0.15rem;
     width: 35px;
-  }
-  main div.wrapper article.skills div.skill-container svg path {
-    fill: #333;
   }
   main div.wrapper figure.sub-card {
     padding: 0.5rem;

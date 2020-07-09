@@ -49,3 +49,72 @@ article.card{
         color: var(--bodyText);
     }
 }
+article.card:hover{
+    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.25);
+}
+main{
+    background-color: var(--notBodyText);
+    div.wrapper{
+        article.projects{
+            section.sub-card{
+                a{
+                    img{
+                        box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
+                    }
+                }
+                .sub-card-content{
+                    .project-name{
+                        a{
+                            color: var(--bodyText);
+                        }
+                    }
+                    .repo-link{
+                        a{
+                            background-image: var(--theSelectorGrad);
+                            color: var(--notBodyText);
+                        }
+                        a:hover{
+                            background-image: var(--theSelectorGradHover);
+                        }
+                    }
+                }
+            }
+        }
+        article.skills{
+            div.skill-container{
+                svg{
+                    path{
+                        fill: #333;
+                    }
+                }
+            }
+        }
+        figure.sub-card{
+            picture{
+                img.sub-card-circle-pic{
+                    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
+                }
+            }
+        }
+    }
+}
+footer.contact{
+    color: var(--notBodyText);
+    .social{
+        .social-icon-container{
+            color: var(--notBodyText);
+            .social-icon{
+                fill: var(--notBodyText);
+            }
+        }
+        .social-icon-container:hover{
+            color: var(--bodyText);
+            .social-icon{
+                fill: var(--bodyText);
+            }
+        }
+    }
+    div.signate{
+        color: var(--notBodyText);
+    }
+}

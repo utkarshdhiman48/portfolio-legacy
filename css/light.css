@@ -50,4 +50,64 @@ article.card .sub-card {
 article.card * {
   color: var(--bodyText);
 }
+
+article.card:hover {
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+}
+
+main {
+  background-color: var(--notBodyText);
+}
+
+main div.wrapper article.projects section.sub-card a img {
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content .project-name a {
+  color: var(--bodyText);
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content .repo-link a {
+  background-image: var(--theSelectorGrad);
+  color: var(--notBodyText);
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content .repo-link a:hover {
+  background-image: var(--theSelectorGradHover);
+}
+
+main div.wrapper article.skills div.skill-container svg path {
+  fill: #333;
+}
+
+main div.wrapper figure.sub-card picture img.sub-card-circle-pic {
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+footer.contact {
+  color: var(--notBodyText);
+}
+
+footer.contact .social .social-icon-container {
+  color: var(--notBodyText);
+}
+
+footer.contact .social .social-icon-container .social-icon {
+  fill: var(--notBodyText);
+}
+
+footer.contact .social .social-icon-container:hover {
+  color: var(--bodyText);
+}
+
+footer.contact .social .social-icon-container:hover .social-icon {
+  fill: var(--bodyText);
+}
+
+footer.contact div.signate {
+  color: var(--notBodyText);
+}
 /*# sourceMappingURL=light.css.map */
