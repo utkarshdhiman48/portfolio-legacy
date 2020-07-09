@@ -30,13 +30,19 @@
     font-display: swap;
     src: url(../assets/OpenSans-ExtraBold.ttf);
 }
-
+@font-face {
+    font-family: 'Allison Tessa Oblique';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../assets/Allison Tessa Oblique.ttf");
+}
 :root{
     --uiCol0: rgb(0, 102, 255);
     --uiCol1: rgb(13, 86, 196);
     --uiCol2: rgb(68, 155, 255);
     --uiCol3: rgb(0, 26, 112);
-    --theBgGradient: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
+    --theSelectorGrad: linear-gradient(90deg,purple, gold);
+    --theBgGradient0: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
     
 }
 * {
@@ -47,7 +53,6 @@
 }
 body{
     // background-image: var(--backgroundVar0);
-    background-color: yellowgreen;
     // animation: bganime 20s ease infinite !important;
 }
 img{
@@ -65,9 +70,9 @@ header#rvHsQW{
     padding: 0.5rem;
     div.dp-container{
         overflow: hidden;
-        flex-basis: 30%;
+        flex-basis: 20%;
         section.dafhauh{
-            padding: 1rem;
+            padding: 0.5rem;
             img{
                 border: 2px solid white;
                 border-radius: 50%;
@@ -103,15 +108,15 @@ div.top-fixed{
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
+                background-image: var(--theSelectorGrad);
                 li{
                     flex: 1;
                     text-align: center;
                     a{
-                        background-color: black;
                         color: white;
                         text-decoration: none;
                         display: block;
-                        padding: 1rem 0.5rem;
+                        padding: calc(0.9rem) 0.5rem;
                         font-size: 0.8rem;
                     }
                     a:hover{
@@ -132,7 +137,7 @@ article.card{
     box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
     margin: 1rem 0;
     padding: 0.5rem;
-    border: 1px solid blue;////////////comment
+    border: 1px solid #888;////////////comment
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,7 +147,7 @@ article.card{
     }
     .sub-card{
         width: 100%;
-        border: 1px solid blue;
+        border: 1px solid #888;
         box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
         border-radius: 5px;
         padding: 0.25rem;
@@ -156,6 +161,51 @@ article.card:hover{
 main{
     padding: 0.5rem;
     div.wrapper{
+        article.projects{
+            display: flex;
+            align-items: stretch;
+            flex-flow: row wrap;
+            section.sub-card{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: stretch;
+                min-height: 300px;
+                flex-basis: 48%;
+                a{
+                    display: block;
+                    img{
+                        height: auto;
+                        width: 100%;
+                        display: block;
+                        box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
+                    }
+                }
+                .sub-card-content{
+                    padding: 0.5rem;
+                    .project-name{
+                        font-size: 1.2rem;
+                    }
+                    .proj-ingredients, .proj-description{
+                        font-size: 1rem;
+                    }
+                    .repo-link{
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+        article.skills{
+            flex-flow: row wrap;
+            div.skill-container{
+                width: 50px;
+                svg{
+                    path{
+                        fill: #333;
+                    }
+                }
+            }
+        }
         figure.sub-card{
             display: flex;
             flex-direction: row;
@@ -186,47 +236,48 @@ main{
                 }
             }
         }
-        article.projects{
-            display: flex;
-            flex-flow: row wrap;
-            section.sub-card{
-                margin-left: auto;
-                margin-right: auto;
-                min-height: 300px;
-                flex-basis: 48%;
-                a{
-                    display: block;
-                    img{
-                        height: auto;
-                        width: 100%;
-                        display: block;
-                        box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
-                    }
-                }
-                .sub-card-content{
-                    padding: 0.5rem;
-                    .project-name{
-                        font-size: 1.2rem;
-                    }
-                    .proj-ingredients, .proj-description{
-                        font-size: 1rem;
-                    }
-                    .repo-link{
-                        font-size: 0.8rem;
-                    }
-                }
+    }
+}
+footer.contact{
+    padding: 0.5rem;
+    .social{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .social-icon-container{
+            width: auto;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            display: block;
+            font-size: 0.6rem;
+            padding: 0.5rem;
+            .social-icon{
+                padding: 0.5rem;
+                margin: auto;
+                fill: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                max-height: 100px;
             }
         }
-        article.skills{
-            flex-flow: row wrap;
-            div.skill-container{
-                width: 50px;
+        .social-icon-container:hover{
+            color: black;
+            .social-icon{
+                fill: black;
             }
         }
     }
+    div.signate{
+        text-align: center;
+        color: white;
+        font-family: "Allison Tessa Oblique", cursive;
+    }
 }
 
-@media all and (max-width: 540px){
+@media all and (max-width: 600px){
     header#rvHsQW{
         div.intro{
             span.my-name{
@@ -270,12 +321,11 @@ main{
                 section.sub-card{
                     margin-left: auto;
                     margin-right: auto;
-                    min-height: 300px;
                     flex-basis: 100%;
                     a{
+                        padding: 0.25rem;
                         img{
-                            height: 20vh;
-                            width: auto;
+                            width: 80%;
                             margin: auto;
                         }
                     }
@@ -388,15 +438,15 @@ main{
 
 @keyframes bganime{
     0%{
-        background-image: var(--theBgGradient);
+        background-image: var(--theBgGradient0);
         background-size: 100%;
     }
     50%{
-        background-image: var(--theBgGradient);
+        background-image: var(--theBgGradient0);
         background-size: 300%;
     }
     100%{
-        background-image: var(--theBgGradient);
+        background-image: var(--theBgGradient0);
         background-size: 100%;
     }
 }
@@ -405,12 +455,14 @@ main{
 //must remain at end
 .light-opacity{
     opacity: 0.5;
+    z-index: -1;
 }
 .sticky{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 99;
 }
 .sticky + main {
-    padding-top: 3rem;
+    padding-top: calc(3rem + 4px);
   }

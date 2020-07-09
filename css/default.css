@@ -35,12 +35,20 @@
   src: url(../assets/OpenSans-ExtraBold.ttf);
 }
 
+@font-face {
+  font-family: 'Allison Tessa Oblique';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/Allison Tessa Oblique.ttf");
+}
+
 :root {
   --uiCol0: rgb(0, 102, 255);
   --uiCol1: rgb(13, 86, 196);
   --uiCol2: rgb(68, 155, 255);
   --uiCol3: rgb(0, 26, 112);
-  --theBgGradient: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
+  --theSelectorGrad: linear-gradient(90deg,purple, gold);
+  --theBgGradient0: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
 }
 
 * {
@@ -49,10 +57,6 @@
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-}
-
-body {
-  background-color: yellowgreen;
 }
 
 img {
@@ -80,12 +84,12 @@ header#rvHsQW {
 
 header#rvHsQW div.dp-container {
   overflow: hidden;
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
 }
 
 header#rvHsQW div.dp-container section.dafhauh {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 header#rvHsQW div.dp-container section.dafhauh img {
@@ -136,6 +140,7 @@ div.top-fixed .navigation nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: var(--theSelectorGrad);
 }
 
 div.top-fixed .navigation nav ul li {
@@ -146,11 +151,10 @@ div.top-fixed .navigation nav ul li {
 }
 
 div.top-fixed .navigation nav ul li a {
-  background-color: black;
   color: white;
   text-decoration: none;
   display: block;
-  padding: 1rem 0.5rem;
+  padding: calc(0.9rem) 0.5rem;
   font-size: 0.8rem;
 }
 
@@ -170,7 +174,7 @@ article.card {
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
   margin: 1rem 0;
   padding: 0.5rem;
-  border: 1px solid blue;
+  border: 1px solid #888;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,7 +196,7 @@ article.card .card-heading {
 
 article.card .sub-card {
   width: 100%;
-  border: 1px solid blue;
+  border: 1px solid #888;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
@@ -207,6 +211,81 @@ article.card:hover {
 
 main {
   padding: 0.5rem;
+}
+
+main div.wrapper article.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+main div.wrapper article.projects section.sub-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  min-height: 300px;
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+}
+
+main div.wrapper article.projects section.sub-card a {
+  display: block;
+}
+
+main div.wrapper article.projects section.sub-card a img {
+  height: auto;
+  width: 100%;
+  display: block;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content {
+  padding: 0.5rem;
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content .project-name {
+  font-size: 1.2rem;
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content .proj-ingredients, main div.wrapper article.projects section.sub-card .sub-card-content .proj-description {
+  font-size: 1rem;
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content .repo-link {
+  font-size: 0.8rem;
+}
+
+main div.wrapper article.skills {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+main div.wrapper article.skills div.skill-container {
+  width: 50px;
+}
+
+main div.wrapper article.skills div.skill-container svg path {
+  fill: #333;
 }
 
 main div.wrapper figure.sub-card {
@@ -256,64 +335,63 @@ main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-dura
   font-size: 0.8rem;
 }
 
-main div.wrapper article.projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-}
-
-main div.wrapper article.projects section.sub-card {
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 300px;
-  -ms-flex-preferred-size: 48%;
-      flex-basis: 48%;
-}
-
-main div.wrapper article.projects section.sub-card a {
-  display: block;
-}
-
-main div.wrapper article.projects section.sub-card a img {
-  height: auto;
-  width: 100%;
-  display: block;
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-}
-
-main div.wrapper article.projects section.sub-card .sub-card-content {
+footer.contact {
   padding: 0.5rem;
 }
 
-main div.wrapper article.projects section.sub-card .sub-card-content .project-name {
-  font-size: 1.2rem;
+footer.contact .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main div.wrapper article.projects section.sub-card .sub-card-content .proj-ingredients, main div.wrapper article.projects section.sub-card .sub-card-content .proj-description {
-  font-size: 1rem;
+footer.contact .social .social-icon-container {
+  width: auto;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-size: 0.6rem;
+  padding: 0.5rem;
 }
 
-main div.wrapper article.projects section.sub-card .sub-card-content .repo-link {
-  font-size: 0.8rem;
+footer.contact .social .social-icon-container .social-icon {
+  padding: 0.5rem;
+  margin: auto;
+  fill: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  max-height: 100px;
 }
 
-main div.wrapper article.skills {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+footer.contact .social .social-icon-container:hover {
+  color: black;
 }
 
-main div.wrapper article.skills div.skill-container {
-  width: 50px;
+footer.contact .social .social-icon-container:hover .social-icon {
+  fill: black;
 }
 
-@media all and (max-width: 540px) {
+footer.contact div.signate {
+  text-align: center;
+  color: white;
+  font-family: "Allison Tessa Oblique", cursive;
+}
+
+@media all and (max-width: 600px) {
   header#rvHsQW div.intro span.my-name {
     font-size: 1.5rem;
   }
@@ -355,13 +433,14 @@ main div.wrapper article.skills div.skill-container {
   main div.wrapper article.projects section.sub-card {
     margin-left: auto;
     margin-right: auto;
-    min-height: 300px;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
+  main div.wrapper article.projects section.sub-card a {
+    padding: 0.25rem;
+  }
   main div.wrapper article.projects section.sub-card a img {
-    height: 20vh;
-    width: auto;
+    width: 80%;
     margin: auto;
   }
 }
@@ -484,45 +563,47 @@ main div.wrapper article.skills div.skill-container {
 
 @-webkit-keyframes bganime {
   0% {
-    background-image: var(--theBgGradient);
+    background-image: var(--theBgGradient0);
     background-size: 100%;
   }
   50% {
-    background-image: var(--theBgGradient);
+    background-image: var(--theBgGradient0);
     background-size: 300%;
   }
   100% {
-    background-image: var(--theBgGradient);
+    background-image: var(--theBgGradient0);
     background-size: 100%;
   }
 }
 
 @keyframes bganime {
   0% {
-    background-image: var(--theBgGradient);
+    background-image: var(--theBgGradient0);
     background-size: 100%;
   }
   50% {
-    background-image: var(--theBgGradient);
+    background-image: var(--theBgGradient0);
     background-size: 300%;
   }
   100% {
-    background-image: var(--theBgGradient);
+    background-image: var(--theBgGradient0);
     background-size: 100%;
   }
 }
 
 .light-opacity {
   opacity: 0.5;
+  z-index: -1;
 }
 
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 99;
 }
 
 .sticky + main {
-  padding-top: 3rem;
+  padding-top: calc(3rem + 4px);
 }
 /*# sourceMappingURL=default.css.map */
