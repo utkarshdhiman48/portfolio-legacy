@@ -16,7 +16,7 @@ const suffix = `</span>`;
 const terminalPreview = document.querySelector("div.terminal-preview");
 const terminalInput = document.querySelector("input.terminal-input");
 
-const listcommands = `_> ut education :scrolls to Utkarsh's education part of page<br>_> ut projects :scrolls to Projects created by me<br>_> ut skills :scrolls to Utkarsh's skills<br>_> ut connect :connect with me on any of the following platforms<br>_> ut linkedin :will open open my linkedin profile<br>_> ut github :will open open my github profile<br>_> ut twitter :will take you to my twitter profile<br>_> ut facebook :will open my facebook profile<br>_> ut email :email me through your email lient<br>_> ut about :tell you something about me<br>_> ut help :opens a list of all commands<br>You're Welcome...`;
+const listcommands = `>_ ut education :scrolls to Utkarsh's education part of page<br>>_ ut projects :scrolls to Projects created by me<br>>_ ut skills :scrolls to Utkarsh's skills<br>>_ ut connect :connect with me on any of the following platforms<br>>_ ut linkedin :will open open my linkedin profile<br>>_ ut github :will open open my github profile<br>>_ ut twitter :will take you to my twitter profile<br>>_ ut facebook :will open my facebook profile<br>>_ ut email :email me through your email lient<br>>_ ut about :tell you something about me<br>>_ ut help :opens a list of all commands<br>You're Welcome...`;
 
 
 

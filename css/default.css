@@ -42,15 +42,6 @@
   src: url("../assets/Allison Tessa Oblique.ttf");
 }
 
-:root {
-  --uiCol0: rgb(0, 102, 255);
-  --uiCol1: rgb(13, 86, 196);
-  --uiCol2: rgb(68, 155, 255);
-  --uiCol3: rgb(0, 26, 112);
-  --theSelectorGrad: linear-gradient(90deg,purple, gold);
-  --theBgGradient0: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -59,20 +50,22 @@
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+  background-image: var(--backgroundVar0);
+  -webkit-animation: bganime 20s ease infinite !important;
+          animation: bganime 20s ease infinite !important;
+}
+
 img {
   width: 240px;
   min-width: 10px;
 }
 
-span {
-  display: block;
-}
-
 header#rvHsQW {
-  background-color: blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -80,6 +73,10 @@ header#rvHsQW {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem;
+}
+
+header#rvHsQW span {
+  display: block;
 }
 
 header#rvHsQW div.dp-container {
@@ -93,7 +90,7 @@ header#rvHsQW div.dp-container section.dafhauh {
 }
 
 header#rvHsQW div.dp-container section.dafhauh img {
-  border: 2px solid white;
+  border: 2px solid var(--notBodyText);
   border-radius: 50%;
   display: inline-block;
   vertical-align: middle;
@@ -101,27 +98,27 @@ header#rvHsQW div.dp-container section.dafhauh img {
 }
 
 header#rvHsQW div.intro {
+  padding: 1rem;
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
-  color: white;
 }
 
 header#rvHsQW div.intro span.my-name {
-  font-size: 2rem;
+  font-size: 4.5rem;
   font-weight: 600;
 }
 
 header#rvHsQW div.intro span.tag-line {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
 }
 
 div.top-fixed {
-  height: calc(3rem + 4px);
+  height: calc(3rem + 3px);
   width: 100%;
 }
 
 div.top-fixed .navigation {
-  height: calc(100% - 4px);
+  height: calc(100% - 3px);
 }
 
 div.top-fixed .navigation nav {
@@ -140,7 +137,6 @@ div.top-fixed .navigation nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: var(--theSelectorGrad);
 }
 
 div.top-fixed .navigation nav ul li {
@@ -151,30 +147,21 @@ div.top-fixed .navigation nav ul li {
 }
 
 div.top-fixed .navigation nav ul li a {
-  color: white;
   text-decoration: none;
   display: block;
-  padding: calc(0.9rem) 0.5rem;
+  padding: 0.9rem 0.5rem;
   font-size: 0.8rem;
 }
 
-div.top-fixed .navigation nav ul li a:hover {
-  background-color: brown;
-}
-
 div.top-fixed div.scroll-progress-bar {
-  background-color: brown;
   width: 0;
-  height: 4px;
+  height: 3px;
 }
 
 article.card {
   border-radius: 10px;
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
   margin: 1rem 0;
   padding: 0.5rem;
-  border: 1px solid #888;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -190,15 +177,16 @@ article.card {
           align-items: center;
 }
 
+article.card span {
+  display: block;
+}
+
 article.card .card-heading {
   width: 100%;
 }
 
 article.card .sub-card {
   width: 100%;
-  border: 1px solid #888;
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   padding: 0.25rem;
   margin: 0.25rem;
@@ -210,7 +198,67 @@ article.card:hover {
 }
 
 main {
+  background-color: var(--notBodyText);
   padding: 0.5rem;
+}
+
+main .terminal {
+  display: block;
+  margin: 1rem;
+  background-color: #333;
+  padding: 0.2rem;
+}
+
+main .terminal .terminal-preview {
+  color: var(--notBodyText);
+  height: 30vh;
+  max-height: 480px;
+  font-family: "UbuntuMono-Regular", monospace;
+  font-size: 1rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+main .terminal .terminal-preview .terminal-preview-text {
+  color: var(--notBodyText);
+  font-family: "UbuntuMono-Regular", monospace;
+}
+
+main .terminal .terminal-preview::-webkit-scrollbar {
+  background-color: transparent;
+  width: 3px;
+}
+
+main .terminal .terminal-preview::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+main .terminal .terminal-preview::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+main .terminal .terminal-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "UbuntuMono-Regular", monospace;
+  color: var(--notBodyText);
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  font-size: 1rem;
+}
+
+main .terminal .terminal-input-container .terminal-input {
+  font-family: "UbuntuMono-Regular", monospace;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  caret-color: var(--notBodyText);
 }
 
 main div.wrapper article.projects {
@@ -263,6 +311,11 @@ main div.wrapper article.projects section.sub-card .sub-card-content {
 
 main div.wrapper article.projects section.sub-card .sub-card-content .project-name {
   font-size: 1.2rem;
+  font-weight: 600;
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content .project-name a {
+  color: var(--bodyText);
 }
 
 main div.wrapper article.projects section.sub-card .sub-card-content .proj-ingredients, main div.wrapper article.projects section.sub-card .sub-card-content .proj-description {
@@ -270,7 +323,21 @@ main div.wrapper article.projects section.sub-card .sub-card-content .proj-ingre
 }
 
 main div.wrapper article.projects section.sub-card .sub-card-content .repo-link {
+  margin-top: 0.25rem;
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content .repo-link a {
   font-size: 0.8rem;
+  background-image: var(--theSelectorGrad);
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content .repo-link a:hover {
+  background-image: var(--theSelectorGradHover);
 }
 
 main div.wrapper article.skills {
@@ -278,9 +345,13 @@ main div.wrapper article.skills {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 main div.wrapper article.skills div.skill-container {
+  margin: 0.25rem;
   width: 50px;
 }
 
@@ -336,6 +407,7 @@ main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-dura
 }
 
 footer.contact {
+  color: var(--notBodyText);
   padding: 0.5rem;
 }
 
@@ -353,7 +425,7 @@ footer.contact .social {
 footer.contact .social .social-icon-container {
   width: auto;
   text-align: center;
-  color: white;
+  color: var(--notBodyText);
   text-decoration: none;
   display: block;
   font-size: 0.6rem;
@@ -363,7 +435,7 @@ footer.contact .social .social-icon-container {
 footer.contact .social .social-icon-container .social-icon {
   padding: 0.5rem;
   margin: auto;
-  fill: white;
+  fill: var(--notBodyText);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,28 +450,47 @@ footer.contact .social .social-icon-container .social-icon {
 }
 
 footer.contact .social .social-icon-container:hover {
-  color: black;
+  color: var(--bodyText);
 }
 
 footer.contact .social .social-icon-container:hover .social-icon {
-  fill: black;
+  fill: var(--bodyText);
 }
 
 footer.contact div.signate {
   text-align: center;
-  color: white;
+  color: var(--notBodyText);
   font-family: "Allison Tessa Oblique", cursive;
+}
+
+@media all and (max-width: 1000px) {
+  header#rvHsQW div.intro span.my-name {
+    font-size: 2.63rem;
+  }
+  header#rvHsQW div.intro span.tag-line {
+    font-size: 1rem;
+  }
+  header#rvHsQW div.header-overlay {
+    display: none;
+  }
 }
 
 @media all and (max-width: 600px) {
   header#rvHsQW div.intro span.my-name {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   header#rvHsQW div.intro span.tag-line {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   header#rvHsQW div.header-overlay {
     display: none;
+  }
+  main div.wrapper article.skills div.skill-container {
+    margin: 0.15rem;
+    width: 35px;
+  }
+  main div.wrapper article.skills div.skill-container svg path {
+    fill: #333;
   }
   main div.wrapper figure.sub-card {
     padding: 0.5rem;
@@ -443,65 +534,6 @@ footer.contact div.signate {
     width: 80%;
     margin: auto;
   }
-}
-
-.terminal {
-  display: none;
-  margin: 1rem;
-  background-color: #333;
-  padding: 0.2rem;
-}
-
-.terminal .terminal-preview {
-  color: white;
-  height: 30vh;
-  max-height: 480px;
-  font-family: "UbuntuMono-Regular", monospace;
-  font-size: 1rem;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
-}
-
-.terminal .terminal-preview .terminal-preview-text {
-  color: white;
-  font-family: "UbuntuMono-Regular", monospace;
-}
-
-.terminal .terminal-preview::-webkit-scrollbar {
-  background-color: transparent;
-  width: 3px;
-}
-
-.terminal .terminal-preview::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-.terminal .terminal-preview::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-}
-
-.terminal .terminal-input-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: "UbuntuMono-Regular", monospace;
-  color: white;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  font-size: 1rem;
-}
-
-.terminal .terminal-input-container .terminal-input {
-  font-family: "UbuntuMono-Regular", monospace;
-  font-size: inherit;
-  color: inherit;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  width: 100%;
-  caret-color: white;
 }
 
 .ut-color, .cyan, .lime, .orangered, .flags, .orchid, .sky-blue, .custom-color1, .yellowgreen, .fb-color, .tw-color, .ln-color, .gh-color {
@@ -592,7 +624,7 @@ footer.contact div.signate {
 }
 
 .light-opacity {
-  opacity: 0.5;
+  opacity: 0.7;
   z-index: -1;
 }
 
@@ -604,6 +636,6 @@ footer.contact div.signate {
 }
 
 .sticky + main {
-  padding-top: calc(3rem + 4px);
+  padding-top: calc(3rem + 3px);
 }
 /*# sourceMappingURL=default.css.map */

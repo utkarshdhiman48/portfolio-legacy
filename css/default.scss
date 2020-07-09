@@ -36,15 +36,7 @@
     font-weight: 400;
     src: url("../assets/Allison Tessa Oblique.ttf");
 }
-:root{
-    --uiCol0: rgb(0, 102, 255);
-    --uiCol1: rgb(13, 86, 196);
-    --uiCol2: rgb(68, 155, 255);
-    --uiCol3: rgb(0, 26, 112);
-    --theSelectorGrad: linear-gradient(90deg,purple, gold);
-    --theBgGradient0: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
-    
-}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -52,29 +44,29 @@
     font-family: "Open Sans", sans-serif;
 }
 body{
-    // background-image: var(--backgroundVar0);
-    // animation: bganime 20s ease infinite !important;
+    background-image: var(--backgroundVar0);
+    animation: bganime 20s ease infinite !important;
 }
 img{
     width: 240px;
     min-width: 10px;
 }
-span{
-    display: block;
-}
 header#rvHsQW{
-    background-color: blue;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
+    span{
+        display: block;
+    }
     div.dp-container{
         overflow: hidden;
         flex-basis: 20%;
         section.dafhauh{
             padding: 0.5rem;
             img{
-                border: 2px solid white;
+                border: 2px solid var(--notBodyText);
                 border-radius: 50%;
                 display: inline-block;
                 vertical-align: middle;
@@ -83,23 +75,32 @@ header#rvHsQW{
         }
     }
     div.intro{
+        padding: 1rem;
         flex-basis: 70%;
-        color: white;
         span.my-name{
-            font-size: 2rem;
+            font-size: 4.5rem;
             font-weight: 600;
         }
         span.tag-line{
-            font-size: 0.9rem;
+            font-size: 1.5rem;
         }
     }
+    // div.mode-change-btn{
+    //     position: absolute;
+    //     top:0;
+    //     right: 0;
+    //     border-radius: 50%;
+    //     height: ;
+    //     width: ;
+    //     background-color: yellow;
+    // }
 }
 
 div.top-fixed{
-    height: calc(3rem + 4px);
+    height: calc(3rem + 3px);
     width: 100%;
     .navigation{
-        height: calc(100% - 4px);
+        height: calc(100% - 3px);
         nav{
             height: 100%;
             ul{
@@ -108,47 +109,40 @@ div.top-fixed{
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
-                background-image: var(--theSelectorGrad);
                 li{
                     flex: 1;
                     text-align: center;
                     a{
-                        color: white;
                         text-decoration: none;
                         display: block;
-                        padding: calc(0.9rem) 0.5rem;
+                        padding: 0.9rem 0.5rem;
                         font-size: 0.8rem;
-                    }
-                    a:hover{
-                        background-color: brown;
                     }
                 }
             }
         }
     }
     div.scroll-progress-bar{
-        background-color: brown;
         width: 0;
-        height: 4px;
+        height: 3px;
     }
 }
 article.card{
     border-radius: 10px;
-    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
     margin: 1rem 0;
     padding: 0.5rem;
-    border: 1px solid #888;////////////comment
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    span{
+        display: block;
+    }
     .card-heading{
         width: 100%;
     }
     .sub-card{
         width: 100%;
-        border: 1px solid #888;
-        box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
         border-radius: 5px;
         padding: 0.25rem;
         margin: 0.25rem;
@@ -159,7 +153,56 @@ article.card:hover{
     
 }
 main{
+    background-color: var(--notBodyText);
     padding: 0.5rem;
+    .terminal{
+        display: block;
+        margin: 1rem;
+        background-color: #333;
+        padding: 0.2rem;
+        .terminal-preview{
+            color: var(--notBodyText);
+            height: 30vh;
+            max-height: 480px;
+            font-family: "UbuntuMono-Regular", monospace;
+            font-size: 1rem;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255,255,255, 0.1) transparent;
+            .terminal-preview-text{
+                color: var(--notBodyText);
+                font-family: "UbuntuMono-Regular", monospace;
+            }
+        }
+        .terminal-preview::-webkit-scrollbar{
+            background-color: transparent;
+            width: 3px
+        }
+        .terminal-preview::-webkit-scrollbar-track{
+            background-color: transparent;
+        }
+        .terminal-preview::-webkit-scrollbar-thumb{
+            background-color: rgba(255,255,255, 0.1);
+            border-radius: 5px;
+        }
+        .terminal-input-container{
+            display: flex;
+            font-family: "UbuntuMono-Regular", monospace;
+            color: var(--notBodyText);
+            flex-wrap: nowrap;
+            font-size: 1rem;
+            .terminal-input{
+                font-family: "UbuntuMono-Regular", monospace;
+                font-size: inherit;
+                color: inherit;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                width: 100%;
+                caret-color: var(--notBodyText);
+            }
+        }
+    }
     div.wrapper{
         article.projects{
             display: flex;
@@ -185,19 +228,37 @@ main{
                     padding: 0.5rem;
                     .project-name{
                         font-size: 1.2rem;
+                        font-weight: 600;
+                        a{
+                            color: var(--bodyText);
+                        }
                     }
                     .proj-ingredients, .proj-description{
                         font-size: 1rem;
                     }
                     .repo-link{
-                        font-size: 0.8rem;
+                        margin-top: 0.25rem;
+                        a{
+                            font-size: 0.8rem;
+                            background-image: var(--theSelectorGrad);
+                            color: white;
+                            text-decoration: none;
+                            display: inline-block;
+                            padding: 0.5rem;
+                            border-radius: 20px;
+                        }
+                        a:hover{
+                            background-image: var(--theSelectorGradHover);
+                        }
                     }
                 }
             }
         }
         article.skills{
             flex-flow: row wrap;
+            justify-content: space-evenly;
             div.skill-container{
+                margin: 0.25rem;
                 width: 50px;
                 svg{
                     path{
@@ -239,6 +300,7 @@ main{
     }
 }
 footer.contact{
+    color: var(--notBodyText);
     padding: 0.5rem;
     .social{
         display: flex;
@@ -247,7 +309,7 @@ footer.contact{
         .social-icon-container{
             width: auto;
             text-align: center;
-            color: white;
+            color: var(--notBodyText);
             text-decoration: none;
             display: block;
             font-size: 0.6rem;
@@ -255,7 +317,7 @@ footer.contact{
             .social-icon{
                 padding: 0.5rem;
                 margin: auto;
-                fill: white;
+                fill: var(--notBodyText);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -264,27 +326,41 @@ footer.contact{
             }
         }
         .social-icon-container:hover{
-            color: black;
+            color: var(--bodyText);
             .social-icon{
-                fill: black;
+                fill: var(--bodyText);
             }
         }
     }
     div.signate{
         text-align: center;
-        color: white;
+        color: var(--notBodyText);
         font-family: "Allison Tessa Oblique", cursive;
     }
 }
-
+@media all and (max-width: 1000px){
+    header#rvHsQW{
+        div.intro{
+            span.my-name{
+                font-size: 2.63rem;
+            }
+            span.tag-line{
+                font-size: 1rem;
+            }
+        }
+        div.header-overlay{
+            display: none;
+        }
+    }
+}
 @media all and (max-width: 600px){
     header#rvHsQW{
         div.intro{
             span.my-name{
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
             span.tag-line{
-                font-size: 0.8rem;
+                font-size: 0.7rem;
             }
         }
         div.header-overlay{
@@ -293,6 +369,17 @@ footer.contact{
     }
     main{
         div.wrapper{
+            article.skills{
+                div.skill-container{
+                    margin: 0.15rem;
+                    width: 35px;
+                    svg{
+                        path{
+                            fill: #333;
+                        }
+                    }
+                }
+            }
             figure.sub-card{
                 padding: 0.5rem;
                 align-items: center;
@@ -334,63 +421,9 @@ footer.contact{
         }
     }
 
-
-
 }
 
 
-
-
-
-
-.terminal{
-    display: none;
-    margin: 1rem;
-    background-color: #333;
-    padding: 0.2rem;
-    .terminal-preview{
-        color: white;
-        height: 30vh;
-        max-height: 480px;
-        font-family: "UbuntuMono-Regular", monospace;
-        font-size: 1rem;
-        overflow-y: auto;
-        scrollbar-width: thin;
-        scrollbar-color: rgba(255,255,255, 0.1) transparent;
-        .terminal-preview-text{
-            color: white;
-            font-family: "UbuntuMono-Regular", monospace;
-        }
-    }
-    .terminal-preview::-webkit-scrollbar{
-        background-color: transparent;
-        width: 3px
-    }
-    .terminal-preview::-webkit-scrollbar-track{
-        background-color: transparent;
-    }
-    .terminal-preview::-webkit-scrollbar-thumb{
-        background-color: rgba(255,255,255, 0.1);
-        border-radius: 5px;
-    }
-    .terminal-input-container{
-        display: flex;
-        font-family: "UbuntuMono-Regular", monospace;
-        color: white;
-        flex-wrap: nowrap;
-        font-size: 1rem;
-        .terminal-input{
-            font-family: "UbuntuMono-Regular", monospace;
-            font-size: inherit;
-            color: inherit;
-            border: none;
-            outline: none;
-            background-color: transparent;
-            width: 100%;
-            caret-color: white;
-        }
-    }
-}
 .ut-color, .cyan, .lime, .orangered, .flags, .orchid, .sky-blue,.custom-color1, .yellowgreen, .fb-color, .tw-color, .ln-color, .gh-color{
     font-family: "UbuntuMono-Regular", monospace;
     font-size: inherit;
@@ -454,7 +487,7 @@ footer.contact{
 
 //must remain at end
 .light-opacity{
-    opacity: 0.5;
+    opacity: 0.7;
     z-index: -1;
 }
 .sticky{
@@ -464,5 +497,5 @@ footer.contact{
     z-index: 99;
 }
 .sticky + main {
-    padding-top: calc(3rem + 4px);
+    padding-top: calc(3rem + 3px);
   }
