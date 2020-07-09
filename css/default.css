@@ -57,6 +57,7 @@ body {
 
 img {
   width: 240px;
+  min-width: 10px;
 }
 
 span {
@@ -74,6 +75,7 @@ header#rvHsQW {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0.5rem;
 }
 
 header#rvHsQW div.dp-container {
@@ -110,35 +112,205 @@ header#rvHsQW div.intro span.tag-line {
 }
 
 div.top-fixed {
-  height: calc(3rem + 2px);
+  height: calc(3rem + 4px);
   width: 100%;
+}
+
+div.top-fixed .navigation {
+  height: calc(100% - 4px);
+}
+
+div.top-fixed .navigation nav {
+  height: 100%;
+}
+
+div.top-fixed .navigation nav ul {
+  height: 100%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.top-fixed .navigation nav ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+div.top-fixed .navigation nav ul li a {
   background-color: black;
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 1rem 0.5rem;
+  font-size: 0.8rem;
 }
 
-main {
-  padding: 0.5rem;
+div.top-fixed .navigation nav ul li a:hover {
+  background-color: brown;
 }
 
-main div.wrapper article.card {
+div.top-fixed div.scroll-progress-bar {
+  background-color: brown;
+  width: 0;
+  height: 4px;
+}
+
+article.card {
   border-radius: 10px;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
   margin: 1rem 0;
   padding: 0.5rem;
   border: 1px solid blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-main div.wrapper article.card .sub-card {
+article.card .card-heading {
+  width: 100%;
+}
+
+article.card .sub-card {
+  width: 100%;
   border: 1px solid blue;
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   padding: 0.25rem;
+  margin: 0.25rem;
 }
 
-main div.wrapper article.card:hover {
+article.card:hover {
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+}
+
+main {
+  padding: 0.5rem;
+}
+
+main div.wrapper figure.sub-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main div.wrapper figure.sub-card picture {
+  padding: 0.5rem;
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+}
+
+main div.wrapper figure.sub-card picture img.sub-card-circle-pic {
+  display: block;
+  width: auto;
+  max-height: 150px;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+main div.wrapper figure.sub-card figcaption.sub-card-content {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-purpose {
+  font-size: 1rem;
+}
+
+main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-duration {
+  font-size: 0.8rem;
+}
+
+main div.wrapper article.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+main div.wrapper article.projects section.sub-card {
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 300px;
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+}
+
+main div.wrapper article.projects section.sub-card a {
+  display: block;
+}
+
+main div.wrapper article.projects section.sub-card a img {
+  height: auto;
+  width: 100%;
+  display: block;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content {
+  padding: 0.5rem;
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content .project-name {
+  font-size: 1.2rem;
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content .proj-ingredients, main div.wrapper article.projects section.sub-card .sub-card-content .proj-description {
+  font-size: 1rem;
+}
+
+main div.wrapper article.projects section.sub-card .sub-card-content .repo-link {
+  font-size: 0.8rem;
+}
+
+main div.wrapper article.skills {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+main div.wrapper article.skills div.skill-container {
+  width: 50px;
 }
 
 @media all and (max-width: 540px) {
@@ -150,6 +322,47 @@ main div.wrapper article.card:hover {
   }
   header#rvHsQW div.header-overlay {
     display: none;
+  }
+  main div.wrapper figure.sub-card {
+    padding: 0.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main div.wrapper figure.sub-card picture {
+    padding: 0.5rem;
+  }
+  main div.wrapper figure.sub-card picture img.sub-card-circle-pic {
+    display: block;
+    width: auto;
+    max-height: 50px;
+  }
+  main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-name {
+    font-size: 1rem;
+  }
+  main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-purpose {
+    font-size: 0.8rem;
+  }
+  main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-duration {
+    font-size: 0.6rem;
+  }
+  main div.wrapper article.projects {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  main div.wrapper article.projects section.sub-card {
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 300px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  main div.wrapper article.projects section.sub-card a img {
+    height: 20vh;
+    width: auto;
+    margin: auto;
   }
 }
 

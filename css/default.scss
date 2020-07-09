@@ -52,6 +52,7 @@ body{
 }
 img{
     width: 240px;
+    min-width: 10px;
 }
 span{
     display: block;
@@ -61,6 +62,7 @@ header#rvHsQW{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.5rem;
     div.dp-container{
         overflow: hidden;
         flex-basis: 30%;
@@ -89,30 +91,137 @@ header#rvHsQW{
 }
 
 div.top-fixed{
-    height: calc(3rem + 2px);
+    height: calc(3rem + 4px);
     width: 100%;
-    background-color: black;
+    .navigation{
+        height: calc(100% - 4px);
+        nav{
+            height: 100%;
+            ul{
+                height: 100%;
+                list-style-type: none;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                li{
+                    flex: 1;
+                    text-align: center;
+                    a{
+                        background-color: black;
+                        color: white;
+                        text-decoration: none;
+                        display: block;
+                        padding: 1rem 0.5rem;
+                        font-size: 0.8rem;
+                    }
+                    a:hover{
+                        background-color: brown;
+                    }
+                }
+            }
+        }
+    }
+    div.scroll-progress-bar{
+        background-color: brown;
+        width: 0;
+        height: 4px;
+    }
 }
-
+article.card{
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border: 1px solid blue;////////////comment
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card-heading{
+        width: 100%;
+    }
+    .sub-card{
+        width: 100%;
+        border: 1px solid blue;
+        box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
+        border-radius: 5px;
+        padding: 0.25rem;
+        margin: 0.25rem;
+    }
+}
+article.card:hover{
+    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.25);
+    
+}
 main{
     padding: 0.5rem;
     div.wrapper{
-        article.card{
-            border-radius: 10px;
-            box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
-            margin: 1rem 0;
+        figure.sub-card{
+            display: flex;
+            flex-direction: row;
             padding: 0.5rem;
-            border: 1px solid blue;////////////comment
-            .sub-card{
-                border: 1px solid blue;
-                box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
-                border-radius: 5px;
-                padding: 0.25rem;
+            align-items: center;
+            picture{
+                padding: 0.5rem;
+                flex-basis: 15%;
+                img.sub-card-circle-pic{
+                    display: block;
+                    width: auto;
+                    max-height: 150px;
+                    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
+                    border-radius: 50%;
+                }
+            }
+            figcaption.sub-card-content{
+                flex-basis: 70%;
+                span.institute-name{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+                span.institute-purpose{
+                    font-size: 1rem;
+                }
+                span.institute-duration{
+                    font-size: 0.8rem;
+                }
             }
         }
-        article.card:hover{
-            box-shadow: 0 2px 3px 1px rgba(0,0,0,0.25);
-            
+        article.projects{
+            display: flex;
+            flex-flow: row wrap;
+            section.sub-card{
+                margin-left: auto;
+                margin-right: auto;
+                min-height: 300px;
+                flex-basis: 48%;
+                a{
+                    display: block;
+                    img{
+                        height: auto;
+                        width: 100%;
+                        display: block;
+                        box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
+                    }
+                }
+                .sub-card-content{
+                    padding: 0.5rem;
+                    .project-name{
+                        font-size: 1.2rem;
+                    }
+                    .proj-ingredients, .proj-description{
+                        font-size: 1rem;
+                    }
+                    .repo-link{
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+        article.skills{
+            flex-flow: row wrap;
+            div.skill-container{
+                width: 50px;
+            }
         }
     }
 }
@@ -131,6 +240,52 @@ main{
             display: none;
         }
     }
+    main{
+        div.wrapper{
+            figure.sub-card{
+                padding: 0.5rem;
+                align-items: center;
+                picture{
+                    padding: 0.5rem;
+                    img.sub-card-circle-pic{
+                        display: block;
+                        width: auto;
+                        max-height: 50px;
+                    }
+                }
+                figcaption.sub-card-content{
+                    span.institute-name{
+                        font-size: 1rem;
+                    }
+                    span.institute-purpose{
+                        font-size: 0.8rem;
+                    }
+                    span.institute-duration{
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+            article.projects{
+                flex-flow: column wrap;
+                section.sub-card{
+                    margin-left: auto;
+                    margin-right: auto;
+                    min-height: 300px;
+                    flex-basis: 100%;
+                    a{
+                        img{
+                            height: 20vh;
+                            width: auto;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
 }
 
 
