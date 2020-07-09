@@ -89,60 +89,33 @@ header#rvHsQW{
 }
 
 div.top-fixed{
-    height: 50px;
+    height: calc(3rem + 2px);
     width: 100%;
-    background-color: red;
+    background-color: black;
 }
 
 main{
     padding: 0.5rem;
     div.wrapper{
         article.card{
-            border: 1px solid ;
+            border-radius: 10px;
+            box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
+            margin: 1rem 0;
+            padding: 0.5rem;
+            border: 1px solid blue;////////////comment
+            .sub-card{
+                border: 1px solid blue;
+                box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
+                border-radius: 5px;
+                padding: 0.25rem;
+            }
+        }
+        article.card:hover{
+            box-shadow: 0 2px 3px 1px rgba(0,0,0,0.25);
+            
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media all and (max-width: 540px){
     header#rvHsQW{
@@ -154,35 +127,11 @@ main{
                 font-size: 0.8rem;
             }
         }
+        div.header-overlay{
+            display: none;
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -308,5 +257,5 @@ main{
     width: 100%;
 }
 .sticky + main {
-    padding-top: 60px;
+    padding-top: 3rem;
   }

@@ -110,9 +110,9 @@ header#rvHsQW div.intro span.tag-line {
 }
 
 div.top-fixed {
-  height: 50px;
+  height: calc(3rem + 2px);
   width: 100%;
-  background-color: red;
+  background-color: black;
 }
 
 main {
@@ -120,7 +120,25 @@ main {
 }
 
 main div.wrapper article.card {
-  border: 1px solid;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid blue;
+}
+
+main div.wrapper article.card .sub-card {
+  border: 1px solid blue;
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 0.25rem;
+}
+
+main div.wrapper article.card:hover {
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
 }
 
 @media all and (max-width: 540px) {
@@ -129,6 +147,9 @@ main div.wrapper article.card {
   }
   header#rvHsQW div.intro span.tag-line {
     font-size: 0.8rem;
+  }
+  header#rvHsQW div.header-overlay {
+    display: none;
   }
 }
 
@@ -289,6 +310,6 @@ main div.wrapper article.card {
 }
 
 .sticky + main {
-  padding-top: 60px;
+  padding-top: 3rem;
 }
 /*# sourceMappingURL=default.css.map */

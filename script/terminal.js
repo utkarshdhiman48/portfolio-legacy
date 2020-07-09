@@ -29,7 +29,7 @@ let keywords = [
 
     new KeyWord(new RegExp("skills","i"), "Redirecting to his skills...", "orchid", ()=>{document.querySelector("#hVoudh").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
-    new KeyWord(new RegExp("connect","i"), "You can connect here", "orangered", ()=>{document.querySelector("#FmFtlU").scrollIntoView({block: 'end', behavior: "smooth"});}),
+    new KeyWord(new RegExp("connect","i"), "You can connect here", "orangered", ()=>{document.querySelector("#YQLBsm").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
     new KeyWord(new RegExp("facebook","i"), "Redirecting to facebook profile...", "fb-color", ()=>{window.open("https://www.facebook.com/utkarsh.utkarsh.927/","_blank")}),
 
