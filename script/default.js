@@ -15,18 +15,18 @@ window.addEventListener("scroll",()=>{
 })
 
 modeChangeBtn.addEventListener("click",()=>{
-    if(mode.getAttribute('href')==="css/light.css"){
-        mode.setAttribute('href',"css/dark.css");
+    if(mode.getAttribute('href')==="css/light.min.css"){
+        mode.setAttribute('href',"css/dark.min.css");
     }
     else{
-        mode.setAttribute('href',"css/light.css")
+        mode.setAttribute('href',"css/light.min.css")
     }
     if(typeof(Storage) !== "undefined"){
         if(localStorage.utthm==="d"){
-            mode.setAttribute('href',"css/dark.css")
+            mode.setAttribute('href',"css/dark.min.css")
         }
         else if (localStorage.utthm ==="l"){
-            mode.setAttribute('href',"css/light.css")
+            mode.setAttribute('href',"css/light.min.css")
         }
         localStorage.setItem("utthm",mode.getAttribute("href"));
     }
