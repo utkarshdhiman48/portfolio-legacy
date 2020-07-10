@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "UbuntuMono-Regular";
-  src: url("../assets/UbuntuMono-Regular.ttf") format("truetype");
+  font-family: "Hermit-Regular";
+  src: url("../assets/Hermit-Regular.otf") format("truetype");
 }
 
 @font-face {
@@ -189,6 +189,7 @@ article.card span {
 }
 
 article.card .card-heading {
+  padding: 0.25rem;
   width: 100%;
 }
 
@@ -215,7 +216,7 @@ main .terminal .terminal-preview {
   color: white;
   height: 30vh;
   max-height: 480px;
-  font-family: "UbuntuMono-Regular", monospace;
+  font-family: "Hermit-Regular", monospace;
   font-size: 1rem;
   overflow-y: auto;
   scrollbar-width: thin;
@@ -224,7 +225,7 @@ main .terminal .terminal-preview {
 
 main .terminal .terminal-preview .terminal-preview-text {
   color: white;
-  font-family: "UbuntuMono-Regular", monospace;
+  font-family: "Hermit-Regular", monospace;
 }
 
 main .terminal .terminal-preview::-webkit-scrollbar {
@@ -245,7 +246,7 @@ main .terminal .terminal-input-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: "UbuntuMono-Regular", monospace;
+  font-family: "Hermit-Regular", monospace;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0.25rem;
@@ -255,7 +256,7 @@ main .terminal .terminal-input-container {
 }
 
 main .terminal .terminal-input-container .terminal-input {
-  font-family: "UbuntuMono-Regular", monospace;
+  font-family: "Hermit-Regular", monospace;
   font-size: inherit;
   color: inherit;
   border: none;
@@ -433,6 +434,7 @@ footer.contact .social .social-icon-container .social-icon {
 }
 
 footer.contact div.signate {
+  padding: 1rem;
   text-align: center;
   font-family: "Allison Tessa Oblique", cursive;
 }
@@ -515,7 +517,7 @@ footer.contact div.signate {
 }
 
 .ut-color, .cyan, .lime, .orangered, .flags, .orchid, .sky-blue, .custom-color1, .yellowgreen, .fb-color, .tw-color, .ln-color, .gh-color {
-  font-family: "UbuntuMono-Regular", monospace;
+  font-family: "Hermit-Regular", monospace;
   font-size: inherit;
 }
 

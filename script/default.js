@@ -1,4 +1,5 @@
 const topFixed = document.querySelector(".top-fixed");
+const navLinks = document.querySelectorAll("div.navigation nav ul li a");
 const sticky = topFixed.offsetTop;
 
 const mode = document.querySelector(".mode");
@@ -20,13 +21,19 @@ modeChangeBtn.addEventListener("click",()=>{
     else{
         mode.setAttribute('href',"css/light.css")
     }
-    // if(typeof(Storage) !== "undefined"){
-    //     if(localStorage.utthm==="d"){
-    //         mode.setAttribute('href',"css/dark.css")
-    //     }
-    //     else if (localStorage.utthm ==="l"){
-    //         mode.setAttribute('href',"css/light.css")
-    //     }
-    //     localStorage.setItem("utthm",mode.getAttribute("href"));
-    // }
+    if(typeof(Storage) !== "undefined"){
+        if(localStorage.utthm==="d"){
+            mode.setAttribute('href',"css/dark.css")
+        }
+        else if (localStorage.utthm ==="l"){
+            mode.setAttribute('href',"css/light.css")
+        }
+        localStorage.setItem("utthm",mode.getAttribute("href"));
+    }
 })
+
+navLinks.forEach((link)=>{
+    link.addEventListener("click",(e)=>{
+        document.querySelector(e.target.dataset.href).scrollIntoView({block: 'start', behavior: "smooth"});
+    })
+});

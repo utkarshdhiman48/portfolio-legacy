@@ -43,11 +43,13 @@ let keywords = [
         window.open("mailto:utkarshdhiman48@gmail.com","_target");
         console.log("utkarshdhiman48@gmail.com");
     }),
+    
+    new KeyWord(new RegExp("theme","i"), "Changing theme...", "orchid", ()=>{document.querySelector(".mode-change-btn").click();})
 
     // new KeyWord(new RegExp("about","i"), "Here is something about him...", "cyan", ()=>{document.querySelector("#YQLBsm").scrollIntoView({block: 'end', behavior: "smooth"});})
 ];
 ////////first line
-terminalPreview.innerHTML=`<span class="yellowgreen">mock@terminal</span><span class="sky-blue">~</span>$ You can navigate my page using this terminal also.<br>Type 'ut help' to get a list of all commands.${suffix}`;
+terminalPreview.innerHTML=`<span class="yellowgreen">mock@terminal</span><span class="sky-blue">~</span>$ You can navigate my page using this terminal also.<br>Toggle Page Dark mode using button in top right corner or type 'ut theme'.<br>Type 'ut help' to get a list of all commands.${suffix}`;
 
 ////////Enter key event listener
 terminalInput.addEventListener("keydown",(e)=>{
