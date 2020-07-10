@@ -23,13 +23,13 @@ const listcommands = `>_ ut education :scrolls to institutes from where i study(
 let keywords = [
     new KeyWord(new RegExp("help","i"), `Help is on the way...<br>All commands are case-insenstive.<br>${listcommands}`, "cyan", ()=>{console.log("You're welcome");}),
 
-    new KeyWord(new RegExp("education","i"), "Redirecting to my institutions...", "custom-color1", ()=>{document.querySelector("#frdBSs").scrollIntoView({block: 'end', behavior: "smooth"});}),
+    new KeyWord(new RegExp("education","i"), "Taking you to my institutes...", "custom-color1", ()=>{document.querySelector("#frdBSs").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
-    new KeyWord(new RegExp("projects","i"), "Redirecting to my projects...", "lime", ()=>{document.querySelector("#KcajcM").scrollIntoView({block: 'end', behavior: "smooth"});}),
+    new KeyWord(new RegExp("projects","i"), "Taking you to my projects...", "lime", ()=>{document.querySelector("#KcajcM").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
-    new KeyWord(new RegExp("skills","i"), "Redirecting to his skills...", "orchid", ()=>{document.querySelector("#hVoudh").scrollIntoView({block: 'end', behavior: "smooth"});}),
+    new KeyWord(new RegExp("skills","i"), "These are my skills...", "orchid", ()=>{document.querySelector("#hVoudh").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
-    new KeyWord(new RegExp("connect","i"), "You can connect here", "sky-blue", ()=>{document.querySelector("#YQLBsm").scrollIntoView({block: 'end', behavior: "smooth"});}),
+    new KeyWord(new RegExp("connect","i"), "You can connect here...", "sky-blue", ()=>{document.querySelector("#YQLBsm").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
     new KeyWord(new RegExp("facebook","i"), "Redirecting to facebook profile...", "fb-color", ()=>{window.open("https://www.facebook.com/utkarsh.utkarsh.927/","_blank")}),
 

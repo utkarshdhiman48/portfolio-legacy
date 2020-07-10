@@ -77,10 +77,11 @@ header#rvHsQW{
         position: absolute;
         top:5px;
         right: 5px;
-        border-radius: 20px;
         padding: 0.25rem;
         svg{
-            opacity: 0.8;
+            border-radius: 50%;
+            box-shadow: 0 3px 3px 2px rgba(0,0,0,0.2);
+            opacity: 0.82;
             max-width: 48px;
             max-height: 48px;
         }
@@ -151,8 +152,9 @@ main{
         display: block;
         margin: 1rem;
         background-color: #111;
-        padding: 0.2rem;
+        padding: 0.25rem;
         .terminal-preview{
+            padding: 0.25rem;
             color: white;
             height: 30vh;
             max-height: 480px;
@@ -280,6 +282,9 @@ main{
 }
 footer.contact{
     padding: 0.5rem;
+    span.footer-heading{
+        font-size: 1.4rem;
+    }
     .social{
         display: flex;
         flex-wrap: wrap;
@@ -338,6 +343,57 @@ footer.contact{
         }
     }
     main{
+        .terminal{
+            display: block;
+            margin: 1rem;
+            background-color: #111;
+            padding: 0.25rem;
+            .terminal-preview{
+                padding: 0.25rem;
+                color: white;
+                height: 30vh;
+                max-height: 480px;
+                font-family: "Hermit-Regular", monospace;
+                font-size: 0.8rem;
+                overflow-y: auto;
+                scrollbar-width: thin;
+                scrollbar-color: rgba(255,255,255, 0.1) transparent;
+                .terminal-preview-text{
+                    color: white;
+                    font-family: "Hermit-Regular", monospace;
+                }
+            }
+            .terminal-preview::-webkit-scrollbar{
+                background-color: transparent;
+                width: 3px
+            }
+            .terminal-preview::-webkit-scrollbar-track{
+                background-color: transparent;
+            }
+            .terminal-preview::-webkit-scrollbar-thumb{
+                background-color: rgba(255,255,255, 0.1);
+                border-radius: 5px;
+            }
+            .terminal-input-container{
+                display: flex;
+                font-family: "Hermit-Regular", monospace;
+                color: white;
+                background-color: rgba(0,0,0,0.5);
+                padding: 0.25rem;
+                flex-wrap: nowrap;
+                font-size: 0.8rem;
+                .terminal-input{
+                    font-family: "Hermit-Regular", monospace;
+                    font-size: inherit;
+                    color: inherit;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    width: 100%;
+                    caret-color: white;
+                }
+            }
+        }
         div.wrapper{
             article.skills{
                 div.skill-container{
@@ -387,7 +443,7 @@ footer.contact{
     }
 
 }
-@media all and (max-width: 320px){
+@media all and (max-width: 330px){
     header#rvHsQW{
         div.mode-change-btn{
             svg{
