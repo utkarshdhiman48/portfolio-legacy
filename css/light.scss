@@ -1,15 +1,14 @@
 :root{
+    --bodyText: #333;
+    --bodyTextHover: black;
+    --notBodyText: white;
     --uiCol0: rgb(0, 102, 255);
     --uiCol1: rgb(13, 86, 196);
     --uiCol2: rgb(68, 155, 255);
     --uiCol3: rgb(0, 26, 112);
-    --bodyText: #333;
-    --bodyTextHover: black;
-    --notBodyText: white;
-    --theSelectorGrad: linear-gradient(90deg,purple, gold);
-    --theSelectorGradHover: linear-gradient(90deg,gold, purple);
+    --theSelectorGrad: linear-gradient(90deg, #904e95, #e96443);
+    --theSelectorGradHover: linear-gradient(90deg,#cb2d3e, #ef473a);
     --theBgGradient0: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
-    
 }
 
 header#rvHsQW{
@@ -53,7 +52,7 @@ article.card:hover{
     box-shadow: 0 2px 3px 1px rgba(0,0,0,0.25);
 }
 main{
-    background-color: var(--notBodyText);
+    background-color: white;
     div.wrapper{
         article.projects{
             section.sub-card{

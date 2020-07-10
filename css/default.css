@@ -13,26 +13,10 @@
 
 @font-face {
   font-family: 'Open Sans';
-  font-style: bold;
+  font-style: normal;
   font-weight: 600;
   font-display: swap;
   src: url(../assets/OpenSans-SemiBold.ttf);
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(../assets/OpenSans-Bold.ttf);
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(../assets/OpenSans-ExtraBold.ttf);
 }
 
 @font-face {
@@ -112,13 +96,32 @@ header#rvHsQW div.intro span.tag-line {
   font-size: 1.5rem;
 }
 
+header#rvHsQW div.mode-change-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-radius: 20px;
+  padding: 0.25rem;
+}
+
+header#rvHsQW div.mode-change-btn svg {
+  opacity: 0.8;
+  max-width: 48px;
+  max-height: 48px;
+}
+
+header#rvHsQW div.mode-change-btn svg:hover {
+  opacity: 1;
+}
+
 div.top-fixed {
-  height: calc(3rem + 3px);
+  height: 3rem;
   width: 100%;
+  overflow-y: hidden;
 }
 
 div.top-fixed .navigation {
-  height: calc(100% - 3px);
+  height: 100%;
 }
 
 div.top-fixed .navigation nav {
@@ -193,14 +196,14 @@ article.card .sub-card {
 }
 
 main {
-  background-color: white;
   padding: 0.5rem;
+  overflow-y: hidden;
 }
 
 main .terminal {
   display: block;
   margin: 1rem;
-  background-color: #333;
+  background-color: #111;
   padding: 0.2rem;
 }
 
@@ -240,6 +243,8 @@ main .terminal .terminal-input-container {
   display: flex;
   font-family: "UbuntuMono-Regular", monospace;
   color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.25rem;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   font-size: 1rem;
@@ -498,6 +503,13 @@ footer.contact div.signate {
   }
 }
 
+@media all and (max-width: 320px) {
+  header#rvHsQW div.mode-change-btn svg {
+    max-width: 30px;
+    max-height: 30px;
+  }
+}
+
 .ut-color, .cyan, .lime, .orangered, .flags, .orchid, .sky-blue, .custom-color1, .yellowgreen, .fb-color, .tw-color, .ln-color, .gh-color {
   font-family: "UbuntuMono-Regular", monospace;
   font-size: inherit;
@@ -598,6 +610,6 @@ footer.contact div.signate {
 }
 
 .sticky + main {
-  padding-top: calc(3rem + 3px);
+  padding-top: 3rem;
 }
 /*# sourceMappingURL=default.css.map */

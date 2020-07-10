@@ -16,8 +16,8 @@ const suffix = `</span>`;
 const terminalPreview = document.querySelector("div.terminal-preview");
 const terminalInput = document.querySelector("input.terminal-input");
 
-const listcommands = `>_ ut education :scrolls to Utkarsh's education part of page<br>>_ ut projects :scrolls to Projects created by me<br>>_ ut skills :scrolls to Utkarsh's skills<br>>_ ut connect :connect with me on any of the following platforms<br>>_ ut linkedin :will open open my linkedin profile<br>>_ ut github :will open open my github profile<br>>_ ut twitter :will take you to my twitter profile<br>>_ ut facebook :will open my facebook profile<br>>_ ut email :email me through your email lient<br>>_ ut about :tell you something about me<br>>_ ut help :opens a list of all commands<br>You're Welcome...`;
-
+const listcommands = `>_ ut education :scrolls to Utkarsh's education part of page<br>>_ ut projects :scrolls to Projects created by me<br>>_ ut skills :scrolls to Utkarsh's skills<br>>_ ut connect :connect with me on any of the following platforms<br>>_ ut linkedin :will open open my linkedin profile<br>>_ ut github :will open open my github profile<br>>_ ut twitter :will take you to my twitter profile<br>>_ ut facebook :will open my facebook profile<br>>_ ut email :email me through your email lient<br>>_ ut help :opens a list of all commands<br>You're Welcome...`;
+/*>_ ut about :tell you something about me<br>*/
 
 
 let keywords = [
@@ -44,10 +44,10 @@ let keywords = [
         console.log("utkarshdhiman48@gmail.com");
     }),
 
-    new KeyWord(new RegExp("about","i"), "Here is something about him...", "cyan", ()=>{document.querySelector("#YQLBsm").scrollIntoView({block: 'end', behavior: "smooth"});})
+    // new KeyWord(new RegExp("about","i"), "Here is something about him...", "cyan", ()=>{document.querySelector("#YQLBsm").scrollIntoView({block: 'end', behavior: "smooth"});})
 ];
 ////////first line
-terminalPreview.innerHTML=`<span class="yellowgreen">mock@terminal</span><span class="sky-blue">~</span>$ Type 'ut help' to get a list of all commands${suffix}`;
+terminalPreview.innerHTML=`<span class="yellowgreen">mock@terminal</span><span class="sky-blue">~</span>$ You can navigate my page using this terminal also.<br>Type 'ut help' to get a list of all commands.${suffix}`;
 
 ////////Enter key event listener
 terminalInput.addEventListener("keydown",(e)=>{

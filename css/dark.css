@@ -1,13 +1,13 @@
 :root {
-  --bodyText: #333;
-  --bodyTextHover: black;
+  --bodyText: #ddd;
+  --bodyTextHover: white;
   --notBodyText: white;
   --uiCol0: rgb(0, 102, 255);
   --uiCol1: rgb(13, 86, 196);
   --uiCol2: rgb(68, 155, 255);
   --uiCol3: rgb(0, 26, 112);
-  --theSelectorGrad: linear-gradient(90deg, #904e95, #e96443);
-  --theSelectorGradHover: linear-gradient(90deg,#cb2d3e, #ef473a);
+  --theSelectorGrad: linear-gradient(90deg, rgb(70, 162, 255), rgb(19, 137, 255));
+  --theSelectorGradHover: linear-gradient(90deg, var(--uiCol1), var(--uiCol2));
   --theBgGradient0: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
 }
 
@@ -57,7 +57,7 @@ article.card:hover {
 }
 
 main {
-  background-color: white;
+  background-color: #222;
 }
 
 main div.wrapper article.projects section.sub-card a img {
@@ -79,7 +79,7 @@ main div.wrapper article.projects section.sub-card .sub-card-content .repo-link 
 }
 
 main div.wrapper article.skills div.skill-container svg path {
-  fill: #333;
+  fill: var(--bodyText);
 }
 
 main div.wrapper figure.sub-card picture img.sub-card-circle-pic {
@@ -110,4 +110,4 @@ footer.contact .social .social-icon-container:hover .social-icon {
 footer.contact div.signate {
   color: var(--notBodyText);
 }
-/*# sourceMappingURL=light.css.map */
+/*# sourceMappingURL=dark.css.map */

@@ -11,24 +11,10 @@
 }
 @font-face {
     font-family: 'Open Sans';
-    font-style: bold;
+    font-style: normal;
     font-weight: 600;
     font-display: swap;
     src: url(../assets/OpenSans-SemiBold.ttf);
-}
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(../assets/OpenSans-Bold.ttf);
-}
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url(../assets/OpenSans-ExtraBold.ttf);
 }
 @font-face {
     font-family: 'Allison Tessa Oblique';
@@ -36,7 +22,6 @@
     font-weight: 400;
     src: url("../assets/Allison Tessa Oblique.ttf");
 }
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -85,22 +70,29 @@ header#rvHsQW{
             font-size: 1.5rem;
         }
     }
-    // div.mode-change-btn{
-    //     position: absolute;
-    //     top:0;
-    //     right: 0;
-    //     border-radius: 50%;
-    //     height: ;
-    //     width: ;
-    //     background-color: yellow;
-    // }
+    div.mode-change-btn{
+        position: absolute;
+        top:5px;
+        right: 5px;
+        border-radius: 20px;
+        padding: 0.25rem;
+        svg{
+            opacity: 0.8;
+            max-width: 48px;
+            max-height: 48px;
+        }
+        svg:hover{
+            opacity: 1;
+        }
+    }
 }
 
 div.top-fixed{
-    height: calc(3rem + 3px);
+    height: 3rem;
     width: 100%;
+    overflow-y: hidden;
     .navigation{
-        height: calc(100% - 3px);
+        height: 100%;
         nav{
             height: 100%;
             ul{
@@ -149,12 +141,12 @@ article.card{
     }
 }
 main{
-    background-color: white;
     padding: 0.5rem;
+    overflow-y: hidden;
     .terminal{
         display: block;
         margin: 1rem;
-        background-color: #333;
+        background-color: #111;
         padding: 0.2rem;
         .terminal-preview{
             color: white;
@@ -185,6 +177,8 @@ main{
             display: flex;
             font-family: "UbuntuMono-Regular", monospace;
             color: white;
+            background-color: rgba(0,0,0,0.5);
+            padding: 0.25rem;
             flex-wrap: nowrap;
             font-size: 1rem;
             .terminal-input{
@@ -388,6 +382,16 @@ footer.contact{
     }
 
 }
+@media all and (max-width: 320px){
+    header#rvHsQW{
+        div.mode-change-btn{
+            svg{
+                max-width: 30px;
+                max-height: 30px;
+            }
+        }
+    }
+}
 .ut-color, .cyan, .lime, .orangered, .flags, .orchid, .sky-blue,.custom-color1, .yellowgreen, .fb-color, .tw-color, .ln-color, .gh-color{
     font-family: "UbuntuMono-Regular", monospace;
     font-size: inherit;
@@ -461,5 +465,5 @@ footer.contact{
     z-index: 99;
 }
 .sticky + main {
-    padding-top: calc(3rem + 3px);
+    padding-top: 3rem;
   }

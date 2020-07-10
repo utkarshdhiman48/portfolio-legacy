@@ -1,0 +1,119 @@
+:root{
+    --bodyText: #ddd;
+    --bodyTextHover: white;
+    --notBodyText: white;
+    --uiCol0: rgb(0, 102, 255);
+    --uiCol1: rgb(13, 86, 196);
+    --uiCol2: rgb(68, 155, 255);
+    --uiCol3: rgb(0, 26, 112);
+    --theSelectorGrad: linear-gradient(90deg, rgb(70, 162, 255), rgb(19, 137, 255));
+    --theSelectorGradHover: linear-gradient(90deg, var(--uiCol1), var(--uiCol2));
+    --theBgGradient0: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
+}
+
+header#rvHsQW{
+    div.intro{
+        color: var(--notBodyText);
+    }
+}
+div.top-fixed{
+    background-color: var(--notBodyText);
+    .navigation{
+        nav{
+            ul{
+                background-image: var(--theSelectorGrad);
+                li{
+                    a{
+                        color: var(--notBodyText);
+                    }
+                    a:hover{
+                        background-image: var(--theSelectorGradHover);
+                    }
+                }
+            }
+        }
+    }
+    div.scroll-progress-bar{
+        background-color: brown;
+    }
+}
+article.card{
+    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
+    border: 1px solid #888;
+    .sub-card{
+        border: 1px solid #888;
+        box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
+    }
+    *{
+        color: var(--bodyText);
+    }
+}
+article.card:hover{
+    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.25);
+}
+main{
+    background-color: #222;
+    div.wrapper{
+        article.projects{
+            section.sub-card{
+                a{
+                    img{
+                        box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
+                    }
+                }
+                .sub-card-content{
+                    .project-name{
+                        a{
+                            color: var(--bodyText);
+                        }
+                    }
+                    .repo-link{
+                        a{
+                            background-image: var(--theSelectorGrad);
+                            color: var(--notBodyText);
+                        }
+                        a:hover{
+                            background-image: var(--theSelectorGradHover);
+                        }
+                    }
+                }
+            }
+        }
+        article.skills{
+            div.skill-container{
+                svg{
+                    path{
+                        fill: var(--bodyText);
+                    }
+                }
+            }
+        }
+        figure.sub-card{
+            picture{
+                img.sub-card-circle-pic{
+                    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
+                }
+            }
+        }
+    }
+}
+footer.contact{
+    color: var(--notBodyText);
+    .social{
+        .social-icon-container{
+            color: var(--notBodyText);
+            .social-icon{
+                fill: var(--notBodyText);
+            }
+        }
+        .social-icon-container:hover{
+            color: var(--bodyText);
+            .social-icon{
+                fill: var(--bodyText);
+            }
+        }
+    }
+    div.signate{
+        color: var(--notBodyText);
+    }
+}
