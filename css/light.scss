@@ -2,12 +2,12 @@
     --bodyText: #333;
     --bodyTextHover: black;
     --notBodyText: white;
-    --uiCol0: rgb(0, 102, 255);
-    --uiCol1: rgb(13, 86, 196);
-    --uiCol2: rgb(68, 155, 255);
-    --uiCol3: rgb(0, 26, 112);
-    --theSelectorGrad: linear-gradient(90deg, #904e95, #e96443);
-    --theSelectorGradHover: linear-gradient(90deg,#cb2d3e, #ef473a);
+    --uiCol0: rgb(255, 153, 0);
+    --uiCol1: #f63543;
+    --uiCol2: rgb(255, 155, 68);
+    --uiCol3: rgb(196, 46, 0);
+    --theSelectorGrad: linear-gradient(90deg, #ee0942, #ff6a00);
+    --theSelectorGradHover: linear-gradient(90deg, #EA384D, #D31027);
     --theBgGradient0: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
 }
 
@@ -39,9 +39,9 @@ div.top-fixed{
 }
 article.card{
     box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
-    border: 1px solid #888;
+    border: 1px solid #ccc;
     .sub-card{
-        border: 1px solid #888;
+        border: 1px solid #ccc;
         box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
     }
     *{
@@ -71,6 +71,7 @@ main{
                         a{
                             background-image: var(--theSelectorGrad);
                             color: var(--notBodyText);
+                            box-shadow: 0 2px 5px 3px rgba(0,0,0,0.2);
                         }
                         a:hover{
                             background-image: var(--theSelectorGradHover);

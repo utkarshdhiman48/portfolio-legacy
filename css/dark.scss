@@ -6,8 +6,8 @@
     --uiCol1: rgb(13, 86, 196);
     --uiCol2: rgb(68, 155, 255);
     --uiCol3: rgb(0, 26, 112);
-    --theSelectorGrad: linear-gradient(90deg, rgb(70, 162, 255), rgb(19, 137, 255));
-    --theSelectorGradHover: linear-gradient(90deg, var(--uiCol1), var(--uiCol2));
+    --theSelectorGrad: linear-gradient(90deg, var(--uiCol1), var(--uiCol2));
+    --theSelectorGradHover: linear-gradient(90deg, #4fa1ff,#2F80ED);
     --theBgGradient0: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
 }
 
@@ -39,9 +39,9 @@ div.top-fixed{
 }
 article.card{
     box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
-    border: 1px solid #888;
+    border: 1px solid #333;
     .sub-card{
-        border: 1px solid #888;
+        border: 1px solid #333;
         box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
     }
     *{
@@ -71,6 +71,7 @@ main{
                         a{
                             background-image: var(--theSelectorGrad);
                             color: var(--notBodyText);
+                            box-shadow: 0 2px 5px 3px rgba(0,0,0,0.2);
                         }
                         a:hover{
                             background-image: var(--theSelectorGradHover);
@@ -107,9 +108,9 @@ footer.contact{
             }
         }
         .social-icon-container:hover{
-            color: var(--bodyText);
+            color: #333;
             .social-icon{
-                fill: var(--bodyText);
+                fill: #333;
             }
         }
     }

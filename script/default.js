@@ -1,11 +1,9 @@
 const topFixed = document.querySelector(".top-fixed");
 const sticky = topFixed.offsetTop;
-// const scrollProgressBar = document.querySelector("div.scroll-progress-bar");
+
 const mode = document.querySelector(".mode");
 const modeChangeBtn = document.querySelector(".mode-change-btn");
 window.addEventListener("scroll",()=>{
-    // const percent = window.scrollY/(document.body.scrollHeight - window.innerHeight)*100;
-    // scrollProgressBar.style.width = `${percent}%`;
 
     if (window.pageYOffset >= sticky) {
         topFixed.classList.add("sticky")
