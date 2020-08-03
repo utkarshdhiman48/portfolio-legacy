@@ -16,7 +16,7 @@ const suffix = `</span>`;
 const terminalPreview = document.querySelector("div.terminal-preview");
 const terminalInput = document.querySelector("input.terminal-input");
 
-const listcommands = `>_ ut education :scrolls to institutes from where i study(ed)<br>>_ ut projects :scrolls to My Projects<br>>_ ut skills :shows the languages I speak ;)<br>>_ ut connect :connect with me on any of the following platforms, emails are priorities<br>>_ ut linkedin :will open open my linkedin profile<br>>_ ut github :will open open my github profile<br>>_ ut twitter :will take you to my twitter profile<br>>_ ut facebook :will open my facebook profile<br>>_ ut email :email me through your email client<br>>_ ut help :opens a list of all commands<br>You're Welcome...`;
+const listcommands = `>_ ut education :scrolls to institutes from where i study(ed)<br>>_ ut projects :scrolls to My Projects<br>>_ ut achievements :scrolls to My Achievements<br>>_ ut skills :shows the languages I speak ;)<br>>_ ut connect :connect with me on any of the following platforms, emails are priorities<br>>_ ut linkedin :will open open my linkedin profile<br>>_ ut github :will open open my github profile<br>>_ ut twitter :will take you to my twitter profile<br>>_ ut facebook :will open my facebook profile<br>>_ ut email :email me through your email client<br>>_ ut help :opens a list of all commands<br>You're Welcome...`;
 /*>_ ut about :tell you something about me<br>*/
 
 
@@ -29,7 +29,7 @@ let keywords = [
 
     new KeyWord(new RegExp("skills","i"), "These are my skills...", "orchid", ()=>{document.querySelector("#hVoudh").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
-    new KeyWord(new RegExp("certifications","i"), "Here are my certifications...", "orangered", ()=>{document.querySelector("#sauBnN").scrollIntoView({block: 'end', behavior: "smooth"});}),
+    new KeyWord(new RegExp("achievements","i"), "Here are my achievements...", "orangered", ()=>{document.querySelector("#sauBnN").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
     new KeyWord(new RegExp("connect","i"), "You can connect here...", "sky-blue", ()=>{document.querySelector("#YQLBsm").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
