@@ -29,6 +29,8 @@ let keywords = [
 
     new KeyWord(new RegExp("skills","i"), "These are my skills...", "orchid", ()=>{document.querySelector("#hVoudh").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
+    new KeyWord(new RegExp("certifications","i"), "Here are my certifications...", "orangered", ()=>{document.querySelector("#sauBnN").scrollIntoView({block: 'end', behavior: "smooth"});}),
+
     new KeyWord(new RegExp("connect","i"), "You can connect here...", "sky-blue", ()=>{document.querySelector("#YQLBsm").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
     new KeyWord(new RegExp("facebook","i"), "Redirecting to facebook profile...", "fb-color", ()=>{window.open("https://www.facebook.com/utkarsh.utkarsh.927/","_blank")}),

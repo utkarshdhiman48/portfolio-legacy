@@ -39,10 +39,37 @@ html {
 }
 
 body {
-  background-color: rgb(0, 128, 255);
   background-image: var(--backgroundVar0);
   -webkit-animation: bganime 20s ease infinite !important;
           animation: bganime 20s ease infinite !important;
+}
+
+body .model {
+  cursor: pointer;
+}
+
+body .modelOverlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .modelOverlay img {
+  max-width: 80%;
+  width: auto;
 }
 
 img {
@@ -372,10 +399,13 @@ main div.wrapper figure.sub-card picture {
       flex-basis: 15%;
 }
 
-main div.wrapper figure.sub-card picture img.sub-card-circle-pic {
+main div.wrapper figure.sub-card picture img.sub-card-pic {
   display: block;
   width: auto;
   max-height: 150px;
+}
+
+main div.wrapper figure.sub-card picture img.sub-card-circle-pic {
   border-radius: 50%;
 }
 
@@ -384,17 +414,34 @@ main div.wrapper figure.sub-card figcaption.sub-card-content {
       flex-basis: 70%;
 }
 
-main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-name {
+main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-name {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-purpose {
+main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-details {
   font-size: 1rem;
 }
 
-main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-duration {
+main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-extras {
   font-size: 0.8rem;
+}
+
+main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-links {
+  font-size: 0.8rem;
+}
+
+main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-links a {
+  color: inherit;
+  opacity: 0.8;
+}
+
+main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-links a:hover {
+  opacity: 1;
+}
+
+main div.wrapper figure.sub-card figcaption.sub-card-content * {
+  padding: 0.15rem;
 }
 
 footer.contact {
@@ -536,18 +583,18 @@ footer.contact div.signate {
   main div.wrapper figure.sub-card picture {
     padding: 0.5rem;
   }
-  main div.wrapper figure.sub-card picture img.sub-card-circle-pic {
+  main div.wrapper figure.sub-card picture img.sub-card-pic {
     display: block;
     width: auto;
     max-height: 50px;
   }
-  main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-name {
+  main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-name {
     font-size: 1rem;
   }
-  main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-purpose {
+  main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-purpose {
     font-size: 0.8rem;
   }
-  main div.wrapper figure.sub-card figcaption.sub-card-content span.institute-duration {
+  main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-duration {
     font-size: 0.6rem;
   }
   main div.wrapper article.projects {
