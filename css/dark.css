@@ -8,11 +8,16 @@
   --uiCol3: rgb(0, 26, 112);
   --theSelectorGrad: linear-gradient(90deg, var(--uiCol1), var(--uiCol2));
   --theSelectorGradHover: linear-gradient(90deg, #4fa1ff,#2F80ED);
-  --theBgGradient0: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
+  --theBgGradient0: radial-gradient(circle at center left,var(--uiCol2), var(--uiCol1), var(--uiCol0), var(--uiCol1), var(--uiCol3));
 }
 
 header#rvHsQW div.intro {
   color: var(--notBodyText);
+}
+
+header#rvHsQW div.dp-container section.dafhauh img {
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
 }
 
 div.top-fixed {

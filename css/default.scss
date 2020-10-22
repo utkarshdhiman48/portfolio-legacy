@@ -3,11 +3,11 @@
 	src: url("../assets/Hermit-Regular.otf") format('truetype');
 }
 @font-face {
-	font-family: 'Open Sans';
+	font-family: 'Raleway Regular';
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url(../assets/OpenSans-Regular.ttf);
+	src: url(../assets/Raleway-Regular.ttf);
 }
 @font-face {
 	font-family: 'Open Sans';
@@ -20,15 +20,15 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	font-family: "Open Sans", sans-serif;
-	// border: 1px solid rgba(255,0,0,0.5);
+	font-family: "Raleway Regular", sans-serif;
+	// letter-spacing: 1px;
 }
+
 html{
 	scroll-behavior: smooth;
 }
+
 body{
-	background-image: var(--backgroundVar0);
-	animation: bganime 20s ease infinite !important;
 	.model{
 		cursor: pointer;
 	}
@@ -60,6 +60,7 @@ header#rvHsQW{
 	justify-content: center;
 	align-items: center;
 	padding: 0.5rem;
+	background-image: var(--theBgGradient0);
 	span{
 		display: block;
 	}
@@ -127,7 +128,7 @@ div.top-fixed{
 						display: block;
 						cursor: pointer;
 						padding: 0.95rem 0.5rem;
-						font-size: 0.8rem;
+						font-size: 0.9rem;
 					}
 				}
 			}
@@ -142,11 +143,14 @@ article.card{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	// line-height: 1.5rem;
 	span{
 		display: block;
 	}
 	.card-heading{
+		font-family: "Open Sans";
 		padding: 0.25rem;
+		// line-height: normal;
 		width: 100%;
 	}
 	.sub-card{
@@ -235,14 +239,16 @@ main{
 					.project-name{
 						font-size: 1.2rem;
 						font-weight: 600;
+						padding: 0.2rem;
 					}
 					.proj-ingredients, .proj-description{
-						font-size: 1rem;
+						font-size: 0.9rem;
+						padding: 0.2rem;
 					}
 					.repo-link{
 						margin-top: 0.25rem;
 						a{
-							font-size: 0.8rem;
+							font-size: 0.9rem;
 							text-decoration: none;
 							display: inline-block;
 							padding: 0.5rem;
@@ -280,17 +286,18 @@ main{
 			figcaption.sub-card-content{
 				flex-basis: 70%;
 				span.sub-card-head-name{
+					font-family: "Open Sans";
 					font-size: 1.5rem;
 					font-weight: 600;
 				}
 				span.sub-card-head-details{
-					font-size: 1rem;
+					font-size: 0.9rem;
 				}
 				span.sub-card-head-extras{
 					font-size: 0.8rem;
 				}
 				span.sub-card-head-links{
-					font-size: 0.8rem;
+					font-size: 0.9rem;
 					a{
 						color: inherit;
 						opacity: 0.8;
@@ -368,8 +375,11 @@ main{
 	}
 }
 footer.contact{
+	background-image: var(--theBgGradient0);
 	padding: 0.5rem;
 	span.footer-heading{
+		font-family: "Open Sans";
+		// line-height: normal;
 		font-size: 1.4rem;
 	}
 	.social{
@@ -594,23 +604,6 @@ footer.contact{
 .apricot{
 	color: #F4CBB2;
 }
-
-
-@keyframes bganime{
-	0%{
-		background-image: var(--theBgGradient0);
-		background-size: 100%;
-	}
-	50%{
-		background-image: var(--theBgGradient0);
-		background-size: 300%;
-	}
-	100%{
-		background-image: var(--theBgGradient0);
-		background-size: 100%;
-	}
-}
-
 
 //must remain at end
 .light-opacity{

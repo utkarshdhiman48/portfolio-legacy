@@ -4,11 +4,11 @@
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Raleway Regular';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(../assets/OpenSans-Regular.ttf);
+  src: url(../assets/Raleway-Regular.ttf);
 }
 
 @font-face {
@@ -24,17 +24,11 @@
           box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway Regular", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  background-image: var(--backgroundVar0);
-  -webkit-animation: bganime 20s ease infinite !important;
-          animation: bganime 20s ease infinite !important;
 }
 
 body .model {
@@ -82,6 +76,7 @@ header#rvHsQW {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem;
+  background-image: var(--theBgGradient0);
 }
 
 header#rvHsQW span {
@@ -179,7 +174,7 @@ div.top-fixed .navigation nav ul li a {
   display: block;
   cursor: pointer;
   padding: 0.95rem 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 article.card {
@@ -206,6 +201,7 @@ article.card span {
 }
 
 article.card .card-heading {
+  font-family: "Open Sans";
   padding: 0.25rem;
   width: 100%;
 }
@@ -333,10 +329,12 @@ main div.wrapper article.projects section.sub-card .sub-card-content {
 main div.wrapper article.projects section.sub-card .sub-card-content .project-name {
   font-size: 1.2rem;
   font-weight: 600;
+  padding: 0.2rem;
 }
 
 main div.wrapper article.projects section.sub-card .sub-card-content .proj-ingredients, main div.wrapper article.projects section.sub-card .sub-card-content .proj-description {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  padding: 0.2rem;
 }
 
 main div.wrapper article.projects section.sub-card .sub-card-content .repo-link {
@@ -344,7 +342,7 @@ main div.wrapper article.projects section.sub-card .sub-card-content .repo-link 
 }
 
 main div.wrapper article.projects section.sub-card .sub-card-content .repo-link a {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-decoration: none;
   display: inline-block;
   padding: 0.5rem;
@@ -402,12 +400,13 @@ main div.wrapper figure.sub-card figcaption.sub-card-content {
 }
 
 main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-name {
+  font-family: "Open Sans";
   font-size: 1.5rem;
   font-weight: 600;
 }
 
 main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-details {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-extras {
@@ -415,7 +414,7 @@ main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-
 }
 
 main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-links {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-links a {
@@ -513,10 +512,12 @@ main div.wrapper article.timeline .timeline-details:hover > .timeline-details-ca
 }
 
 footer.contact {
+  background-image: var(--theBgGradient0);
   padding: 0.5rem;
 }
 
 footer.contact span.footer-heading {
+  font-family: "Open Sans";
   font-size: 1.4rem;
 }
 
@@ -756,36 +757,6 @@ footer.contact .social .social-icon-container .social-icon {
 
 .apricot {
   color: #F4CBB2;
-}
-
-@-webkit-keyframes bganime {
-  0% {
-    background-image: var(--theBgGradient0);
-    background-size: 100%;
-  }
-  50% {
-    background-image: var(--theBgGradient0);
-    background-size: 300%;
-  }
-  100% {
-    background-image: var(--theBgGradient0);
-    background-size: 100%;
-  }
-}
-
-@keyframes bganime {
-  0% {
-    background-image: var(--theBgGradient0);
-    background-size: 100%;
-  }
-  50% {
-    background-image: var(--theBgGradient0);
-    background-size: 300%;
-  }
-  100% {
-    background-image: var(--theBgGradient0);
-    background-size: 100%;
-  }
 }
 
 .light-opacity {
