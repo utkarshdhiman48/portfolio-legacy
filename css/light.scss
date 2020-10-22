@@ -1,120 +1,150 @@
 :root{
-    --bodyText: #333;
-    --bodyTextHover: black;
-    --notBodyText: white;
-    --uiCol0: rgb(255, 153, 0);
-    --uiCol1: #f63543;
-    --uiCol2: rgb(255, 155, 68);
-    --uiCol3: rgb(196, 46, 0);
-    --theSelectorGrad: linear-gradient(90deg, #ee0942, #ff6a00);
-    --theSelectorGradHover: linear-gradient(90deg, #EA384D, #D31027);
-    --theBgGradient0: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
+	--bodyText: #333;
+	--bodyTextHover: black;
+	--notBodyText: white;
+	--uiCol0: rgb(255, 153, 0);
+	--uiCol1: #f63543;
+	--uiCol2: rgb(255, 155, 68);
+	--uiCol3: rgb(196, 46, 0);
+	--theSelectorGrad: linear-gradient(90deg, #ee0942, #ff6a00);
+	--theSelectorGradHover: linear-gradient(90deg, #EA384D, #D31027);
+	--theBgGradient0: radial-gradient(circle at center left,var(--uiCol2) 10% , var(--uiCol0) 25%, var(--uiCol1) 25%, var(--uiCol0) 35%, var(--uiCol1) 35%, var(--uiCol0) 50%, var(--uiCol1) 50%, var(--uiCol0) 65%, var(--uiCol1) 65%, var(--uiCol0) 80%, var(--uiCol1) 80%, var(--uiCol3) 100%);
 }
 
 header#rvHsQW{
-    div.intro{
-        color: var(--notBodyText);
-    }
+	div.intro{
+		color: var(--notBodyText);
+	}
 }
 div.top-fixed{
-    background-color: var(--notBodyText);
-    .navigation{
-        nav{
-            ul{
-                background-image: var(--theSelectorGrad);
-                li{
-                    a{
-                        color: var(--notBodyText);
-                    }
-                    a:hover{
-                        background-image: var(--theSelectorGradHover);
-                    }
-                }
-            }
-        }
-    }
-    div.scroll-progress-bar{
-        background-color: brown;
-    }
+	background-color: var(--notBodyText);
+	.navigation{
+		nav{
+			ul{
+				background-image: var(--theSelectorGrad);
+				li{
+					a{
+						color: var(--notBodyText);
+					}
+					a:hover{
+						background-image: var(--theSelectorGradHover);
+					}
+				}
+			}
+		}
+	}
 }
 article.card{
-    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
-    border: 1px solid #ccc;
-    .sub-card{
-        border: 1px solid #ccc;
-        box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
-    }
-    *{
-        color: var(--bodyText);
-    }
+	box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
+	border: 1px solid #ccc;
+	.sub-card{
+		border: 1px solid #ccc;
+		box-shadow: 0 2px 3px 1px rgba(0,0,0,0.15);
+	}
+	*{
+		color: var(--bodyText);
+	}
 }
 article.card:hover{
-    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.25);
+	box-shadow: 0 2px 3px 1px rgba(0,0,0,0.25);
 }
 main{
-    background-color: white;
-    div.wrapper{
-        article.projects{
-            section.sub-card{
-                a{
-                    img{
-                        box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
-                    }
-                }
-                .sub-card-content{
-                    .project-name{
-                        a{
-                            color: var(--bodyText);
-                        }
-                    }
-                    .repo-link{
-                        a{
-                            background-image: var(--theSelectorGrad);
-                            color: var(--notBodyText);
-                            box-shadow: 0 2px 5px 3px rgba(0,0,0,0.2);
-                        }
-                        a:hover{
-                            background-image: var(--theSelectorGradHover);
-                        }
-                    }
-                }
-            }
-        }
-        article.skills{
-            div.skill-container{
-                svg{
-                    path{
-                        fill: #333;
-                    }
-                }
-            }
-        }
-        figure.sub-card{
-            picture{
-                img.sub-card-circle-pic{
-                    box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
-                }
-            }
-        }
-    }
+	background-color: white;
+	div.wrapper{
+		article.projects{
+			section.sub-card{
+				a{
+					img{
+						box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
+					}
+				}
+				.sub-card-content{
+					.project-name{
+						a{
+							color: var(--bodyText);
+						}
+					}
+					.repo-link{
+						a{
+							background-image: var(--theSelectorGrad);
+							color: var(--notBodyText);
+							box-shadow: 0 2px 5px 3px rgba(0,0,0,0.2);
+						}
+						a:hover{
+							background-image: var(--theSelectorGradHover);
+						}
+					}
+				}
+			}
+		}
+		article.skills{
+			div.skill-container{
+				svg{
+					path{
+						fill: #333;
+					}
+				}
+			}
+		}
+		figure.sub-card{
+			picture{
+				img.sub-card-circle-pic{
+					box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
+				}
+			}
+		}
+		article.timeline{
+			section.timeline-progress{
+				scrollbar-color: rgba(0,0,0, 0.1) transparent;
+				div.timeline-progress-content{
+					border: 2px solid var(--uiCol2);
+				}
+				div.timeline-progress-bar{
+					background-color: var(--uiCol2);
+				}
+			}
+			section.timeline-progress::-webkit-scrollbar{
+				background-color: transparent;
+			}
+			section.timeline-progress::-webkit-scrollbar-track{
+				background-color: transparent;
+			}
+			section.timeline-progress::-webkit-scrollbar-thumb{
+				background-color: rgba(0,0,0, 0.2);
+			}
+			.timeline-details{
+				.timeline-details-card {
+					background-color: rgba(250,250,250,0.7);
+					// border: 2px solid #fff;
+				}
+			}
+		}
+	}
 }
 footer.contact{
-    color: var(--notBodyText);
-    .social{
-        .social-icon-container{
-            color: var(--notBodyText);
-            .social-icon{
-                fill: var(--notBodyText);
-            }
-        }
-        .social-icon-container:hover{
-            color: var(--bodyText);
-            .social-icon{
-                fill: var(--bodyText);
-            }
-        }
-    }
-    div.signate{
-        color: var(--notBodyText);
-    }
+	color: var(--notBodyText);
+	.social{
+		.social-icon-container{
+			color: var(--notBodyText);
+			.social-icon{
+				fill: var(--notBodyText);
+			}
+		}
+		.social-icon-container:hover{
+			color: var(--bodyText);
+			.social-icon{
+				fill: var(--bodyText);
+			}
+		}
+	}
+	div.signate{
+		color: var(--notBodyText);
+	}
+}
+
+.toolTip{
+	.toolTipText {
+		background-color: rgba(36,36,36,1);
+		// border: 2px solid #fff;
+	}
 }

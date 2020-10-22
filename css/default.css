@@ -19,13 +19,6 @@
   src: url(../assets/OpenSans-SemiBold.ttf);
 }
 
-@font-face {
-  font-family: 'Allison Tessa Oblique';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../assets/Allison Tessa Oblique.ttf");
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -137,8 +130,6 @@ header#rvHsQW div.mode-change-btn {
 
 header#rvHsQW div.mode-change-btn svg {
   border-radius: 50%;
-  -webkit-box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.2);
   opacity: 0.82;
   max-width: 48px;
   max-height: 48px;
@@ -186,13 +177,9 @@ div.top-fixed .navigation nav ul li {
 div.top-fixed .navigation nav ul li a {
   text-decoration: none;
   display: block;
+  cursor: pointer;
   padding: 0.95rem 0.5rem;
   font-size: 0.8rem;
-}
-
-div.top-fixed div.scroll-progress-bar {
-  width: 0;
-  height: 3px;
 }
 
 article.card {
@@ -444,6 +431,77 @@ main div.wrapper figure.sub-card figcaption.sub-card-content * {
   padding: 0.15rem;
 }
 
+main div.wrapper article.timeline {
+  position: relative;
+}
+
+main div.wrapper article.timeline section.timeline-progress {
+  overflow-x: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  scrollbar-width: thin;
+  padding: 2rem 0;
+}
+
+main div.wrapper article.timeline section.timeline-progress div.timeline-progress-content {
+  border-radius: 20px;
+  padding: 0.6rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+main div.wrapper article.timeline section.timeline-progress div.timeline-progress-bar {
+  min-width: 100px;
+  height: 4px;
+}
+
+main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar {
+  background-color: transparent;
+  height: 3px;
+}
+
+main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
+
+main div.wrapper article.timeline .timeline-details .timeline-details-card {
+  display: none;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  width: 100%;
+  min-width: 100px;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 999999;
+  top: -1rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card {
+  margin: 0;
+  white-space: normal;
+  text-align: left;
+}
+
+main div.wrapper article.timeline .timeline-details:hover > .timeline-details-card {
+  display: block;
+}
+
 footer.contact {
   padding: 0.5rem;
 }
@@ -486,12 +544,6 @@ footer.contact .social .social-icon-container .social-icon {
           align-items: center;
   width: 40px;
   max-height: 100px;
-}
-
-footer.contact div.signate {
-  padding: 1rem;
-  text-align: center;
-  font-family: "Allison Tessa Oblique", cursive;
 }
 
 @media all and (max-width: 1000px) {
@@ -726,5 +778,28 @@ footer.contact div.signate {
 
 .sticky + main {
   padding-top: 3rem;
+}
+
+.toolTip {
+  position: relative;
+}
+
+.toolTip .toolTipText {
+  display: none;
+  width: auto;
+  min-width: 100px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.25rem;
+  position: absolute;
+  z-index: 999999;
+  top: -1rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.toolTip:hover > .toolTipText {
+  display: block;
 }
 /*# sourceMappingURL=default.css.map */

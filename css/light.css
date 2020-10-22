@@ -31,10 +31,6 @@ div.top-fixed .navigation nav ul li a:hover {
   background-image: var(--theSelectorGradHover);
 }
 
-div.top-fixed div.scroll-progress-bar {
-  background-color: brown;
-}
-
 article.card {
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
@@ -89,6 +85,34 @@ main div.wrapper figure.sub-card picture img.sub-card-circle-pic {
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
+main div.wrapper article.timeline section.timeline-progress {
+  scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+}
+
+main div.wrapper article.timeline section.timeline-progress div.timeline-progress-content {
+  border: 2px solid var(--uiCol2);
+}
+
+main div.wrapper article.timeline section.timeline-progress div.timeline-progress-bar {
+  background-color: var(--uiCol2);
+}
+
+main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+main div.wrapper article.timeline .timeline-details .timeline-details-card {
+  background-color: rgba(250, 250, 250, 0.7);
+}
+
 footer.contact {
   color: var(--notBodyText);
 }
@@ -111,5 +135,9 @@ footer.contact .social .social-icon-container:hover .social-icon {
 
 footer.contact div.signate {
   color: var(--notBodyText);
+}
+
+.toolTip .toolTipText {
+  background-color: #242424;
 }
 /*# sourceMappingURL=light.css.map */
