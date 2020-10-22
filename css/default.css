@@ -485,7 +485,7 @@ main div.wrapper article.timeline .timeline-details .timeline-details-card {
   text-align: center;
   border-radius: 6px;
   position: absolute;
-  z-index: 999999;
+  z-index: 9;
   top: -1rem;
   left: 50%;
   -webkit-transform: translate(-50%, -100%);
@@ -496,6 +496,16 @@ main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-
   margin: 0;
   white-space: normal;
   text-align: left;
+}
+
+main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card picture {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card picture img {
+  margin: auto;
+  max-height: 150px;
 }
 
 main div.wrapper article.timeline .timeline-details:hover > .timeline-details-card {
@@ -668,6 +678,20 @@ footer.contact .social .social-icon-container .social-icon {
     width: 80%;
     margin: auto;
   }
+  main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card picture {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card picture img {
+    margin: auto;
+    max-height: 100px;
+  }
 }
 
 @media all and (max-width: 330px) {
@@ -792,7 +816,7 @@ footer.contact .social .social-icon-container .social-icon {
   border-radius: 6px;
   padding: 0.25rem;
   position: absolute;
-  z-index: 999999;
+  z-index: 9;
   top: -1rem;
   left: 50%;
   -webkit-transform: translate(-50%, -100%);

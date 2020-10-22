@@ -54,3 +54,26 @@ models.forEach((model)=>{
 modelOverlay.addEventListener("click",()=>{
     modelOverlay.style.display = "none";
 });
+
+///timeline
+let colors = new Map();
+
+document.querySelectorAll("[data-year]").forEach((ele)=>{
+    colors.set(parseInt(ele.dataset['year']), null);
+});
+
+colors.forEach((v,k)=>{
+    colors.set(k, `rgb(${randomColorChannel()}, ${randomColorChannel()}, ${randomColorChannel()})`);
+});
+document.querySelectorAll("[data-year]").forEach((element)=>{
+    if(element.classList.contains("timeline-progress-bar")){
+        element.style.backgroundColor = colors.get(parseInt(element.dataset['year']));
+    }
+    else{
+        element.style.borderColor = colors.get(parseInt(element.dataset['year']));
+    }
+});
+
+function randomColorChannel(){
+    return parseInt((Math.random()*100+150)%220);
+}

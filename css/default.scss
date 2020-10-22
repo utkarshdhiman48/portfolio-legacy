@@ -343,7 +343,7 @@ main{
 					text-align: center;
 					border-radius: 6px;
 					position: absolute;
-					z-index: 999999;
+					z-index: 9;
 					top: -1rem;
 					left: 50%;
 					transform: translate(-50%, -100%);
@@ -351,6 +351,13 @@ main{
 						margin: 0;
 						white-space: normal;
 						text-align: left;
+						picture{
+							flex-basis: 40%;
+							img{
+								margin: auto;
+								max-height: 150px;
+							}
+						}
 					}
 				}
 			}
@@ -514,6 +521,22 @@ footer.contact{
 					}
 				}
 			}
+			article.timeline{
+				.timeline-details{
+					.timeline-details-card {
+						.sub-card{
+							flex-direction: column;
+							picture{
+								flex-basis: 100%;
+								img{
+									margin: auto;
+									max-height: 100px;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -614,7 +637,7 @@ footer.contact{
 		border-radius: 6px;
 		padding: 0.25rem;
 		position: absolute;
-		z-index: 999999;
+		z-index: 9;
 		top: -1rem;
 		left: 50%;
 		transform: translate(-50%, -100%);
