@@ -91,9 +91,8 @@ header#rvHsQW{
 	}
 	div.mode-change-btn{
 		position: absolute;
-		top:5px;
-		right: 5px;
-		padding: 0.25rem;
+		top: 10px;
+		right: 10px;
 		svg{
 			border-radius: 50%;
 			opacity: 0.82;
@@ -343,7 +342,7 @@ main{
 			}
 			.timeline-details{
 				.timeline-details-card {
-					display: none;
+					// display: none;
 					backdrop-filter: blur(2px);
 					width: 100%;
 					min-width: 100px;
@@ -354,6 +353,9 @@ main{
 					top: -1rem;
 					left: 50%;
 					transform: translate(-50%, -100%);
+					opacity: 0;
+					visibility: hidden;
+  				transition: opacity 0.4s;
 					.sub-card{
 						margin: 0;
 						white-space: normal;
@@ -369,7 +371,9 @@ main{
 				}
 			}
 			.timeline-details:hover > .timeline-details-card {
-				display: block;
+				opacity: 1;
+				visibility: visible;
+				// display: block;
 			}
 		}
 	}
@@ -489,7 +493,6 @@ footer.contact{
 		div.wrapper{
 			article.skills{
 				div.skill-container{
-					margin: 0.15rem;
 					width: 35px;
 				}
 			}
@@ -620,22 +623,27 @@ footer.contact{
 	padding-top: 3rem;
 }
 
-.toolTip{
-	position: relative;
-	.toolTipText {
-		display: none;
-		width: auto;
-		min-width: 100px;
-		text-align: center;
-		border-radius: 6px;
-		padding: 0.25rem;
-		position: absolute;
-		z-index: 9;
-		top: -1rem;
-		left: 50%;
-		transform: translate(-50%, -100%);
-	}
-}
-.toolTip:hover > .toolTipText {
-	display: block;
-}
+// .toolTip{
+// 	position: relative;
+// 	.toolTipText {
+// 		display: none;
+// 		width: auto;
+// 		min-width: 100px;
+// 		text-align: center;
+// 		border-radius: 6px;
+// 		padding: 0.25rem;
+// 		position: absolute;
+// 		z-index: 9;
+// 		bottom: 0;
+// 		left: 50%;
+// 		visibility: hidden;
+// 		opacity: 0;
+// 		transition: opacity 0.5s;
+// 		transform: translate(-50%, -100%);
+// 	}
+// }
+// .toolTip:hover > .toolTipText {
+// 	display: block;
+// 	opacity: 1;
+// 	visibility: visible;
+// }

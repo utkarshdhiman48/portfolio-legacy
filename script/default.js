@@ -63,7 +63,7 @@ document.querySelectorAll("[data-year]").forEach((ele)=>{
 });
 
 colors.forEach((v,k)=>{
-    colors.set(k, `rgb(${randomColorChannel()}, ${randomColorChannel()}, ${randomColorChannel()})`);
+    colors.set(k, `hsl(${parseInt((Math.random()*1000)%360)}, ${parseInt((Math.random()*100)%100)}%, ${parseInt(60)}%)`);
 });
 document.querySelectorAll("[data-year]").forEach((element)=>{
     if(element.classList.contains("timeline-progress-bar")){

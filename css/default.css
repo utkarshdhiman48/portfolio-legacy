@@ -118,9 +118,8 @@ header#rvHsQW div.intro span.tag-line {
 
 header#rvHsQW div.mode-change-btn {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  padding: 0.25rem;
+  top: 10px;
+  right: 10px;
 }
 
 header#rvHsQW div.mode-change-btn svg {
@@ -476,7 +475,6 @@ main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-t
 }
 
 main div.wrapper article.timeline .timeline-details .timeline-details-card {
-  display: none;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   width: 100%;
@@ -489,6 +487,10 @@ main div.wrapper article.timeline .timeline-details .timeline-details-card {
   left: 50%;
   -webkit-transform: translate(-50%, -100%);
           transform: translate(-50%, -100%);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 
 main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card {
@@ -508,7 +510,8 @@ main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-
 }
 
 main div.wrapper article.timeline .timeline-details:hover > .timeline-details-card {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 footer.contact {
@@ -634,7 +637,6 @@ footer.contact .social .social-icon-container .social-icon {
     caret-color: white;
   }
   main div.wrapper article.skills div.skill-container {
-    margin: 0.15rem;
     width: 35px;
   }
   main div.wrapper figure.sub-card {
@@ -773,28 +775,5 @@ footer.contact .social .social-icon-container .social-icon {
 
 .sticky + main {
   padding-top: 3rem;
-}
-
-.toolTip {
-  position: relative;
-}
-
-.toolTip .toolTipText {
-  display: none;
-  width: auto;
-  min-width: 100px;
-  text-align: center;
-  border-radius: 6px;
-  padding: 0.25rem;
-  position: absolute;
-  z-index: 9;
-  top: -1rem;
-  left: 50%;
-  -webkit-transform: translate(-50%, -100%);
-          transform: translate(-50%, -100%);
-}
-
-.toolTip:hover > .toolTipText {
-  display: block;
 }
 /*# sourceMappingURL=default.css.map */
