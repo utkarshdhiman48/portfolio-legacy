@@ -1,24 +1,50 @@
-AOS.init();
+AOS.init({
+    offset: 100,
+    delay: 50
+});
 const models = document.querySelectorAll(".model");
 const modelOverlay = document.querySelector(".modelOverlay");
 const modelImmediateImg = modelOverlay.children[0];
 
 const topFixed = document.querySelector(".top-fixed");
 const navLinks = document.querySelectorAll("div.navigation nav ul li a");
-const sticky = topFixed.offsetTop;
 
 const mode = document.querySelector(".mode");
 const modeChangeBtn = document.querySelector(".mode-change-btn");
+const scrollTriggers = [...document.querySelectorAll("[data-trg]")];
+
+//scroll 
 window.addEventListener("scroll",()=>{
-
-    if (window.pageYOffset >= sticky) {
-        topFixed.classList.add("sticky")
+    let scrolled = document.body.scrollTop || document.documentElement.scrollTop;
+    let viewportHeight = window.innerHeight;
+    //nav-bar
+    if (scrolled> 120) {
+        topFixed.style.top = "0";
+    } else {
+        topFixed.style.top = "-50px";
     }
-    else {
-        topFixed.classList.remove("sticky");
-    }
-})
 
+    //scroll spy
+    let last;
+    navLinks.forEach(link=>link.classList.remove("active-link-btn"));
+    for(let i=0; i<scrollTriggers.length; i++){
+        let pos = getPositionOfElement(scrollTriggers[i]);
+        if(pos>scrolled-100 && pos<scrolled+viewportHeight-200){
+            last=scrollTriggers[i];
+        }
+    }
+    let id = last.id;
+    let link = document.querySelector('[data-href="#'+id+'"]');
+    // console.log(last, link);
+    if(link) link.classList.add("active-link-btn");
+
+
+});
+
+
+
+
+//theme
 modeChangeBtn.addEventListener("click",()=>{
     if(mode.getAttribute('href')==="css/light.css"){
         mode.setAttribute('href',"css/dark.css");
@@ -37,12 +63,14 @@ modeChangeBtn.addEventListener("click",()=>{
     }
 })
 
+//no # links
 navLinks.forEach((link)=>{
     link.addEventListener("click",(e)=>{
         document.querySelector(e.target.dataset.href).scrollIntoView({block: 'start', behavior: "smooth"});
     })
 });
 
+//modal
 models.forEach((model)=>{
     model.addEventListener("click", (e)=>{
         modelImmediateImg.src=e.target.src;
@@ -63,6 +91,7 @@ document.querySelectorAll("[data-year]").forEach((ele)=>{
     colors.set(parseInt(ele.dataset['year']), null);
 });
 
+//random color generator
 colors.forEach((v,k)=>{
     colors.set(k, `hsl(${parseInt((Math.random()*1000)%360)}, ${parseInt((Math.random()*100)%100)}%, ${parseInt(60)}%)`);
 });
@@ -77,4 +106,14 @@ document.querySelectorAll("[data-year]").forEach((element)=>{
 
 function randomColorChannel(){
     return parseInt((Math.random()*100+150)%220);
+}
+function getPositionOfElement(domElement)
+{
+    let pos = 0;
+    while (domElement != null)
+    {
+        pos += domElement.offsetTop;
+        domElement = domElement.offsetParent;
+    }
+    return pos;
 }

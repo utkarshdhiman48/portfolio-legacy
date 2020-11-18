@@ -22,7 +22,7 @@ header#rvHsQW div.dp-container section.dafhauh img {
 }
 
 div.top-fixed {
-  background-color: var(--notBodyText);
+  background-image: var(--theSelectorGrad);
 }
 
 div.top-fixed .navigation nav ul {
@@ -143,5 +143,9 @@ footer.contact div.signate {
 
 .toolTip .toolTipText {
   background-color: #242424;
+}
+
+.active-link-btn {
+  background-image: var(--theSelectorGradHover);
 }
 /*# sourceMappingURL=dark.css.map */
