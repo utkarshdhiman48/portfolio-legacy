@@ -118,9 +118,11 @@ header#rvHsQW div.intro span.tag-line {
 }
 
 header#rvHsQW div.mode-change-btn {
+  cursor: pointer;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1rem;
+  right: 1rem;
+  margin: 0.5rem;
 }
 
 header#rvHsQW div.mode-change-btn svg {
@@ -182,6 +184,10 @@ div.top-fixed .navigation nav ul li a {
   cursor: pointer;
   padding: 0.95rem 0.5rem;
   font-size: 0.9rem;
+}
+
+.overlay-nav {
+  display: none;
 }
 
 .card {
@@ -548,8 +554,28 @@ footer.contact .social .social-icon-container .social-icon:hover {
 }
 
 @media all and (max-width: 1000px) {
+  header#rvHsQW {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header#rvHsQW div.dp-container {
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  header#rvHsQW div.dp-container section.dafhauh img {
+    width: 200px;
+  }
+  header#rvHsQW div.intro {
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
+    text-align: center;
+  }
   header#rvHsQW div.intro span.my-name {
-    font-size: 2.63rem;
+    font-size: 2.5rem;
   }
   header#rvHsQW div.intro span.tag-line {
     font-size: 1rem;
@@ -560,23 +586,8 @@ footer.contact .social .social-icon-container .social-icon:hover {
 }
 
 @media all and (max-width: 600px) {
-  div.top-fixed div.navigation nav {
+  div.top-fixed {
     display: none;
-  }
-  header#rvHsQW {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  header#rvHsQW div.dp-container {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    padding: 1rem;
-    margin: 1rem;
-  }
-  header#rvHsQW div.intro {
-    text-align: center;
   }
   header#rvHsQW div.intro span.my-name {
     font-size: 1.2rem;
@@ -699,6 +710,82 @@ footer.contact .social .social-icon-container .social-icon:hover {
   main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card picture img {
     margin: auto;
     max-height: 100px;
+  }
+  .bottom-fixed {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 98;
+  }
+  .bottom-fixed .burger, .bottom-fixed .scroll-to-top {
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.5rem;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bottom-fixed .burger .bars, .bottom-fixed .scroll-to-top .bars {
+    height: 2px;
+    width: 1rem;
+  }
+  .bottom-fixed .burger .up-arrow-box, .bottom-fixed .scroll-to-top .up-arrow-box {
+    height: 0.5rem;
+    width: 0.5rem;
+    -webkit-transform: rotateZ(45deg) translate(25%, 25%);
+            transform: rotateZ(45deg) translate(25%, 25%);
+  }
+  .overlay-nav {
+    display: block;
+    height: 0;
+    width: 100%;
+    position: fixed;
+    /* Stay in place */
+    z-index: 99;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  .overlay-nav .overlay-content {
+    position: relative;
+    top: 3rem;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 3rem;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  .overlay-nav a {
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    /* Display block instead of inline */
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+  }
+  .overlay-nav .closebtn {
+    font-size: 3rem;
   }
 }
 

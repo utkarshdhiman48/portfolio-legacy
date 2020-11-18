@@ -14,34 +14,44 @@ const modeChangeBtn = document.querySelector(".mode-change-btn");
 const scrollTriggers = [...document.querySelectorAll("[data-trg]")];
 
 //scroll 
-window.addEventListener("scroll",()=>{
-    let scrolled = document.body.scrollTop || document.documentElement.scrollTop;
-    let viewportHeight = window.innerHeight;
-    //nav-bar
-    if (scrolled> 120) {
-        topFixed.style.top = "0";
-    } else {
-        topFixed.style.top = "-50px";
-    }
+if(!window.matchMedia("(max-width: 600px)").matches){
+        window.addEventListener("scroll",()=>{
+            let scrolled = document.body.scrollTop || document.documentElement.scrollTop;
+            let viewportHeight = window.innerHeight;
+            //nav-bar
+            if (scrolled> 120) {
+                topFixed.style.top = "0";
+            } else {
+                topFixed.style.top = "-50px";
+            }
 
     //scroll spy
-    let last;
-    navLinks.forEach(link=>link.classList.remove("active-link-btn"));
-    for(let i=0; i<scrollTriggers.length; i++){
-        let pos = getPositionOfElement(scrollTriggers[i]);
-        if(pos>scrolled-100 && pos<scrolled+viewportHeight-200){
-            last=scrollTriggers[i];
+        let last;
+        navLinks.forEach(link=>link.classList.remove("active-link-btn"));
+        for(let i=0; i<scrollTriggers.length; i++){
+            let pos = getPositionOfElement(scrollTriggers[i]);
+            if(pos>scrolled-100 && pos<scrolled+viewportHeight-200){
+                last=scrollTriggers[i];
+            }
         }
-    }
-    let id = last.id;
-    let link = document.querySelector('[data-href="#'+id+'"]');
-    // console.log(last, link);
-    if(link) link.classList.add("active-link-btn");
+        let id = last.id;
+        let link = document.querySelector('[data-href="#'+id+'"]');
+        // console.log(last, link);
+        if(link) link.classList.add("active-link-btn");
+    });
+}
 
 
-});
 
-
+//responsive nav
+function openNav() {
+    document.querySelector(".overlay-nav").style.height = "100%";
+}
+  
+  /* Close */
+function closeNav() {
+    document.querySelector(".overlay-nav").style.height = "0%";
+}
 
 
 //theme

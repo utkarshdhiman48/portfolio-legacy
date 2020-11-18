@@ -91,9 +91,11 @@ header#rvHsQW{
 		}
 	}
 	div.mode-change-btn{
+		cursor: pointer;
 		position: absolute;
-		top: 10px;
-		right: 10px;
+		top: 1rem;
+		right: 1rem;
+		margin: 0.5rem;
 		svg{
 			border-radius: 50%;
 			opacity: 0.82;
@@ -139,7 +141,9 @@ div.top-fixed{
 		}
 	}
 }
-
+.overlay-nav{
+	display: none;
+}
 .card{
 	max-width: 1000px;
 	border-radius: 10px;
@@ -410,9 +414,22 @@ footer.contact{
 }
 @media all and (max-width: 1000px){
 	header#rvHsQW{
+		flex-direction: column;
+		div.dp-container{
+			flex-basis: unset;
+			padding: 1rem;
+			margin: 1rem;
+			section.dafhauh{
+				img{
+					width: 200px;
+				}
+			}
+		}
 		div.intro{
+			flex-basis: unset;
+			text-align: center;
 			span.my-name{
-				font-size: 2.63rem;
+				font-size: 2.5rem;
 			}
 			span.tag-line{
 				font-size: 1rem;
@@ -425,21 +442,10 @@ footer.contact{
 }
 @media all and (max-width: 600px){
 	div.top-fixed{
-		div.navigation{
-			nav{
-				display: none;
-			}
-		}
+		display: none;
 	}
 	header#rvHsQW{
-		flex-direction: column;
-		div.dp-container{
-			flex-basis: 100%;
-			padding: 1rem;
-			margin: 1rem;
-		}
 		div.intro{
-			text-align: center;
 			span.my-name{
 				font-size: 1.2rem;
 			}
@@ -566,6 +572,62 @@ footer.contact{
 		}
 	}
 
+.bottom-fixed{
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	// padding: 1rem;
+	z-index: 98;
+	.burger, .scroll-to-top{
+		cursor: pointer;
+		height: 2rem;
+		width: 2rem;
+		margin: 0.5rem;
+		border-radius: 50%;
+		display: flex;
+		padding: 0.5rem;
+		justify-content: space-around;
+		align-items: center;
+		flex-direction: column;
+		.bars{
+			height: 2px;
+			width: 1rem;
+		}
+		.up-arrow-box{
+			height: 0.5rem;
+			width: 0.5rem;
+			transform: rotateZ(45deg) translate(25%, 25%);
+		}
+	}
+}
+.overlay-nav {
+	display: block;
+  height: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  left: 0;
+  top: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+	.overlay-content {
+		position: relative;
+		top: 3rem; /* 25% from the top */
+		width: 100%; /* 100% width */
+		text-align: center; /* Centered text/links */
+		margin-top: 3rem; /* 30px top margin to avoid conflict with the close button on smaller screens */
+	}
+	a {
+		padding: 0.5rem;
+		text-decoration: none;
+		font-size: 1.5rem;
+		display: block; /* Display block instead of inline */
+		transition: 0.3s; /* Transition effects on hover (color) */
+	}
+	.closebtn {
+		font-size: 3rem;
+	}
+}
 }
 @media all and (max-width: 330px){
 	header#rvHsQW{

@@ -8,8 +8,11 @@
   --uiCol3: rgb(0, 26, 112);
   --theSelectorGrad: linear-gradient(90deg, var(--uiCol1), var(--uiCol2));
   --theSelectorGradHover: linear-gradient(90deg, #4fa1ff,#2F80ED);
+  --theSelectorGradVert: linear-gradient(180deg, var(--uiCol1), var(--uiCol2));
   --theBgGradient0: radial-gradient(circle at top left,var(--uiCol2), var(--uiCol1), var(--uiCol0), var(--uiCol1), var(--uiCol3));
-  --shadowCol: var(--shadowCol);
+  --shadowCol: var(rgba(255, 0, 0, 0.2));
+  --oppCol: #333;
+  --oppCol2: #222;
 }
 
 header#rvHsQW div.intro {
@@ -22,6 +25,7 @@ header#rvHsQW div.dp-container section.dafhauh img {
 }
 
 div.top-fixed {
+  background-color: var(--notBodyText);
   background-image: var(--theSelectorGrad);
 }
 
@@ -38,9 +42,9 @@ div.top-fixed .navigation nav ul li a:hover {
 }
 
 .card {
-  -webkit-box-shadow: 0 2px 3px 1px var(--shadowCol);
-          box-shadow: 0 2px 3px 1px var(--shadowCol);
-  border: 1px solid #333;
+  -webkit-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--oppCol);
 }
 
 .card * {
@@ -49,13 +53,13 @@ div.top-fixed .navigation nav ul li a:hover {
 
 .card .sub-card {
   border-left: 4px solid var(--uiCol2);
-  -webkit-box-shadow: 0 2px 3px 1px var(--shadowCol);
-          box-shadow: 0 2px 3px 1px var(--shadowCol);
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
 .card section.sub-card a img {
-  -webkit-box-shadow: 0 2px 3px 1px var(--shadowCol);
-          box-shadow: 0 2px 3px 1px var(--shadowCol);
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
 .card section.sub-card .sub-card-content .project-name a {
@@ -65,8 +69,8 @@ div.top-fixed .navigation nav ul li a:hover {
 .card section.sub-card .sub-card-content .repo-link a {
   background-image: var(--theSelectorGrad);
   color: var(--notBodyText);
-  -webkit-box-shadow: 0 2px 5px 3px var(--shadowCol);
-          box-shadow: 0 2px 5px 3px var(--shadowCol);
+  -webkit-box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.2);
 }
 
 .card section.sub-card .sub-card-content .repo-link a:hover {
@@ -74,17 +78,17 @@ div.top-fixed .navigation nav ul li a:hover {
 }
 
 .card figure.sub-card picture img.sub-card-circle-pic {
-  -webkit-box-shadow: 0 2px 3px 1px var(--shadowCol);
-          box-shadow: 0 2px 3px 1px var(--shadowCol);
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
 article.card:hover {
-  -webkit-box-shadow: 0 2px 3px 1px var(--shadowCol);
-          box-shadow: 0 2px 3px 1px var(--shadowCol);
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
 main {
-  background-color: #222;
+  background-color: var(--oppCol2);
 }
 
 main div.wrapper article.skills div.skill-container svg path {
@@ -115,6 +119,7 @@ main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-t
 
 main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-thumb {
   background-color: var(--uiCol2);
+  background-image: var(--theSelectorGrad);
 }
 
 main div.wrapper article.timeline .timeline-details .timeline-details-card {
@@ -122,7 +127,7 @@ main div.wrapper article.timeline .timeline-details .timeline-details-card {
 }
 
 main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card {
-  border: 2px solid #fff;
+  border: 2px solid var(--bodyTextHover);
 }
 
 footer.contact {
@@ -147,5 +152,51 @@ footer.contact div.signate {
 
 .active-link-btn {
   background-image: var(--theSelectorGradHover);
+}
+
+.bottom-fixed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bottom-fixed .burger, .bottom-fixed .scroll-to-top {
+  background-color: var(--uiCol2);
+  background-image: var(--theSelectorGrad);
+}
+
+.bottom-fixed .burger .bars, .bottom-fixed .scroll-to-top .bars {
+  background-color: var(--notBodyText);
+}
+
+.bottom-fixed .burger .up-arrow-box, .bottom-fixed .scroll-to-top .up-arrow-box {
+  border-top: 1px solid var(--notBodyText);
+  border-left: 1px solid var(--notBodyText);
+}
+
+.bottom-fixed .burger:hover, .bottom-fixed .scroll-to-top:hover {
+  background-image: var(--theSelectorGradHover);
+}
+
+.overlay-nav {
+  background-image: var(--theSelectorGradVert);
+}
+
+.overlay-nav a {
+  color: var(--bodyText);
+}
+
+.overlay-nav a:hover {
+  color: var(--bodyTextHover);
 }
 /*# sourceMappingURL=dark.css.map */
