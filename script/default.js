@@ -1,3 +1,4 @@
+AOS.init();
 const models = document.querySelectorAll(".model");
 const modelOverlay = document.querySelector(".modelOverlay");
 const modelImmediateImg = modelOverlay.children[0];

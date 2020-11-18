@@ -9,6 +9,7 @@
   --theSelectorGrad: linear-gradient(90deg, var(--uiCol1), var(--uiCol2));
   --theSelectorGradHover: linear-gradient(90deg, #4fa1ff,#2F80ED);
   --theBgGradient0: radial-gradient(circle at top left,var(--uiCol2), var(--uiCol1), var(--uiCol0), var(--uiCol1), var(--uiCol3));
+  --shadowCol: var(--shadowCol);
 }
 
 header#rvHsQW div.intro {
@@ -36,65 +37,67 @@ div.top-fixed .navigation nav ul li a:hover {
   background-image: var(--theSelectorGradHover);
 }
 
-article.card {
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
+.card {
+  -webkit-box-shadow: 0 2px 3px 1px var(--shadowCol);
+          box-shadow: 0 2px 3px 1px var(--shadowCol);
   border: 1px solid #333;
 }
 
-article.card .sub-card {
-  border: 1px solid #333;
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
-}
-
-article.card * {
+.card * {
   color: var(--bodyText);
 }
 
+.card .sub-card {
+  border-left: 4px solid var(--uiCol2);
+  -webkit-box-shadow: 0 2px 3px 1px var(--shadowCol);
+          box-shadow: 0 2px 3px 1px var(--shadowCol);
+}
+
+.card section.sub-card a img {
+  -webkit-box-shadow: 0 2px 3px 1px var(--shadowCol);
+          box-shadow: 0 2px 3px 1px var(--shadowCol);
+}
+
+.card section.sub-card .sub-card-content .project-name a {
+  color: var(--bodyText);
+}
+
+.card section.sub-card .sub-card-content .repo-link a {
+  background-image: var(--theSelectorGrad);
+  color: var(--notBodyText);
+  -webkit-box-shadow: 0 2px 5px 3px var(--shadowCol);
+          box-shadow: 0 2px 5px 3px var(--shadowCol);
+}
+
+.card section.sub-card .sub-card-content .repo-link a:hover {
+  background-image: var(--theSelectorGradHover);
+}
+
+.card figure.sub-card picture img.sub-card-circle-pic {
+  -webkit-box-shadow: 0 2px 3px 1px var(--shadowCol);
+          box-shadow: 0 2px 3px 1px var(--shadowCol);
+}
+
 article.card:hover {
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 2px 3px 1px var(--shadowCol);
+          box-shadow: 0 2px 3px 1px var(--shadowCol);
 }
 
 main {
   background-color: #222;
 }
 
-main div.wrapper article.projects section.sub-card a img {
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-}
-
-main div.wrapper article.projects section.sub-card .sub-card-content .project-name a {
-  color: var(--bodyText);
-}
-
-main div.wrapper article.projects section.sub-card .sub-card-content .repo-link a {
-  background-image: var(--theSelectorGrad);
-  color: var(--notBodyText);
-  -webkit-box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.2);
-}
-
-main div.wrapper article.projects section.sub-card .sub-card-content .repo-link a:hover {
-  background-image: var(--theSelectorGradHover);
-}
-
 main div.wrapper article.skills div.skill-container svg path {
   fill: var(--bodyText);
 }
 
-main div.wrapper figure.sub-card picture img.sub-card-circle-pic {
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-}
-
 main div.wrapper article.timeline section.timeline-progress {
+  border: none;
   scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
 }
 
 main div.wrapper article.timeline section.timeline-progress div.timeline-progress-content {
+  border: none;
   border: 2px solid var(--uiCol2);
 }
 
@@ -107,15 +110,19 @@ main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar {
 }
 
 main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: rgba(100, 100, 100, 0.5);
 }
 
 main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--uiCol2);
 }
 
 main div.wrapper article.timeline .timeline-details .timeline-details-card {
-  background-color: rgba(36, 36, 36, 0.7);
+  background-color: rgba(36, 36, 36, 0.8);
+}
+
+main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card {
+  border: 2px solid #fff;
 }
 
 footer.contact {
@@ -128,14 +135,6 @@ footer.contact .social .social-icon-container {
 
 footer.contact .social .social-icon-container .social-icon {
   fill: var(--notBodyText);
-}
-
-footer.contact .social .social-icon-container:hover {
-  color: #333;
-}
-
-footer.contact .social .social-icon-container:hover .social-icon {
-  fill: #333;
 }
 
 footer.contact div.signate {
