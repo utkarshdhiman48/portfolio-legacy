@@ -12,7 +12,7 @@
   --theBgGradient0: radial-gradient(circle at top left,var(--uiCol2), var(--uiCol1), var(--uiCol0), var(--uiCol1), var(--uiCol3));
   --shadowCol: var(rgba(0,0,0, 0.2));
   --oppCol: #ccc;
-  --oppCol: #ddd;
+  --oppCol2: #ddd;
 }
 
 header#rvHsQW div.intro {
@@ -123,7 +123,7 @@ main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-t
 }
 
 main div.wrapper article.timeline .timeline-details .timeline-details-card {
-  background-color: rgba(136, 136, 136, 0.8);
+  background-color: rgba(230, 230, 230, 0.8);
 }
 
 main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card {
@@ -193,7 +193,7 @@ footer.contact div.signate {
 }
 
 .overlay-nav a {
-  color: var(--bodyText);
+  color: var(--oppCol2);
 }
 
 .overlay-nav a:hover {

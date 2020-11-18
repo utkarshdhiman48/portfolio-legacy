@@ -12,7 +12,7 @@
 	--theBgGradient0: radial-gradient(circle at top left,var(--uiCol2), var(--uiCol1), var(--uiCol0), var(--uiCol1), var(--uiCol3));
 	--shadowCol: var(rgba(0,0,0, 0.2));
 	--oppCol: #ccc;
-	--oppCol: #ddd;
+	--oppCol2: #ddd;
 }
 
 header#rvHsQW{
@@ -127,7 +127,7 @@ main{
 			}
 			.timeline-details{
 				.timeline-details-card {
-					background-color: rgba(136,136,136,0.8);
+					background-color: rgba(230,230,230,0.8);
 					.sub-card{
 						border: 2px solid var(--bodyTextHover);
 
@@ -183,7 +183,7 @@ footer.contact{
 .overlay-nav {
 	background-image: var(--theSelectorGradVert);
 	a {
-		color: var(--bodyText);
+		color: var(--oppCol2);
 		&:hover{
 			color: var(--bodyTextHover);
 		}
