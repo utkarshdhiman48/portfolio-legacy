@@ -35,13 +35,13 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 		<div class="navigation">
 			<nav>
 				<ul>
-					<li><a data-href="#oGWeOr">&gt;_</a></li>
-					<li><a data-href="#hVoudh">Skills</a></li>
-					<li><a data-href="#KcajcM">Projects</a></li>
-					<li><a data-href="#frdBSs">Education</a></li>
-					<li><a data-href="#sauBnN">Certifications</a></li>
-					<li><a data-href="#arIknM">Timeline</a></li>
-					<li><a data-href="#FmFtlU">Contact</a></li>
+					<li><a data-pointsTo="oGWeOr">&gt;_</a></li>
+					<li><a data-pointsTo="hVoudh">Skills</a></li>
+					<li><a data-pointsTo="KcajcM">Projects</a></li>
+					<li><a data-pointsTo="frdBSs">Education</a></li>
+					<li><a data-pointsTo="sauBnN">Certifications</a></li>
+					<li><a data-pointsTo="arIknM">Timeline</a></li>
+					<li><a data-pointsTo="FmFtlU">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -73,7 +73,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 
 	<main>
 
-		<article class="terminal" data-trg="true" id="oGWeOr">
+		<article class="terminal" data-trigger="true" id="oGWeOr">
 			<div class="terminal-preview"></div>
 			<div class="terminal-input-parent">
 				<span class="terminal-input-container"><span class="yellowgreen">mock@terminal</span><span class="sky-blue">~</span>$&nbsp;<input placeholder="Type here" class="terminal-input" type="text" spellcheck="false"></span>
@@ -81,7 +81,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 		</article>
 
 		<div class="wrapper">
-			<article class="skills card" data-aos="fade-up" data-trg="true" id="hVoudh">
+			<article class="skills card" data-aos="fade-up" data-trigger="true" id="hVoudh">
 
 				<span class="card-heading">Languages I speak</span>
 				<div class="skill-container-parent">
@@ -136,30 +136,59 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 
 			</article>
 
-			<article class="projects card" data-aos="fade-up" data-trg="true" id="KcajcM">
+			<article class="projects card" data-aos="fade-up" data-trigger="true" id="KcajcM">
 
 				<span class="card-heading">Projects</span>
-				<section class="sub-card" id="meme-generator">
+				<section class="sub-card">
 					<div class="sub-card-content">
 						<span class="project-name">Meme Generator</span>
 						<span class="proj-description">A simple meme generator using Canvas.</span>
 						<span class="proj-ingredients">Ingredients: HTML5, CSS, JavaScript</span>
-						<span class="repo-link"><a href="https://github.com/utkarsh48/meme-generator">Github Repo</a></span>
+						<span class="repo-link">
+							<a href="https://utkarsh48.github.io/meme-generator">Open</a>
+							<a href="https://github.com/utkarsh48/meme-generator">Github Repo</a>
+						</span>
 					</div>
 				</section>
 
-				<section class="sub-card" id="theExecryptioner">
+				<section class="sub-card">
 					<div class="sub-card-content">
 						<span class="project-name">theExecryptioner</span>
 						<span class="proj-description">A chrome extension for encrypting text files and vice-versa.</span>
 						<span class="proj-ingredients">Ingredients: HTML5, CSS, JavaScript</span>
-						<span class="repo-link"><a href="https://github.com/utkarsh48/theExecryptioner">Github Repo</a></span>
+						<span class="repo-link">
+							<a href="https://github.com/utkarsh48/theExecryptioner">Github Repo</a>
+						</span>
+					</div>
+				</section>
+
+				<section class="sub-card">
+					<div class="sub-card-content">
+						<span class="project-name">scrollSpy</span>
+						<span class="proj-description">A script that can spy for internal links currently within the viewport and correspondingly add a class to its pointer link. It works without any depencencies like jQuery.</span>
+						<span class="proj-ingredients">Ingredients: JavaScript</span>
+						<span class="repo-link">
+							<a href="https://utkarsh48.github.io/scrollSpy/">Open</a>
+							<a href="https://github.com/utkarsh48/scrollSpy">Github Repo</a>
+						</span>
+					</div>
+				</section>
+				
+				<section class="sub-card">
+					<div class="sub-card-content">
+						<span class="project-name">Social Engineering</span>
+						<span class="proj-description">Front end for the blog.</span>
+						<span class="proj-ingredients">Ingredients: HTML5, CSS, JavaScript</span>
+						<span class="repo-link">
+							<a href="https://akumar0709.github.io/social-engineering/">Open</a>
+							<a href="https://github.com/akumar0709/social-engineering">Github Repo</a>
+						</span>
 					</div>
 				</section>
 
 			</article>
 			
-			<article class="education card" data-aos="fade-up" data-trg="true" id="frdBSs">
+			<article class="education card" data-aos="fade-up" data-trigger="true" id="frdBSs">
 				<span class="card-heading">Education</span>
 				<figure class="sub-card">
 					<!-- <picture>
@@ -184,7 +213,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 				</figure>
 			</article>
 
-			<article class="achievements card" data-aos="fade-up" data-trg="true" id="sauBnN">
+			<article class="achievements card" data-aos="fade-up" data-trigger="true" id="sauBnN">
 				<span class="card-heading">Certifications</span>
 				
 				<figure class="sub-card">
@@ -211,7 +240,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 				</figure>
 			</article>
 
-			<article class="timeline card" data-aos="fade-up" data-trg="true" id="arIknM">
+			<article class="timeline card" data-aos="fade-up" data-trigger="true" id="arIknM">
 				<span class="card-heading">Timeline</span>
 				<section class="sub-card timeline-progress">
 					<div class="timeline-progress-bar" style="min-width: 1rem; width: 1.5rem; background-color: transparent;"></div>
@@ -406,6 +435,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
 		<img src="">
 	</div>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="script/scrollSpy.js"></script>
 	<script src="script/terminal.js"></script>
 	<script src="script/default.js"></script>
 

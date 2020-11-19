@@ -65,7 +65,7 @@ img {
 }
 
 header#rvHsQW {
-  height: 70vh;
+  min-height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,9 +141,7 @@ div.top-fixed {
   width: 100%;
   overflow-y: hidden;
   position: fixed;
-  /* Make it stick/fixed */
   top: -50px;
-  /* Hide the navbar 50 px outside of the top view */
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
   z-index: 99;
@@ -264,9 +262,23 @@ div.top-fixed .navigation nav ul li a {
 
 .card .sub-card .sub-card-content .repo-link {
   margin-top: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .card .sub-card .sub-card-content .repo-link a {
+  margin: 0.5rem;
   font-size: 0.9rem;
   text-decoration: none;
   display: inline-block;
@@ -752,37 +764,27 @@ footer.contact .social .social-icon-container .social-icon:hover {
     height: 0;
     width: 100%;
     position: fixed;
-    /* Stay in place */
     z-index: 99;
-    /* Sit on top */
     left: 0;
     top: 0;
     overflow-x: hidden;
-    /* Disable horizontal scroll */
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
   }
   .overlay-nav .overlay-content {
     position: relative;
     top: 3rem;
-    /* 25% from the top */
     width: 100%;
-    /* 100% width */
     text-align: center;
-    /* Centered text/links */
     margin-top: 3rem;
-    /* 30px top margin to avoid conflict with the close button on smaller screens */
   }
   .overlay-nav a {
     padding: 0.5rem;
     text-decoration: none;
     font-size: 1.5rem;
     display: block;
-    /* Display block instead of inline */
     -webkit-transition: 0.3s;
     transition: 0.3s;
-    /* Transition effects on hover (color) */
   }
   .overlay-nav .closebtn {
     font-size: 3rem;

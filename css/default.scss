@@ -54,8 +54,7 @@ img{
 }
 
 header#rvHsQW{
-	// max-height: 70vh;
-	height: 70vh;
+	min-height: 70vh;
 	display: flex;
 	position: relative;
 	justify-content: center;
@@ -112,8 +111,8 @@ div.top-fixed{
 	height: 3rem;
 	width: 100%;
 	overflow-y: hidden;
-	position: fixed; /* Make it stick/fixed */
-  top: -50px; /* Hide the navbar 50 px outside of the top view */
+	position: fixed; 
+  top: -50px; 
 	transition: top 0.3s;
 	z-index: 99;
 	.navigation{
@@ -193,7 +192,12 @@ div.top-fixed{
 			}
 			.repo-link{
 				margin-top: 0.25rem;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				flex-flow: row wrap;
 				a{
+					margin: 0.5rem;
 					font-size: 0.9rem;
 					text-decoration: none;
 					display: inline-block;
@@ -604,25 +608,25 @@ footer.contact{
 	display: block;
   height: 0;
   width: 100%;
-  position: fixed; /* Stay in place */
-  z-index: 99; /* Sit on top */
+  position: fixed; 
+  z-index: 99;
   left: 0;
   top: 0;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  overflow-x: hidden;
+  transition: 0.5s; 
 	.overlay-content {
 		position: relative;
-		top: 3rem; /* 25% from the top */
-		width: 100%; /* 100% width */
-		text-align: center; /* Centered text/links */
-		margin-top: 3rem; /* 30px top margin to avoid conflict with the close button on smaller screens */
+		top: 3rem; 
+		width: 100%; 
+		text-align: center;
+		margin-top: 3rem;
 	}
 	a {
 		padding: 0.5rem;
 		text-decoration: none;
 		font-size: 1.5rem;
-		display: block; /* Display block instead of inline */
-		transition: 0.3s; /* Transition effects on hover (color) */
+		display: block; 
+		transition: 0.3s;
 	}
 	.closebtn {
 		font-size: 3rem;

@@ -2,6 +2,12 @@ AOS.init({
     offset: 100,
     delay: 50
 });
+
+new ScrollSpy({
+    activeClassName: "active-link-btn",
+    checkLowerBound: false
+});
+
 const models = document.querySelectorAll(".model");
 const modelOverlay = document.querySelector(".modelOverlay");
 const modelImmediateImg = modelOverlay.children[0];
@@ -15,29 +21,15 @@ const scrollTriggers = [...document.querySelectorAll("[data-trg]")];
 
 //scroll 
 if(!window.matchMedia("(max-width: 600px)").matches){
-        window.addEventListener("scroll",()=>{
-            let scrolled = document.body.scrollTop || document.documentElement.scrollTop;
-            let viewportHeight = window.innerHeight;
-            //nav-bar
-            if (scrolled> 120) {
-                topFixed.style.top = "0";
-            } else {
-                topFixed.style.top = "-50px";
-            }
-
-    //scroll spy
-        let last;
-        navLinks.forEach(link=>link.classList.remove("active-link-btn"));
-        for(let i=0; i<scrollTriggers.length; i++){
-            let pos = getPositionOfElement(scrollTriggers[i]);
-            if(pos>scrolled-100 && pos<scrolled+viewportHeight-200){
-                last=scrollTriggers[i];
-            }
+    window.addEventListener("scroll",()=>{
+        let scrolled = document.body.scrollTop || document.documentElement.scrollTop;
+        let viewportHeight = window.innerHeight;
+        //nav-bar
+        if (scrolled> 120) {
+            topFixed.style.top = "0";
+        } else {
+            topFixed.style.top = "-50px";
         }
-        let id = last.id;
-        let link = document.querySelector('[data-href="#'+id+'"]');
-        // console.log(last, link);
-        if(link) link.classList.add("active-link-btn");
     });
 }
 
