@@ -8,15 +8,29 @@ new ScrollSpy({
     checkLowerBound: false
 });
 
+
 const models = document.querySelectorAll(".model");
 const modelOverlay = document.querySelector(".modelOverlay");
 const modelImmediateImg = modelOverlay.children[0];
 
 const topFixed = document.querySelector(".top-fixed");
-const navLinks = document.querySelectorAll("div.navigation nav ul li a");
+const navLinks = [...document.querySelectorAll("div.navigation nav ul li a"),...document.querySelectorAll("div.overlay-nav .overlay-content a")];
 
 const mode = document.querySelector(".mode");
 const modeChangeBtn = document.querySelector(".mode-change-btn");
+
+let utThm=localStorage.getItem("utthm");
+console.log(utThm);
+switch (utThm) {
+    case "l":
+        mode.setAttribute('href',"css/light.css");
+        break;
+
+    default:
+        mode.setAttribute('href',"css/light.css");
+        break;
+}
+
 const scrollTriggers = [...document.querySelectorAll("[data-trg]")];
 
 //scroll 
@@ -40,7 +54,6 @@ function openNav() {
     document.querySelector(".overlay-nav").style.height = "100%";
 }
   
-  /* Close */
 function closeNav() {
     document.querySelector(".overlay-nav").style.height = "0%";
 }
@@ -48,27 +61,26 @@ function closeNav() {
 
 //theme
 modeChangeBtn.addEventListener("click",()=>{
+    let utthm = "d";
     if(mode.getAttribute('href')==="css/light.css"){
         mode.setAttribute('href',"css/dark.css");
+        utthm="d";
     }
     else{
         mode.setAttribute('href',"css/light.css")
+        utthm="l";
     }
-    if(typeof(Storage) !== "undefined"){
-        if(localStorage.utthm==="d"){
-            mode.setAttribute('href',"css/dark.css")
-        }
-        else if (localStorage.utthm ==="l"){
-            mode.setAttribute('href',"css/light.css")
-        }
-        localStorage.setItem("utthm",mode.getAttribute("href"));
-    }
+
+    if(typeof(Storage) !== "undefined")
+        localStorage.setItem("utthm", utthm);
 })
 
 //no # links
 navLinks.forEach((link)=>{
     link.addEventListener("click",(e)=>{
-        document.querySelector(e.target.dataset.href).scrollIntoView({block: 'start', behavior: "smooth"});
+        if(e.target.dataset.pointsto){
+            document.querySelector("#"+e.target.dataset.pointsto).scrollIntoView({block: 'start', behavior: "smooth"});
+        }
     })
 });
 
@@ -108,14 +120,4 @@ document.querySelectorAll("[data-year]").forEach((element)=>{
 
 function randomColorChannel(){
     return parseInt((Math.random()*100+150)%220);
-}
-function getPositionOfElement(domElement)
-{
-    let pos = 0;
-    while (domElement != null)
-    {
-        pos += domElement.offsetTop;
-        domElement = domElement.offsetParent;
-    }
-    return pos;
 }

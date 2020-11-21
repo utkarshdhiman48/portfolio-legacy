@@ -47,14 +47,14 @@ div.top-fixed{
 	}
 }
 .card{
-	box-shadow: 0 2px 5px 2px rgba(0,0,0,0.2);
+	box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
 	border: 1px solid var(--oppCol);
 	*{
 		color: var(--bodyText);
 	}
 	.sub-card{
 		border-left: 4px solid var(--uiCol2);
-		box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
+		box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
 	}
 	section.sub-card{
 		a{
@@ -72,7 +72,7 @@ div.top-fixed{
 				a{
 					background-image: var(--theSelectorGrad);
 					color: var(--notBodyText);
-					box-shadow: 0 2px 5px 3px rgba(0,0,0,0.2);
+					box-shadow: 0 2px 5px 1 rgba(0,0,0,0.2);
 				}
 				a:hover{
 					background-image: var(--theSelectorGradHover);
@@ -87,9 +87,6 @@ div.top-fixed{
 			}
 		}
 	}
-}
-article.card:hover{
-	box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
 }
 main{
 	background-color: var(--oppCol2);

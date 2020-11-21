@@ -42,8 +42,8 @@ div.top-fixed .navigation nav ul li a:hover {
 }
 
 .card {
-  -webkit-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
   border: 1px solid var(--oppCol);
 }
 
@@ -53,8 +53,8 @@ div.top-fixed .navigation nav ul li a:hover {
 
 .card .sub-card {
   border-left: 4px solid var(--uiCol2);
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .card section.sub-card a img {
@@ -69,8 +69,8 @@ div.top-fixed .navigation nav ul li a:hover {
 .card section.sub-card .sub-card-content .repo-link a {
   background-image: var(--theSelectorGrad);
   color: var(--notBodyText);
-  -webkit-box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 5px 1 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px 1 rgba(0, 0, 0, 0.2);
 }
 
 .card section.sub-card .sub-card-content .repo-link a:hover {
@@ -78,11 +78,6 @@ div.top-fixed .navigation nav ul li a:hover {
 }
 
 .card figure.sub-card picture img.sub-card-circle-pic {
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-}
-
-article.card:hover {
   -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
 }
