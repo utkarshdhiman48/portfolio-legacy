@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Hermit-Regular";
-  src: url("../assets/Hermit-Regular.otf") format("truetype");
+  src: url("../Hermit-Regular.otf") format("truetype");
 }
 
 @font-face {
@@ -8,15 +8,15 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(../assets/Raleway-Regular.ttf);
+  src: url(../Raleway-Regular.ttf);
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Raleway Semi';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(../assets/OpenSans-SemiBold.ttf);
+  src: url(../Raleway-SemiBold.ttf);
 }
 
 * {
@@ -213,7 +213,7 @@ div.top-fixed .navigation nav ul li a {
 }
 
 .card .card-heading {
-  font-family: "Open Sans";
+  font-family: "Raleway Semi";
   padding: 0.5rem;
   font-size: 1.5rem;
   width: 100%;
@@ -249,7 +249,7 @@ div.top-fixed .navigation nav ul li a {
 }
 
 .card .sub-card .sub-card-content .sub-card-head-name, .card .sub-card .sub-card-content .project-name {
-  font-family: "Open Sans";
+  font-family: "Raleway Semi";
   font-size: 1.2rem;
   font-weight: 600;
   padding: 0.2rem 0;
@@ -516,7 +516,7 @@ footer.contact {
 }
 
 footer.contact span.footer-heading {
-  font-family: "Open Sans";
+  font-family: "Raleway Semi";
   font-size: 1.4rem;
 }
 

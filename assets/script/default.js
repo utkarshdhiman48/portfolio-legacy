@@ -23,11 +23,11 @@ let utThm=localStorage.getItem("utthm");
 console.log(utThm);
 switch (utThm) {
     case "l":
-        mode.setAttribute('href',"css/light.css");
+        mode.setAttribute('href',"assets/css/light.css");
         break;
 
     default:
-        mode.setAttribute('href',"css/light.css");
+        mode.setAttribute('href',"assets/css/dark.css");
         break;
 }
 
@@ -62,12 +62,12 @@ function closeNav() {
 //theme
 modeChangeBtn.addEventListener("click",()=>{
     let utthm = "d";
-    if(mode.getAttribute('href')==="css/light.css"){
-        mode.setAttribute('href',"css/dark.css");
+    if(mode.getAttribute('href')==="assets/css/light.css"){
+        mode.setAttribute('href',"assets/css/dark.css");
         utthm="d";
     }
     else{
-        mode.setAttribute('href',"css/light.css")
+        mode.setAttribute('href',"assets/css/light.css")
         utthm="l";
     }
 
