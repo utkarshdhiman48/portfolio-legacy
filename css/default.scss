@@ -1,20 +1,20 @@
 @font-face{
 	font-family: "Hermit-Regular";
-	src: url("../Hermit-Regular.otf") format('truetype');
+	src: url(../assets/Hermit-Regular.otf) format('truetype');
 }
 @font-face {
 	font-family: 'Raleway Regular';
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url(../Raleway-Regular.ttf);
+	src: url(../assets/Raleway-Regular.ttf);
 }
 @font-face {
 	font-family: 'Raleway Semi';
 	font-style: normal;
 	font-weight: 600;
 	font-display: swap;
-	src: url(../Raleway-SemiBold.ttf);
+	src: url(../assets/Raleway-SemiBold.ttf);
 }
 * {
 	box-sizing: border-box;
