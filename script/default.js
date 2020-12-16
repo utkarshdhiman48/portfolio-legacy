@@ -9,7 +9,33 @@ new ScrollSpy({
     checkLowerBound: false
 });
 
+class returnAndIncrementNumber{
+    constructor(limit, begin=0){
+        this.limit = limit;
+        this.value = begin;
+        this.begin = begin;
+    }
+    value;
+    begin;
+    limit;
+    increment(count=1){
+        let temp = this.value;
+        this.value+=count;
+        if(this.value>=this.limit)
+            this.value=this.begin;
+        return temp;
+    }
+    decrement(count=1){
+        let temp = this.value;
+        this.value-=count;
+        if(this.value<this.begin)
+            this.value=this.limit-1;
+        return temp;
+    }
+}
 
+
+const root = document.documentElement;
 const models = document.querySelectorAll(".model");
 const modelOverlay = document.querySelector(".modelOverlay");
 const modelImmediateImg = modelOverlay.children[0];
@@ -75,6 +101,17 @@ modeChangeBtn.addEventListener("click",()=>{
         localStorage.setItem("utthm", utthm);
 })
 
+//ui color
+const colShuffle = document.querySelector(".col-shuffle");
+const materialColors = ["009bff", "3BB78F", "FC9842", "d23"];
+let colorCount = new returnAndIncrementNumber(materialColors.length, 0);
+
+colShuffle.addEventListener("click", ()=>{
+    root.style.setProperty("--fallbackCol", "#"+materialColors[colorCount.increment(1)]);
+});
+
+
+
 //no # links
 navLinks.forEach((link)=>{
     link.addEventListener("click",(e)=>{
@@ -97,3 +134,6 @@ models.forEach((model)=>{
 modelOverlay.addEventListener("click",()=>{
     modelOverlay.style.display = "none";
 });
+
+
+//helper function

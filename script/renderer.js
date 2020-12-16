@@ -194,7 +194,7 @@ header.addEventListener('mousemove', (e) => {
 
 
 //add background to header
-header.appendChild(new bgHex().render());
+header.appendChild(new bgHex(parseInt(window.innerHeight/55), parseInt(window.innerWidth/48)).render());
 
 //append this cursor to hexBg
 header.appendChild(cursor);

@@ -23,7 +23,9 @@
 	font-family: "Raleway Regular", sans-serif;
 	// letter-spacing: 1px;
 }
-
+:root{
+	--fallbackCol: #d23;
+}
 html{
 	scroll-behavior: smooth;
 }
@@ -54,6 +56,7 @@ img{
 }
 
 header#rvHsQW{
+	background-color: var(--notBodyText);
 	min-height: 70vh;
 	display: flex;
 	position: relative;
@@ -61,7 +64,6 @@ header#rvHsQW{
 	align-items: center;
 	padding: 0.5rem;
 	overflow: hidden;
-	// background-image: var(--theBgGradient0);
 	
 	div.dp-container{
 		z-index: 3;
@@ -75,10 +77,12 @@ header#rvHsQW{
 				display: inline-block;
 				vertical-align: middle;
 				width: 100%;
+				box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
 			}
 		}
 	}
 	div.intro{
+		color: var(--bodyText);
 		z-index: 3;
 		padding: 1rem;
 		flex-basis: 70%;
@@ -118,10 +122,12 @@ header#rvHsQW{
 		$pseudo-t-border: $pseudo-bottop * 1.71;
 		position: absolute;
 		top: 0;
-		width: 100%;
+		left: -3rem;
+		width: calc(100% + 6rem);
 		height: inherit;
+		// overflow: hidden;
 		.hexRow {
-			width: 100%;
+			width: calc(100% + 6rem);
 			height: 2 * $side + 1rem;
 			overflow: hidden;
 			display: flex;
@@ -186,6 +192,7 @@ header#rvHsQW{
 		position: absolute;
 		z-index: 1;
 		filter: blur(40px);
+		background: var(--fallbackCol);
 	}
 }
 
@@ -196,7 +203,9 @@ div.top-fixed{
 	position: fixed; 
   top: -50px; 
 	transition: top 0.3s;
+	background: var(--notBodyText);
 	z-index: 99;
+	box-shadow: 0 2px 5px 1px rgba(0,0,0,0.2);
 	.navigation{
 		height: 100%;
 		nav{
@@ -206,16 +215,22 @@ div.top-fixed{
 				list-style-type: none;
 				display: flex;
 				justify-content: space-evenly;
+				background: var(--fallbackCol);
 				align-items: center;
 				li{
 					flex: 1;
 					text-align: center;
 					a{
+						color: #ddd;
 						text-decoration: none;
 						display: block;
 						cursor: pointer;
 						padding: 0.95rem 0.5rem;
 						font-size: 0.9rem;
+						&:hover{
+							font-weight: bold;
+							border-bottom: 0.2rem solid #ddd;
+						}
 					}
 				}
 			}
@@ -230,27 +245,35 @@ div.top-fixed{
 	max-width: 1000px;
 	border-radius: 10px;
 	margin: 2rem auto;
-	padding: 0.5rem;
+	padding: 1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+	border: 1px solid var(--oppCol);
+	*{
+		color: var(--bodyText);
+	}
 	span{
 		display: block;
 	}
 	.card-heading{
 		font-family: "Raleway Semi";
 		padding: 0.5rem;
+		margin-bottom: 1rem;
 		font-size: 1.5rem;
 		width: 100%;
 	}
 	.sub-card{
 		width: 100%;
 		flex-basis: 100%;
-		padding: 0.25rem;
+		padding: 0.5rem;
 		margin: 0.25rem;
 		display: flex;
 		flex-direction: column;
+		border-left: 4px solid var(--fallbackCol);
+		box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
 		// justify-content: space-between;
 		// align-items: stretch;
 		a{
@@ -259,6 +282,8 @@ div.top-fixed{
 				height: auto;
 				width: 100%;
 				display: block;
+				box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
+
 			}
 		}
 		.sub-card-content{
@@ -267,10 +292,10 @@ div.top-fixed{
 				font-family: "Raleway Semi";
 				font-size: 1.2rem;
 				font-weight: 600;
-				padding: 0.2rem 0;
+				padding: 0.2rem;
 			}
 			.proj-ingredients, .proj-description{
-				font-size: 0.9rem;
+				font-size: 1rem;
 				padding: 0.2rem;
 			}
 			.repo-link{
@@ -281,11 +306,17 @@ div.top-fixed{
 				flex-flow: row wrap;
 				a{
 					margin: 0.5rem;
-					font-size: 0.9rem;
+					font-size: 1rem;
 					text-decoration: none;
 					display: inline-block;
 					padding: 0.5rem;
 					border-radius: 20px;
+					background: var(--fallbackCol);
+					color: #eee;
+					box-shadow: 0 2px 5px 1px rgba(0,0,0,0.2);
+					&:hover{
+						text-decoration: underline;
+					}
 				}
 			}
 		}
@@ -298,14 +329,15 @@ div.top-fixed{
 		picture{
 			img.sub-card-circle-pic{
 				border-radius: 50%;
+				box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
 			}
 		}
 		figcaption.sub-card-content{
 			span.sub-card-head-details{
-				font-size: 0.9rem;
+				font-size: 1rem;
 			}
 			span.sub-card-head-extras{
-				font-size: 0.8rem;
+				font-size: 0.9rem;
 			}
 			span.sub-card-head-links{
 				font-size: 0.9rem;
@@ -324,6 +356,7 @@ div.top-fixed{
 	}
 }
 main{
+	background-color: var(--oppCol2);
 	padding: 0.5rem;
 	overflow-y: hidden;
 	.terminal{
@@ -392,6 +425,9 @@ main{
 				div.skill-container{
 					margin: 0.25rem;
 					width: 50px;
+					svg > path{
+						fill: var(--bodyText);
+					}
 				}
 			}
 		}
@@ -399,6 +435,8 @@ main{
 			position: relative;
 			section.timeline-progress{
 				overflow-x: scroll;
+				border: none;
+				scrollbar-color: rgba(255,255,255, 0.1) transparent;
 				display: flex;
 				flex-direction: row;
 				align-items: center;
@@ -407,25 +445,35 @@ main{
 				div.timeline-progress-content{
 					border-radius: 20px;
 					padding: 0.6rem;
+					border: 2px solid var(--fallbackCol);
 					white-space: nowrap;
 					cursor: pointer;
 				}
 				div.timeline-progress-bar{
 					min-width: 100px;
 					height: 4px;
+					background-color: var(--fallbackCol);
 				}
 			}
 			section.timeline-progress::-webkit-scrollbar{
 				height: 6px;
+				background-color: transparent;
+			}
+			section.timeline-progress::-webkit-scrollbar-track{
+				background-color: rgba(175, 175, 175, 0.5);
+			}
+			section.timeline-progress::-webkit-scrollbar-thumb{
+				background-color: var(--fallbackCol);
 			}
 			.timeline-details{
 				.timeline-details-card {
+					background-color: var(--notBodyText);
 					// display: none;
-					backdrop-filter: blur(5px);
+					color: var(--bodyText);
+					// filter: blur(5px);
 					width: 100%;
 					min-width: 100px;
 					text-align: center;
-					border-radius: 6px;
 					position: absolute;
 					z-index: 9;
 					top: -1rem;
@@ -436,6 +484,8 @@ main{
   				transition: opacity 0.4s;
 					.sub-card{
 						margin: 0;
+						border-radius: 6px;
+						border: 1px solid var(--bodyText);
 						white-space: normal;
 						text-align: left;
 						picture{
@@ -465,9 +515,16 @@ main{
 }
 .bottom-fixed{
 	height: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
 }
 footer.contact{
-	padding: 0.5rem;
+	padding: 1rem;
+	background: var(--fallbackCol);
+	color: #eee;
 	span.footer-heading{
 		font-family: "Raleway Semi";
 		// line-height: normal;
@@ -479,6 +536,7 @@ footer.contact{
 		justify-content: center;
 		align-items: flex-start;
 		.social-icon-container{
+			color: #eee;
 			width: auto;
 			text-align: center;
 			text-decoration: none;
@@ -487,6 +545,7 @@ footer.contact{
 			padding: 0.5rem;
 			.social-icon{
 				padding: 0.5rem;
+				fill: #eee;
 				margin: auto;
 				display: flex;
 				justify-content: center;
@@ -499,6 +558,9 @@ footer.contact{
 				}
 			}
 		}
+	}
+	.signate{
+		color: #eee;
 	}
 }
 @media all and (max-width: 1000px){
@@ -668,10 +730,12 @@ footer.contact{
 		right: 1rem;
 		// padding: 1rem;
 		z-index: 98;
-		.burger, .scroll-to-top{
+		.burger, .col-shuffle, .scroll-to-top{
+			background-color: var(--fallbackCol);
+			box-shadow: 0 0 5px 1px rgba(0,0,0,0.32);
 			cursor: pointer;
-			height: 2rem;
-			width: 2rem;
+			height: 2.5rem;
+			width: 2.5rem;
 			margin: 0.5rem;
 			border-radius: 50%;
 			display: flex;
@@ -679,12 +743,22 @@ footer.contact{
 			justify-content: space-around;
 			align-items: center;
 			flex-direction: column;
+			transition: all 0.2s ease;
+			&:hover{
+				transform: scale(1.2);
+			}
+			svg{
+				width: 100%;
+			}
 			.bars{
+				background-color: #eee;
 				height: 2px;
 				width: 1rem;
 			}
 			.up-arrow-box{
 				height: 0.5rem;
+				border-left: 2px solid #eee;
+				border-top: 2px solid #eee;
 				width: 0.5rem;
 				transform: rotateZ(45deg) translate(25%, 25%);
 			}
@@ -692,6 +766,7 @@ footer.contact{
 	}
 	.overlay-nav {
 		display: block;
+		background: var(--fallbackCol);
 		height: 0;
 		width: 100%;
 		position: fixed; 
@@ -708,11 +783,15 @@ footer.contact{
 			margin-top: 3rem;
 		}
 		a {
+			color: #eee;
 			padding: 0.5rem;
 			text-decoration: none;
 			font-size: 1.5rem;
 			display: block; 
-			transition: 0.3s;
+			transition: 0.3s all ease;
+			&:hover{
+				background-color: rgba(0,0,0,0.2);
+			}
 		}
 		.closebtn {
 			font-size: 3rem;
@@ -774,7 +853,8 @@ footer.contact{
 }
 
 .active-link-btn{
-	background-color: #111;
+	border-bottom: 0.2rem solid #ddd;
+	font-weight: bold;
 }
 
 //must remain at end
@@ -785,7 +865,8 @@ footer.contact{
 // .toolTip{
 // 	position: relative;
 // 	.toolTipText {
-// 		display: none;
+		// background-color: rgba(36,36,36,1);
+		// 		display: none;
 // 		width: auto;
 // 		min-width: 100px;
 // 		text-align: center;

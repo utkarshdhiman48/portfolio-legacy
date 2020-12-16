@@ -9,14 +9,15 @@ class KeyWord{
 
 
 /////////////VARIABLES
-
+let lastInps = [""];
+let lastInpCounter = new returnAndIncrementNumber(1, 0);
 const utcolor="ut-color";
 const prefix = `<br><span class="terminal-preview-text"><span class="yellowgreen">mock@terminal</span><span class="sky-blue">~</span>$ `;
 const suffix = `</span>`;
 const terminalPreview = document.querySelector("div.terminal-preview");
 const terminalInput = document.querySelector("input.terminal-input");
 
-const listcommands = `>_ ut education :scrolls to institutes from where i study(ed)<br>>_ ut projects :scrolls to My Projects<br>>_ ut certifications :scrolls to My Certifications<br>>_ ut skills :shows the languages I speak ;)<br>>_ ut connect :connect with me on any of the following platforms, emails are priorities<br>>_ ut timeline :shows my timeline tip: use shift+scroll to scroll the timeline<br>>_ ut linkedin :will open open my linkedin profile<br>>_ ut github :will open open my github profile<br>>_ ut twitter :will take you to my twitter profile<br>>_ ut facebook :will open my facebook profile<br>>_ ut email :email me through your email client<br>>_ ut help :opens a list of all commands<br>You're Welcome...`;
+const listcommands = `>_ ut education :scrolls to institutes from where i study(ed)<br>>_ ut projects :scrolls to My Projects<br>>_ ut certifications :scrolls to My Certifications<br>>_ ut skills :shows the languages I speak ;)<br>>_ ut connect :connect with me on any of the following platforms, emails are priorities<br>>_ ut timeline :shows my timeline tip: use shift+scroll to scroll the timeline<br>>_ ut linkedin :will open open my linkedin profile<br>>_ ut github :will open open my github profile<br>>_ ut twitter :will take you to my twitter profile<br>>_ ut facebook :will open my facebook profile<br>>_ ut email :email me through your email client<br>>_ ut help :opens a list of all commands<br>You're Welcome...<br>>_ ut color :change UI color(not preserved)<br>>_ ut theme :change theme of site(preserverd)`;
 /*>_ ut about :tell you something about me<br>*/
 
 
@@ -48,12 +49,15 @@ let keywords = [
     
     new KeyWord(new RegExp("timeline","i"), "Use Shift + Scroll to scroll...", "sky-blue", ()=>{document.querySelector("#arIknM").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
-    new KeyWord(new RegExp("theme","i"), "Changing theme...", "orchid", ()=>{document.querySelector(".mode-change-btn").click();})
+    new KeyWord(new RegExp("theme","i"), "Changing theme...<br> preferences preserved!", "orchid", ()=>{document.querySelector(".mode-change-btn").click();}),
+
+    new KeyWord(new RegExp("color","i"), "Changing UI color...<br>Note: This color preference is not saved!", "orchid", ()=>{document.querySelector(".col-shuffle").click();})
 
     // new KeyWord(new RegExp("about","i"), "Here is something about him...", "cyan", ()=>{document.querySelector("#YQLBsm").scrollIntoView({block: 'end', behavior: "smooth"});})
 ];
+
 ////////first line
-terminalPreview.innerHTML=`<span class="yellowgreen">mock@terminal</span><span class="sky-blue">~</span>$ You can navigate my page using this terminal also.<br>Toggle theme using button in top right corner or type 'ut theme'.<br>Type 'ut help' to get a list of all commands.${suffix}`;
+terminalPreview.innerHTML=`<span class="yellowgreen">mock@terminal</span><span class="sky-blue">~</span>$ You can navigate my page using this terminal also.<br>Toggle theme using button in top right corner or type '<span class="ut-color">ut</span> <span class="orchid">theme</span>'.<br>Type '<span class="ut-color">ut</span> <span class="cyan">help</span>' to get a list of all commands.${suffix}`;
 
 ////////Enter key event listener
 terminalInput.addEventListener("keydown",(e)=>{
@@ -61,6 +65,11 @@ terminalInput.addEventListener("keydown",(e)=>{
     let prevCommands = terminalPreview.innerHTML;
     if(e.key==="Enter" || e.keyCode==13){
         let textChunks = inputField.value.split(" ");
+
+        //input stack
+        lastInps.push(inputField.value.trim());
+        lastInpCounter.limit++;
+
         if((textChunks[0] ==="ut" || textChunks[0] === "UT") && textChunks.length === 2 ) {
             let [found] = keywords.filter((f)=>{
                 return textChunks[1].match(f.command);
@@ -84,9 +93,17 @@ terminalInput.addEventListener("keydown",(e)=>{
             terminalPreview.lastChild.scrollIntoView(false);
         }
         inputField.value = "";
+        lastInpCounter.value=0;
     }
-
-
-
+    else if(e.key==="ArrowUp" || e.keyCode==38){
+        lastInpCounter.decrement();
+        inputField.value = lastInps[lastInpCounter.value] || "";
+        console.log(lastInps, lastInpCounter.value);
+    }
+    else if(e.key==="ArrowDown" || e.keyCode==40){
+        lastInpCounter.increment();
+        inputField.value = lastInps[lastInpCounter.value] || "";
+        console.log(lastInps, lastInpCounter.value);
+    }
 
 });
