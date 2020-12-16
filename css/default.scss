@@ -62,7 +62,6 @@ header#rvHsQW{
 	padding: 0.5rem;
 	overflow: hidden;
 	// background-image: var(--theBgGradient0);
-	background-color: #1a1a1a;
 	
 	div.dp-container{
 		z-index: 3;
@@ -112,6 +111,7 @@ header#rvHsQW{
 		}
 	}
 	.hexSuperParent{
+		$fill: var(--oppCol2);
 		z-index: 2;
 		$side: 3rem;
 		$pseudo-bottop: $side / 2;
@@ -131,7 +131,7 @@ header#rvHsQW{
 			margin-top: -35px;
 			margin-left: 0;
 			.bgHexagon {
-				$fill: #222;
+				// $fill: #222;
 				position: relative;
 				width: 2 * $pseudo-t-border;
 				height: $side;
@@ -463,8 +463,10 @@ main{
 		}
 	}
 }
+.bottom-fixed{
+	height: 0;
+}
 footer.contact{
-	background-image: var(--theBgGradient0);
 	padding: 0.5rem;
 	span.footer-heading{
 		font-family: "Raleway Semi";
@@ -508,7 +510,7 @@ footer.contact{
 			margin: 1rem;
 			section.dafhauh{
 				img{
-					width: 200px;
+					max-width: 200px;
 				}
 			}
 		}
@@ -659,62 +661,63 @@ footer.contact{
 		}
 	}
 
-.bottom-fixed{
-	position: fixed;
-	bottom: 1rem;
-	right: 1rem;
-	// padding: 1rem;
-	z-index: 98;
-	.burger, .scroll-to-top{
-		cursor: pointer;
-		height: 2rem;
-		width: 2rem;
-		margin: 0.5rem;
-		border-radius: 50%;
-		display: flex;
-		padding: 0.5rem;
-		justify-content: space-around;
-		align-items: center;
-		flex-direction: column;
-		.bars{
-			height: 2px;
-			width: 1rem;
+	.bottom-fixed{
+		height: unset;
+		position: fixed;
+		bottom: 1rem;
+		right: 1rem;
+		// padding: 1rem;
+		z-index: 98;
+		.burger, .scroll-to-top{
+			cursor: pointer;
+			height: 2rem;
+			width: 2rem;
+			margin: 0.5rem;
+			border-radius: 50%;
+			display: flex;
+			padding: 0.5rem;
+			justify-content: space-around;
+			align-items: center;
+			flex-direction: column;
+			.bars{
+				height: 2px;
+				width: 1rem;
+			}
+			.up-arrow-box{
+				height: 0.5rem;
+				width: 0.5rem;
+				transform: rotateZ(45deg) translate(25%, 25%);
+			}
 		}
-		.up-arrow-box{
-			height: 0.5rem;
-			width: 0.5rem;
-			transform: rotateZ(45deg) translate(25%, 25%);
+	}
+	.overlay-nav {
+		display: block;
+		height: 0;
+		width: 100%;
+		position: fixed; 
+		z-index: 99;
+		left: 0;
+		top: 0;
+		overflow-x: hidden;
+		transition: 0.5s; 
+		.overlay-content {
+			position: relative;
+			top: 3rem; 
+			width: 100%; 
+			text-align: center;
+			margin-top: 3rem;
+		}
+		a {
+			padding: 0.5rem;
+			text-decoration: none;
+			font-size: 1.5rem;
+			display: block; 
+			transition: 0.3s;
+		}
+		.closebtn {
+			font-size: 3rem;
 		}
 	}
-}
-.overlay-nav {
-	display: block;
-  height: 0;
-  width: 100%;
-  position: fixed; 
-  z-index: 99;
-  left: 0;
-  top: 0;
-  overflow-x: hidden;
-  transition: 0.5s; 
-	.overlay-content {
-		position: relative;
-		top: 3rem; 
-		width: 100%; 
-		text-align: center;
-		margin-top: 3rem;
-	}
-	a {
-		padding: 0.5rem;
-		text-decoration: none;
-		font-size: 1.5rem;
-		display: block; 
-		transition: 0.3s;
-	}
-	.closebtn {
-		font-size: 3rem;
-	}
-}
 }
 @media all and (max-width: 330px){
 	header#rvHsQW{
