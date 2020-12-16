@@ -77,14 +77,12 @@ header#rvHsQW {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem;
-  background-image: var(--theBgGradient0);
-}
-
-header#rvHsQW span {
-  display: block;
+  overflow: hidden;
+  background-color: #1a1a1a;
 }
 
 header#rvHsQW div.dp-container {
+  z-index: 3;
   overflow: hidden;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
@@ -103,9 +101,14 @@ header#rvHsQW div.dp-container section.dafhauh img {
 }
 
 header#rvHsQW div.intro {
+  z-index: 3;
   padding: 1rem;
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
+}
+
+header#rvHsQW div.intro span {
+  display: block;
 }
 
 header#rvHsQW div.intro span.my-name {
@@ -118,6 +121,7 @@ header#rvHsQW div.intro span.tag-line {
 }
 
 header#rvHsQW div.mode-change-btn {
+  z-index: 3;
   cursor: pointer;
   position: absolute;
   top: 1rem;
@@ -134,6 +138,95 @@ header#rvHsQW div.mode-change-btn svg {
 
 header#rvHsQW div.mode-change-btn svg:hover {
   opacity: 1;
+}
+
+header#rvHsQW .hexSuperParent {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: inherit;
+}
+
+header#rvHsQW .hexSuperParent .hexRow {
+  width: 100%;
+  height: 7rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: -35px;
+  margin-left: 0;
+}
+
+header#rvHsQW .hexSuperParent .hexRow .bgHexagon {
+  position: relative;
+  width: 5.13rem;
+  height: 3rem;
+  background-color: #222;
+  margin: 2rem 0.2rem;
+  display: block;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+header#rvHsQW .hexSuperParent .hexRow .bgHexagon::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 2.565rem solid transparent;
+  border-right: 2.565rem solid transparent;
+  top: 100%;
+  width: 0;
+  border-top: 1.5rem solid #222;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+header#rvHsQW .hexSuperParent .hexRow .bgHexagon::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 2.565rem solid transparent;
+  border-right: 2.565rem solid transparent;
+  bottom: 100%;
+  border-bottom: 1.5rem solid #222;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+header#rvHsQW .hexSuperParent .hexRow .bgHexagon-trans {
+  background-color: transparent;
+}
+
+header#rvHsQW .hexSuperParent .hexRow .bgHexagon-trans::before, header#rvHsQW .hexSuperParent .hexRow .bgHexagon-trans::after {
+  border: none;
+  background-color: transparent;
+}
+
+header#rvHsQW .hexSuperParent .hexRow.hexRowMoved .halfHex {
+  margin-right: 0.2rem;
+  width: 2.565rem;
+  height: 3rem;
+  background-color: transparent;
+}
+
+header#rvHsQW .cursor {
+  width: 12vmax;
+  height: 12vmax;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
 }
 
 div.top-fixed {

@@ -9,7 +9,7 @@
 	--theSelectorGrad: linear-gradient(90deg, var(--uiCol1), var(--uiCol2));
 	--theSelectorGradHover: linear-gradient(90deg, #4fa1ff,#2F80ED);
 	--theSelectorGradVert: linear-gradient(180deg, var(--uiCol1), var(--uiCol2));
-	--theBgGradient0: radial-gradient(circle at top left,var(--uiCol2), var(--uiCol1), var(--uiCol0), var(--uiCol1), var(--uiCol3));
+	--theBgGradient0: radial-gradient(var(--uiCol2), var(--uiCol0), var(--uiCol1), var(--uiCol2));
 	--shadowCol: var(rgba(255, 0, 0, 0.2));
 	--oppCol: #333;
 	--oppCol2: #222;
@@ -25,6 +25,9 @@ header#rvHsQW{
 				box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
 			}
 		}
+	}
+	.cursor{
+		background: #009bff var(--theBgGradient0);
 	}
 }
 div.top-fixed{

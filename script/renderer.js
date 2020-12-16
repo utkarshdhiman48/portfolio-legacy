@@ -1,3 +1,4 @@
+//datas
 let timelineData = [
 {
 heading:"DevMela 2020",
@@ -64,23 +65,9 @@ details: "NCC 'A' Certificate is given to the cadet when they complete the first
 }
 ];
 
-
+//classes
 class TimelineCell{
   constructor(obj){
-    this.heading = obj.heading;
-    this.date = obj.date;
-    this.location = obj.location;
-    this.details = obj.details;
-    this.year = calcYear(this.date);
-  }
-
-  heading;
-  date;
-  location;
-  details;
-  year;
-
-  render(){
     let timelineProgressContent = document.createElement("div");
     timelineProgressContent.classList.add("timeline-progress-content", "timeline-details");
 
@@ -95,19 +82,19 @@ class TimelineCell{
 
     let subCardHeadName = document.createElement("span");
     subCardHeadName.classList.add("sub-card-head-name");
-    subCardHeadName.innerText = this.heading;
+    subCardHeadName.innerText = obj.heading;
 
     let subCardHeadExtras1 = document.createElement("span");
     subCardHeadExtras1.classList.add("sub-card-head-extras");
-    subCardHeadExtras1.innerText = this.date;
+    subCardHeadExtras1.innerText = obj.date;
 
     let subCardHeadExtras2 = document.createElement("span");
     subCardHeadExtras2.classList.add("sub-card-head-extras");
-    subCardHeadExtras2.innerText = this.location;
+    subCardHeadExtras2.innerText = obj.location;
 
     let subCardHeadDetails = document.createElement("span");
     subCardHeadDetails.classList.add("sub-card-head-details");
-    subCardHeadDetails.innerText = this.details;
+    subCardHeadDetails.innerText = obj.details;
 
     hoverCardCap.appendChild(subCardHeadName);
     hoverCardCap.appendChild(subCardHeadExtras1);
@@ -117,34 +104,103 @@ class TimelineCell{
     hoverCard.appendChild(hoverCardCap);
 
     timelineDetailsCard.appendChild(hoverCard);
-    timelineProgressContent.innerText = this.heading;
+    timelineProgressContent.innerText = obj.heading;
     timelineProgressContent.appendChild(timelineDetailsCard);
-    timelineProgressContent.setAttribute("data-year", this.year);
+    timelineProgressContent.setAttribute("data-year", obj.year);
+    
+    this.main = timelineProgressContent;
+  }
+  main;
 
-    return timelineProgressContent;
+  render(){
+    return this.main;
   }
 }
 
 class TimelineProgressBar{
   constructor(date){
+    let year;
     if(date)
-      this.year = calcYear(date);
-  }
-  year;
-  render(){
-    let main = document.createElement("div")
-    main.classList.add("timeline-progress-bar")
+      year = calcYear(date);
     
-    if(this.year)  
-      main.setAttribute("data-year", this.year);
+    this.main = document.createElement("div")
+    this.main.classList.add("timeline-progress-bar")
+    
+    if(year)  
+      this.main.setAttribute("data-year", year);
     else{
-      main.style.minWidth = "1rem";
-      main.style.width = "1.5rem";
-      main.style.backgroundColor = "transparent";
+      this.main.style.minWidth = "1rem";
+      this.main.style.width = "1.5rem";
+      this.main.style.backgroundColor = "transparent";
     }
-    return main;
+  }
+  main;
+
+  render(){  
+    return this.main;
   }
 }
+
+class bgHex{
+  constructor(rows=12, columns=20){
+    //create super parent
+    this.main = document.createElement("div");
+    this.main.classList.add("hexSuperParent");
+    //create rows
+    for (let i = 0; i < rows; i++) {
+      let row = document.createElement("div");
+      row.classList.add("hexRow");
+      //alternatively move row
+      if(i%2===0){
+        let half = document.createElement("div");
+        half.classList.add("halfHex");
+        row.classList.add("hexRowMoved");
+        row.appendChild(half);
+      }
+      
+      //create hexagons for each row
+      for(let j=0; j<columns; j++){
+        let hex = document.createElement("div");
+        hex.classList.add("bgHexagon");
+        if(parseInt(Math.random()+0.1))
+          hex.classList.add("bgHexagon-trans");
+        row.appendChild(hex);
+      }
+      this.main.appendChild(row);
+    }
+  }
+  main;
+
+  render(){
+    return this.main;
+  }
+}
+
+//header element
+const header = document.querySelector('header');
+
+//cursor for hex-background
+let cursor = document.createElement("div");
+cursor.classList.add("cursor");
+
+//event for mouse movements
+header.addEventListener('mousemove', (e) => {
+  let side = cursor.offsetHeight;
+  let x = e.pageX;
+  let y = e.pageY;
+  cursor.style.left = (x - side/2) + "px";
+  cursor.style.top = (y - side/2) + "px";
+});
+
+
+//add background to header
+header.appendChild(new bgHex().render());
+
+//append this cursor to hexBg
+header.appendChild(cursor);
+
+
+
 
 
 ///timeline
@@ -188,6 +244,17 @@ timelineSuperParent.appendChild(timelineParent);
 
 //ending transparent element
 timelineParent.appendChild(new TimelineProgressBar().render());
+
+
+
+
+
+
+
+
+
+
+
 
 
 //helper functions

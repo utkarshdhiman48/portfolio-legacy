@@ -60,11 +60,12 @@ header#rvHsQW{
 	justify-content: center;
 	align-items: center;
 	padding: 0.5rem;
-	background-image: var(--theBgGradient0);
-	span{
-		display: block;
-	}
+	overflow: hidden;
+	// background-image: var(--theBgGradient0);
+	background-color: #1a1a1a;
+	
 	div.dp-container{
+		z-index: 3;
 		overflow: hidden;
 		flex-basis: 20%;
 		section.dafhauh{
@@ -79,8 +80,12 @@ header#rvHsQW{
 		}
 	}
 	div.intro{
+		z-index: 3;
 		padding: 1rem;
 		flex-basis: 70%;
+		span{
+			display: block;
+		}
 		span.my-name{
 			font-size: 4.5rem;
 			font-weight: 600;
@@ -90,6 +95,7 @@ header#rvHsQW{
 		}
 	}
 	div.mode-change-btn{
+		z-index: 3;
 		cursor: pointer;
 		position: absolute;
 		top: 1rem;
@@ -104,6 +110,82 @@ header#rvHsQW{
 		svg:hover{
 			opacity: 1;
 		}
+	}
+	.hexSuperParent{
+		z-index: 2;
+		$side: 3rem;
+		$pseudo-bottop: $side / 2;
+		$pseudo-t-border: $pseudo-bottop * 1.71;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: inherit;
+		.hexRow {
+			width: 100%;
+			height: 2 * $side + 1rem;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			margin-top: -35px;
+			margin-left: 0;
+			.bgHexagon {
+				$fill: #222;
+				position: relative;
+				width: 2 * $pseudo-t-border;
+				height: $side;
+				background-color: $fill;
+				margin: 2rem 0.2rem;
+				display: block;
+				transition: all 0.2s linear;
+				&::after {
+					content: "";
+					position: absolute;
+					width: 0;
+					border-left: $pseudo-t-border solid transparent;
+					border-right: $pseudo-t-border solid transparent;
+					top: 100%;
+					width: 0;
+					border-top: $pseudo-bottop solid $fill;
+					transition: all 0.2s linear;
+				}
+				&::before {
+					content: "";
+					position: absolute;
+					width: 0;
+					border-left: $pseudo-t-border solid transparent;
+					border-right: $pseudo-t-border solid transparent;
+					bottom: 100%;
+					border-bottom: $pseudo-bottop solid $fill;
+					transition: all 0.2s linear;
+				}
+			}
+
+			.bgHexagon-trans{
+				background-color: transparent;
+				&::before, &::after{
+					border: none;
+					background-color: transparent;
+				}
+			}
+		}
+		.hexRow.hexRowMoved {
+			.halfHex{
+				margin-right: 0.2rem;
+				width: $pseudo-t-border;
+				height: $side;
+				background-color: transparent;
+			}
+		}
+	}
+	.cursor {
+		width: 12vmax;
+		height: 12vmax;
+		border-radius: 50%;
+		position: absolute;
+		z-index: 1;
+		filter: blur(40px);
 	}
 }
 
@@ -143,6 +225,7 @@ div.top-fixed{
 .overlay-nav{
 	display: none;
 }
+
 .card{
 	max-width: 1000px;
 	border-radius: 10px;
