@@ -21,7 +21,6 @@
 	padding: 0;
 	margin: 0;
 	font-family: "Raleway Regular", sans-serif;
-	// letter-spacing: 1px;
 }
 :root{
 	--fallbackCol: #d23;
@@ -75,21 +74,24 @@ header#rvHsQW{
 	background-color: var(--notBodyText);
 	min-height: 70vh;
 	display: flex;
+	flex-direction: column;
 	position: relative;
 	justify-content: center;
 	align-items: center;
 	padding: 0.5rem;
 	overflow: hidden;
-	
 	div.dp-container{
 		z-index: 3;
 		overflow: hidden;
-		flex-basis: 20%;
+		padding: 1rem;
+		margin: 1rem;
+		// flex-basis: 20%;
 		section.dafhauh{
 			padding: 0.5rem;
 			img{
 				border: 2px solid var(--notBodyText);
 				border-radius: 50%;
+				max-width: 240px;
 				display: inline-block;
 				vertical-align: middle;
 				width: 100%;
@@ -101,7 +103,9 @@ header#rvHsQW{
 		color: var(--bodyText);
 		z-index: 3;
 		padding: 1rem;
-		flex-basis: 70%;
+		// flex-basis: unset;
+		// flex-basis: 70%;
+		text-align: center;
 		span{
 			display: block;
 		}
@@ -595,8 +599,6 @@ footer.contact{
 			}
 		}
 		div.intro{
-			flex-basis: unset;
-			text-align: center;
 			span.my-name{
 				font-size: 2.5rem;
 			}
