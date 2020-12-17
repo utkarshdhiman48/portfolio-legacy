@@ -36,7 +36,7 @@ class returnAndIncrementNumber{
 
 
 const root = document.documentElement;
-const models = document.querySelectorAll(".model");
+const models = document.querySelectorAll("img");
 const modelOverlay = document.querySelector(".modelOverlay");
 const modelImmediateImg = modelOverlay.children[0];
 

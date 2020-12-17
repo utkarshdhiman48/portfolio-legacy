@@ -107,6 +107,7 @@ class TimelineCell{
     timelineProgressContent.innerText = obj.heading;
     timelineProgressContent.appendChild(timelineDetailsCard);
     timelineProgressContent.setAttribute("data-year", obj.year);
+    timelineProgressContent.setAttribute("title", "Scroll right for more!");
     
     this.main = timelineProgressContent;
   }
@@ -175,6 +176,9 @@ class bgHex{
     return this.main;
   }
 }
+
+
+//hexagon background
 
 //header element
 const header = document.querySelector('header');

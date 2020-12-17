@@ -35,6 +35,25 @@ html {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--fallbackCol) rgba(175, 175, 175, 0.5);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--oppCol);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--fallbackCol);
+  border: 1px solid var(--oppCol);
+  border-radius: 4px;
+}
+
 .model {
   cursor: pointer;
 }
@@ -564,7 +583,7 @@ main div.wrapper article.skills .skill-container-parent div.skill-container {
   width: 50px;
 }
 
-main div.wrapper article.skills .skill-container-parent div.skill-container svg > path {
+main div.wrapper article.skills .skill-container-parent div.skill-container path {
   fill: var(--bodyText);
 }
 
@@ -605,7 +624,7 @@ main div.wrapper article.timeline section.timeline-progress div.timeline-progres
 }
 
 main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar {
-  height: 6px;
+  height: 0.5rem;
   background-color: transparent;
 }
 
@@ -615,6 +634,8 @@ main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-t
 
 main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-thumb {
   background-color: var(--fallbackCol);
+  border: 1px solid var(--oppCol);
+  border-radius: 4px;
 }
 
 main div.wrapper article.timeline .timeline-details .timeline-details-card {
@@ -784,64 +805,10 @@ footer.contact .signate {
     font-size: 1.2rem;
   }
   header#rvHsQW div.intro span.tag-line {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   header#rvHsQW div.header-overlay {
     display: none;
-  }
-  main .terminal {
-    display: block;
-    margin: 1rem;
-    background-color: #111;
-    padding: 0.25rem;
-  }
-  main .terminal .terminal-preview {
-    padding: 0.25rem;
-    color: white;
-    height: 30vh;
-    max-height: 480px;
-    font-family: "Hermit-Regular", monospace;
-    font-size: 0.8rem;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
-  }
-  main .terminal .terminal-preview .terminal-preview-text {
-    color: white;
-    font-family: "Hermit-Regular", monospace;
-  }
-  main .terminal .terminal-preview::-webkit-scrollbar {
-    background-color: transparent;
-    width: 3px;
-  }
-  main .terminal .terminal-preview::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  main .terminal .terminal-preview::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-  }
-  main .terminal .terminal-input-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-family: "Hermit-Regular", monospace;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 0.25rem;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    font-size: 0.8rem;
-  }
-  main .terminal .terminal-input-container .terminal-input {
-    font-family: "Hermit-Regular", monospace;
-    font-size: inherit;
-    color: inherit;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    width: 100%;
-    caret-color: white;
   }
   main div.wrapper article.skills div.skill-container {
     width: 35px;
