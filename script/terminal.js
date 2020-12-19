@@ -57,7 +57,7 @@ let keywords = [
 ];
 
 ////////first line
-terminalPreview.innerHTML=`<span class="yellowgreen">mock@terminal</span><span class="sky-blue">~</span>$ You can navigate my page using this terminal also.<br>Toggle theme using button in top right corner or type '<span class="ut-color">ut</span> <span class="orchid">theme</span>'.<br>Type '<span class="ut-color">ut</span> <span class="cyan">help</span>' to get a list of all commands.${suffix}`;
+terminalPreview.innerHTML=`<span class="yellowgreen">mock@terminal</span><span class="sky-blue">~</span>$ You can navigate my page using this terminal also.<br>You change theme or colors using button in top right corner or using commands '<span class="ut-color">ut</span> <span class="orchid">theme</span>' and '<span class="ut-color">ut</span> <span class="orchid">color</span>' respectively.<br>Type '<span class="ut-color">ut</span> <span class="cyan">help</span>' to get a list of all commands.${suffix}`;
 
 ////////Enter key event listener
 terminalInput.addEventListener("keydown",(e)=>{
@@ -70,7 +70,7 @@ terminalInput.addEventListener("keydown",(e)=>{
         lastInps.push(inputField.value.trim());
         lastInpCounter.limit++;
 
-        if((textChunks[0] ==="ut" || textChunks[0] === "UT") && textChunks.length === 2 ) {
+        if((textChunks[0].match(/ut/i)) && textChunks.length === 2 ) {
             let [found] = keywords.filter((f)=>{
                 return textChunks[1].match(f.command);
             });

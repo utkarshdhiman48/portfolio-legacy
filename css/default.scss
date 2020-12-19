@@ -117,22 +117,30 @@ header#rvHsQW{
 			font-size: 1.5rem;
 		}
 	}
-	div.mode-change-btn{
+	.mode-change-btn, .col-shuffle{
 		z-index: 3;
 		cursor: pointer;
+		border-radius: 50%;
 		position: absolute;
 		top: 1rem;
 		right: 1rem;
 		margin: 0.5rem;
+		height: 2rem;
+		width: 2rem;
+		box-shadow: 0 0 5px 1px rgba(0,0,0,0.32);
+		transition: all 0.5s ease;
 		svg{
 			border-radius: 50%;
-			opacity: 0.82;
 			max-width: 48px;
 			max-height: 48px;
 		}
-		svg:hover{
-			opacity: 1;
+		&:hover{
+			transform: rotate(180deg);
 		}
+	}
+	.col-shuffle{
+		// right: 3rem;
+		top: 4rem;
 	}
 	.hexSuperParent{
 		$fill: var(--oppCol2);
@@ -210,6 +218,7 @@ header#rvHsQW{
 		height: 12vmax;
 		border-radius: 50%;
 		position: absolute;
+		top: 0;
 		z-index: 1;
 		filter: blur(40px);
 		background: var(--fallbackCol);
@@ -313,9 +322,6 @@ div.top-fixed{
 				padding: 0.2rem;
 				display: block;
 				margin-bottom: 1rem;
-			}
-			.proj-ingredients, .proj-description{////////////////////////////remove from index
-				font-size: 1rem;
 			}
 			.links{
 				margin-top: 0.25rem;
@@ -475,6 +481,7 @@ main{
 				div.skill-container{
 					margin: 0.25rem;
 					width: 50px;
+					cursor: pointer;
 					path{
 						fill: var(--bodyText);
 					}
@@ -706,7 +713,7 @@ footer.contact{
 		right: 1rem;
 		// padding: 1rem;
 		z-index: 98;
-		.burger, .col-shuffle, .scroll-to-top{
+		.burger, .scroll-to-top{
 			background-color: var(--fallbackCol);
 			box-shadow: 0 0 5px 1px rgba(0,0,0,0.32);
 			cursor: pointer;
@@ -720,12 +727,6 @@ footer.contact{
 			align-items: center;
 			flex-direction: column;
 			transition: all 0.2s ease;
-			&:hover{
-				transform: scale(1.2);
-			}
-			svg{
-				width: 100%;
-			}
 			.bars{
 				background-color: #eee;
 				height: 2px;
@@ -733,10 +734,22 @@ footer.contact{
 			}
 			.up-arrow-box{
 				height: 0.5rem;
+				width: 0.5rem;
 				border-left: 2px solid #eee;
 				border-top: 2px solid #eee;
-				width: 0.5rem;
-				transform: rotateZ(45deg) translate(25%, 25%);
+				transition: all 0.2s ease;
+				transform: rotateZ(45deg) translate(20%, 20%);
+			}
+		}
+		.burger{
+			&:hover{
+				padding: 0.75rem;
+			}
+		}
+		.scroll-to-top:hover{
+			.up-arrow-box{
+				width: 0.75rem;
+				height: 0.75rem;
 			}
 		}
 	}

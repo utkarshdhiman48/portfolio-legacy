@@ -150,24 +150,35 @@ header#rvHsQW div.intro span.tag-line {
   font-size: 1.5rem;
 }
 
-header#rvHsQW div.mode-change-btn {
+header#rvHsQW .mode-change-btn, header#rvHsQW .col-shuffle {
   z-index: 3;
   cursor: pointer;
+  border-radius: 50%;
   position: absolute;
   top: 1rem;
   right: 1rem;
   margin: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.32);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-header#rvHsQW div.mode-change-btn svg {
+header#rvHsQW .mode-change-btn svg, header#rvHsQW .col-shuffle svg {
   border-radius: 50%;
-  opacity: 0.82;
   max-width: 48px;
   max-height: 48px;
 }
 
-header#rvHsQW div.mode-change-btn svg:hover {
-  opacity: 1;
+header#rvHsQW .mode-change-btn:hover, header#rvHsQW .col-shuffle:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+header#rvHsQW .col-shuffle {
+  top: 4rem;
 }
 
 header#rvHsQW .hexSuperParent {
@@ -255,6 +266,7 @@ header#rvHsQW .cursor {
   height: 12vmax;
   border-radius: 50%;
   position: absolute;
+  top: 0;
   z-index: 1;
   -webkit-filter: blur(40px);
           filter: blur(40px);
@@ -394,10 +406,6 @@ div.top-fixed .navigation nav ul li a:hover {
   padding: 0.2rem;
   display: block;
   margin-bottom: 1rem;
-}
-
-.card .sub-card .sub-card-content .proj-ingredients, .card .sub-card .sub-card-content .proj-description {
-  font-size: 1rem;
 }
 
 .card .sub-card .sub-card-content .links {
@@ -601,6 +609,7 @@ main div.wrapper article.skills .skill-container-parent {
 main div.wrapper article.skills .skill-container-parent div.skill-container {
   margin: 0.25rem;
   width: 50px;
+  cursor: pointer;
 }
 
 main div.wrapper article.skills .skill-container-parent div.skill-container path {
@@ -860,7 +869,7 @@ footer.contact .signate {
     right: 1rem;
     z-index: 98;
   }
-  .bottom-fixed .burger, .bottom-fixed .col-shuffle, .bottom-fixed .scroll-to-top {
+  .bottom-fixed .burger, .bottom-fixed .scroll-to-top {
     background-color: var(--fallbackCol);
     -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.32);
             box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.32);
@@ -885,25 +894,27 @@ footer.contact .signate {
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
   }
-  .bottom-fixed .burger:hover, .bottom-fixed .col-shuffle:hover, .bottom-fixed .scroll-to-top:hover {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  .bottom-fixed .burger svg, .bottom-fixed .col-shuffle svg, .bottom-fixed .scroll-to-top svg {
-    width: 100%;
-  }
-  .bottom-fixed .burger .bars, .bottom-fixed .col-shuffle .bars, .bottom-fixed .scroll-to-top .bars {
+  .bottom-fixed .burger .bars, .bottom-fixed .scroll-to-top .bars {
     background-color: #eee;
     height: 2px;
     width: 1rem;
   }
-  .bottom-fixed .burger .up-arrow-box, .bottom-fixed .col-shuffle .up-arrow-box, .bottom-fixed .scroll-to-top .up-arrow-box {
+  .bottom-fixed .burger .up-arrow-box, .bottom-fixed .scroll-to-top .up-arrow-box {
     height: 0.5rem;
+    width: 0.5rem;
     border-left: 2px solid #eee;
     border-top: 2px solid #eee;
-    width: 0.5rem;
-    -webkit-transform: rotateZ(45deg) translate(25%, 25%);
-            transform: rotateZ(45deg) translate(25%, 25%);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    -webkit-transform: rotateZ(45deg) translate(20%, 20%);
+            transform: rotateZ(45deg) translate(20%, 20%);
+  }
+  .bottom-fixed .burger:hover {
+    padding: 0.75rem;
+  }
+  .bottom-fixed .scroll-to-top:hover .up-arrow-box {
+    width: 0.75rem;
+    height: 0.75rem;
   }
   .overlay-nav {
     display: block;
