@@ -371,25 +371,16 @@ div.top-fixed .navigation nav ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-left: 4px solid var(--fallbackCol);
   -webkit-box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.card .sub-card a {
-  display: block;
-}
-
-.card .sub-card a img {
-  height: auto;
-  width: 100%;
-  display: block;
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
 .card .sub-card .sub-card-content {
@@ -401,14 +392,15 @@ div.top-fixed .navigation nav ul li a:hover {
   font-size: 1.2rem;
   font-weight: 600;
   padding: 0.2rem;
+  display: block;
+  margin-bottom: 1rem;
 }
 
 .card .sub-card .sub-card-content .proj-ingredients, .card .sub-card .sub-card-content .proj-description {
   font-size: 1rem;
-  padding: 0.2rem;
 }
 
-.card .sub-card .sub-card-content .repo-link {
+.card .sub-card .sub-card-content .links {
   margin-top: 0.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -425,7 +417,7 @@ div.top-fixed .navigation nav ul li a:hover {
           flex-flow: row wrap;
 }
 
-.card .sub-card .sub-card-content .repo-link a {
+.card .sub-card .sub-card-content .links a {
   margin: 0.5rem;
   font-size: 1rem;
   text-decoration: none;
@@ -438,53 +430,77 @@ div.top-fixed .navigation nav ul li a:hover {
           box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
-.card .sub-card .sub-card-content .repo-link a:hover {
+.card .sub-card .sub-card-content .links a:hover {
   text-decoration: underline;
 }
 
-.card figure.sub-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 0.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.card figure.sub-card picture img.sub-card-circle-pic {
-  border-radius: 50%;
-  -webkit-box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
-}
-
-.card figure.sub-card figcaption.sub-card-content span.sub-card-head-details {
+.card .sub-card .sub-card-content .sub-card-head-details {
   font-size: 1rem;
+  padding: 0.2rem;
 }
 
-.card figure.sub-card figcaption.sub-card-content span.sub-card-head-extras {
+.card .sub-card .sub-card-content .sub-card-head-simple-links, .card .sub-card .sub-card-content .sub-card-head-extras {
   font-size: 0.9rem;
 }
 
-.card figure.sub-card figcaption.sub-card-content span.sub-card-head-links {
-  font-size: 0.9rem;
-}
-
-.card figure.sub-card figcaption.sub-card-content span.sub-card-head-links a {
+.card .sub-card .sub-card-content .sub-card-head-simple-links a, .card .sub-card .sub-card-content .sub-card-head-extras a {
   color: inherit;
   opacity: 0.8;
 }
 
-.card figure.sub-card figcaption.sub-card-content span.sub-card-head-links a:hover {
+.card .sub-card .sub-card-content .sub-card-head-simple-links a:hover, .card .sub-card .sub-card-content .sub-card-head-extras a:hover {
   opacity: 1;
 }
 
-.card figure.sub-card figcaption.sub-card-content * {
+.card .sub-card .sub-card-content * {
   padding: 0.15rem;
+}
+
+.hidden-view-details .hidden-view-details-card {
+  background-color: var(--notBodyText);
+  color: var(--bodyText);
+  width: 100%;
+  min-width: 100px;
+  text-align: center;
+  position: absolute;
+  z-index: 9;
+  top: -1rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.hidden-view-details .hidden-view-details-card .sub-card {
+  margin: 0;
+  border-radius: 6px;
+  border: 1px solid var(--bodyText);
+  white-space: normal;
+  text-align: left;
+}
+
+.hidden-view-details .hidden-view-details-card .sub-card picture {
+  padding: 0.5rem;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.hidden-view-details .hidden-view-details-card .sub-card picture img {
+  margin: auto;
+  max-height: 150px;
+}
+
+.hidden-view-details .hidden-view-details-card .sub-card picture img.sub-card-pic {
+  display: block;
+  width: auto;
+}
+
+.hidden-view-details:hover > .hidden-view-details-card {
+  opacity: 1;
+  visibility: visible;
 }
 
 main {
@@ -591,6 +607,36 @@ main div.wrapper article.skills .skill-container-parent div.skill-container path
   fill: var(--bodyText);
 }
 
+main div.wrapper article.skills .skill-container-parent div.skill-container .hidden-view-details-card {
+  width: auto;
+}
+
+main div.wrapper article.skills .skill-container-parent div.skill-container .hidden-view-details-card .sub-card .skill-level {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+main div.wrapper article.skills .skill-container-parent div.skill-container .hidden-view-details-card .sub-card .skill-level .skill-bar {
+  min-width: 1.5rem;
+  height: 4px;
+  width: 3rem;
+  margin: auto 0.1rem;
+  border: 1px solid var(--fallbackCol);
+}
+
+main div.wrapper article.skills .skill-container-parent div.skill-container .hidden-view-details-card .sub-card .skill-level .skill-bar-filled {
+  background-color: var(--fallbackCol);
+}
+
+main div.wrapper article.skills .skill-container-parent div.skill-container .hidden-view-details-card .sub-card .skill-level .skill-bar-empty {
+  background-color: transparent;
+}
+
 main div.wrapper article.timeline {
   position: relative;
 }
@@ -633,60 +679,13 @@ main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar {
 }
 
 main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-track {
-  background-color: rgba(175, 175, 175, 0.5);
+  background-color: var(--oppCol);
 }
 
 main div.wrapper article.timeline section.timeline-progress::-webkit-scrollbar-thumb {
   background-color: var(--fallbackCol);
   border: 1px solid var(--oppCol);
   border-radius: 4px;
-}
-
-main div.wrapper article.timeline .timeline-details .timeline-details-card {
-  background-color: var(--notBodyText);
-  color: var(--bodyText);
-  width: 100%;
-  min-width: 100px;
-  text-align: center;
-  position: absolute;
-  z-index: 9;
-  top: -1rem;
-  left: 50%;
-  -webkit-transform: translate(-50%, -100%);
-          transform: translate(-50%, -100%);
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
-}
-
-main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card {
-  margin: 0;
-  border-radius: 6px;
-  border: 1px solid var(--bodyText);
-  white-space: normal;
-  text-align: left;
-}
-
-main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card picture {
-  padding: 0.5rem;
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
-}
-
-main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card picture img {
-  margin: auto;
-  max-height: 150px;
-}
-
-main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card picture img.sub-card-pic {
-  display: block;
-  width: auto;
-}
-
-main div.wrapper article.timeline .timeline-details:hover > .timeline-details-card {
-  opacity: 1;
-  visibility: visible;
 }
 
 .bottom-fixed {
@@ -812,27 +811,27 @@ footer.contact .signate {
   main div.wrapper article.skills div.skill-container {
     width: 35px;
   }
-  main div.wrapper figure.sub-card {
+  main div.wrapper .sub-card {
     padding: 0.5rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  main div.wrapper figure.sub-card picture {
+  main div.wrapper .sub-card picture {
     padding: 0.5rem;
   }
-  main div.wrapper figure.sub-card picture img.sub-card-pic {
+  main div.wrapper .sub-card picture img.sub-card-pic {
     display: block;
     width: auto;
     max-height: 50px;
   }
-  main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-name {
+  main div.wrapper .sub-card .sub-card-content .sub-card-head-name {
     font-size: 1rem;
   }
-  main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-purpose {
+  main div.wrapper .sub-card .sub-card-content .sub-card-head-purpose {
     font-size: 0.8rem;
   }
-  main div.wrapper figure.sub-card figcaption.sub-card-content span.sub-card-head-duration {
+  main div.wrapper .sub-card .sub-card-content .sub-card-head-duration {
     font-size: 0.6rem;
   }
   main div.wrapper article.projects {
@@ -853,20 +852,6 @@ footer.contact .signate {
   main div.wrapper article.projects section.sub-card a img {
     width: 80%;
     margin: auto;
-  }
-  main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card picture {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  main div.wrapper article.timeline .timeline-details .timeline-details-card .sub-card picture img {
-    margin: auto;
-    max-height: 100px;
   }
   .bottom-fixed {
     height: unset;
@@ -1029,5 +1014,9 @@ footer.contact .signate {
 .light-opacity {
   opacity: 0.7;
   z-index: -1;
+}
+
+.center-text {
+  text-align: center;
 }
 /*# sourceMappingURL=default.css.map */

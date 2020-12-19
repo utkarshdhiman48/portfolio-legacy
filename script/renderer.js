@@ -69,10 +69,10 @@ details: "NCC 'A' Certificate is given to the cadet when they complete the first
 class TimelineCell{
   constructor(obj){
     let timelineProgressContent = document.createElement("div");
-    timelineProgressContent.classList.add("timeline-progress-content", "timeline-details");
+    timelineProgressContent.classList.add("timeline-progress-content", "hidden-view-details");
 
     let timelineDetailsCard = document.createElement("section");
-    timelineDetailsCard.classList.add("timeline-details-card");
+    timelineDetailsCard.classList.add("hidden-view-details-card");
 
     let hoverCard = document.createElement("figure");
     hoverCard.classList.add("sub-card");
