@@ -137,17 +137,15 @@ header#rvHsQW div.intro {
   text-align: center;
 }
 
-header#rvHsQW div.intro span {
+header#rvHsQW div.intro .my-name {
   display: block;
-}
-
-header#rvHsQW div.intro span.my-name {
   font-size: 4.5rem;
   font-weight: 600;
 }
 
-header#rvHsQW div.intro span.tag-line {
-  font-size: 1.5rem;
+header#rvHsQW div.intro .tag-line {
+  display: block;
+  font-size: 1rem;
 }
 
 header#rvHsQW .mode-change-btn, header#rvHsQW .col-shuffle {
@@ -397,6 +395,8 @@ div.top-fixed .navigation nav ul li a:hover {
 
 .card .sub-card .sub-card-content {
   padding: 0.5rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .card .sub-card .sub-card-content .sub-card-head-name, .card .sub-card .sub-card-content .project-name {
@@ -620,30 +620,18 @@ main div.wrapper article.skills .skill-container-parent div.skill-container .hid
   width: auto;
 }
 
-main div.wrapper article.skills .skill-container-parent div.skill-container .hidden-view-details-card .sub-card .skill-level {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-}
-
-main div.wrapper article.skills .skill-container-parent div.skill-container .hidden-view-details-card .sub-card .skill-level .skill-bar {
-  min-width: 1.5rem;
-  height: 4px;
-  width: 3rem;
+main div.wrapper article.skills .skill-container-parent div.skill-container .hidden-view-details-card .sub-card .skill-bar {
+  min-height: 6px;
+  width: 100%;
+  min-width: 200px;
   margin: auto 0.1rem;
   border: 1px solid var(--fallbackCol);
+  padding: 1px;
 }
 
-main div.wrapper article.skills .skill-container-parent div.skill-container .hidden-view-details-card .sub-card .skill-level .skill-bar-filled {
+main div.wrapper article.skills .skill-container-parent div.skill-container .hidden-view-details-card .sub-card .skill-bar-filled {
+  min-height: 4px;
   background-color: var(--fallbackCol);
-}
-
-main div.wrapper article.skills .skill-container-parent div.skill-container .hidden-view-details-card .sub-card .skill-level .skill-bar-empty {
-  background-color: transparent;
 }
 
 main div.wrapper article.timeline {
@@ -793,11 +781,8 @@ footer.contact .signate {
   header#rvHsQW div.dp-container section.dafhauh img {
     max-width: 200px;
   }
-  header#rvHsQW div.intro span.my-name {
+  header#rvHsQW div.intro .my-name {
     font-size: 2.5rem;
-  }
-  header#rvHsQW div.intro span.tag-line {
-    font-size: 1rem;
   }
   header#rvHsQW div.header-overlay {
     display: none;
@@ -808,11 +793,8 @@ footer.contact .signate {
   div.top-fixed {
     display: none;
   }
-  header#rvHsQW div.intro span.my-name {
+  header#rvHsQW div.intro .my-name {
     font-size: 1.2rem;
-  }
-  header#rvHsQW div.intro span.tag-line {
-    font-size: 0.9rem;
   }
   header#rvHsQW div.header-overlay {
     display: none;
@@ -1029,5 +1011,10 @@ footer.contact .signate {
 
 .center-text {
   text-align: center;
+}
+
+.pun {
+  display: none;
+  opacity: 0.7;
 }
 /*# sourceMappingURL=default.css.map */
