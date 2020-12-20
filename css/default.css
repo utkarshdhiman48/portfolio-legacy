@@ -523,6 +523,7 @@ main .terminal {
   margin: 1rem;
   background-color: #111;
   padding: 0.25rem;
+  overflow-x: hidden;
 }
 
 main .terminal .terminal-preview {
@@ -553,7 +554,7 @@ main .terminal .terminal-preview::-webkit-scrollbar-track {
 
 main .terminal .terminal-preview::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 main .terminal .terminal-input-container {
@@ -624,14 +625,17 @@ main div.wrapper article.skills .skill-container-parent div.skill-container .hid
 main div.wrapper article.skills .skill-container-parent div.skill-container .hidden-view-details-card .sub-card .skill-bar {
   min-height: 6px;
   width: 100%;
-  min-width: 200px;
+  width: 200px;
+  max-width: 100%;
   margin: auto 0.1rem;
   border: 1px solid var(--fallbackCol);
   padding: 1px;
+  border-radius: 4px;
 }
 
 main div.wrapper article.skills .skill-container-parent div.skill-container .hidden-view-details-card .sub-card .skill-bar-filled {
   min-height: 4px;
+  border-radius: 4px;
   background-color: var(--fallbackCol);
 }
 
@@ -940,6 +944,9 @@ footer.contact .signate {
   header#rvHsQW div.mode-change-btn svg {
     max-width: 30px;
     max-height: 30px;
+  }
+  .card .card-heading, .card .sub-card {
+    overflow-x: scroll;
   }
 }
 

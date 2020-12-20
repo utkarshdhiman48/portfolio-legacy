@@ -278,6 +278,7 @@ div.top-fixed{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	// overflow-x: hidden;
 	align-items: center;
 	box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
 	border: 1px solid var(--oppCol);
@@ -421,6 +422,7 @@ main{
 		margin: 1rem;
 		background-color: #111;
 		padding: 0.25rem;
+		overflow-x: hidden;
 		.terminal-preview{
 			padding: 0.25rem;
 			color: white;
@@ -445,7 +447,7 @@ main{
 		}
 		.terminal-preview::-webkit-scrollbar-thumb{
 			background-color: rgba(255,255,255, 0.1);
-			border-radius: 5px;
+			border-radius: 6px;
 		}
 		.terminal-input-container{
 			display: flex;
@@ -492,13 +494,17 @@ main{
 							.skill-bar{
 								min-height: 6px;
 								width: 100%;
-								min-width: 200px;
+								width: 200px;
+								max-width: 100%;
 								margin: auto 0.1rem;
 								border: 1px solid var(--fallbackCol);
+								// background-color: var(--oppCol);
 								padding: 1px;
+								border-radius: 4px;
 							}
 							.skill-bar-filled{
 								min-height: 4px;
+								border-radius: 4px;
 								background-color: var(--fallbackCol);
 							}
 						}
@@ -784,6 +790,12 @@ footer.contact{
 				max-width: 30px;
 				max-height: 30px;
 			}
+		}
+	}
+
+	.card{
+		.card-heading, .sub-card{
+			overflow-x: scroll;
 		}
 	}
 }
