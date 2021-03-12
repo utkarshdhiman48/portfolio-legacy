@@ -138,6 +138,8 @@ header#rvHsQW div.intro {
           backdrop-filter: blur(5px);
   border-radius: 1rem;
   text-align: center;
+  -webkit-box-shadow: 0 0 1rem 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1rem 1px rgba(0, 0, 0, 0.2);
 }
 
 header#rvHsQW div.intro .my-name {
