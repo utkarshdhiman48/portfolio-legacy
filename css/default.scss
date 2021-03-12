@@ -103,6 +103,8 @@ header#rvHsQW{
 		color: var(--bodyText);
 		z-index: 3;
 		padding: 1rem;
+		backdrop-filter: blur(5px);
+		border-radius: 1rem;
 		// flex-basis: unset;
 		// flex-basis: 70%;
 		text-align: center;
@@ -336,13 +338,14 @@ div.top-fixed{
 					font-size: 1rem;
 					text-decoration: none;
 					display: inline-block;
-					padding: 0.5rem;
+					padding: 0.25rem 0.5rem;
 					border-radius: 20px;
 					background: var(--fallbackCol);
 					color: #eee;
 					box-shadow: 0 2px 5px 1px rgba(0,0,0,0.2);
 					&:hover{
-						text-decoration: underline;
+						color: var(--notBodyText);
+						background-color: var(--bodyText);
 					}
 				}
 			}
