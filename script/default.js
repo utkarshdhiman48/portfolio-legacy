@@ -4,11 +4,6 @@ AOS.init({
     delay: 50
 });
 
-new ScrollSpy({
-    activeClassName: "active-link-btn",
-    checkLowerBound: false
-});
-
 class returnAndIncrementNumber{
     constructor(limit, begin=0){
         this.limit = limit;
