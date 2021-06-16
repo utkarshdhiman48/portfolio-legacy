@@ -17,14 +17,16 @@ const suffix = `</span>`;
 const terminalPreview = document.querySelector("div.terminal-preview");
 const terminalInput = document.querySelector("input.terminal-input");
 
-const listcommands = `>_ ut education :scrolls to institutes from where i study(ed)<br>>_ ut projects :scrolls to My Projects<br>>_ ut certifications :scrolls to My Certifications<br>>_ ut skills :shows the languages I speak ;)<br>>_ ut connect :connect with me on any of the following platforms, emails are priorities<br>>_ ut timeline :shows my timeline tip: use shift+scroll to scroll the timeline<br>>_ ut linkedin :will open open my linkedin profile<br>>_ ut github :will open open my github profile<br>>_ ut twitter :will take you to my twitter profile<br>>_ ut facebook :will open my facebook profile<br>>_ ut email :email me through your email client<br>>_ ut help :opens a list of all commands<br>You're Welcome...<br>>_ ut color :change UI color(not preserved)<br>>_ ut theme :change theme of site(preserverd)`;
-/*>_ ut about :tell you something about me<br>*/
+const listcommands = `>_ ut blogs :Blogs I've written<br>>_ ut extras :Some of my experiments<br>>_ ut projects :scrolls to My Projects<br>>_ ut certifications :scrolls to My Certifications<br>>_ ut skills :shows the languages I speak ;)<br>>_ ut connect :connect with me on any of the following platforms, emails are priorities<br>>_ ut timeline :shows my timeline tip: use shift+scroll to scroll the timeline<br>>_ ut linkedin :will open open my linkedin profile<br>>_ ut github :will open open my github profile<br>>_ ut twitter :will take you to my twitter profile<br>>_ ut facebook :will open my facebook profile<br>>_ ut email :email me through your email client<br>>_ ut help :opens a list of all commands<br>You're Welcome...<br>>_ ut color :change UI color(not preserved)<br>>_ ut theme :change theme of site(preserverd)`;
+// >_ ut about :tell you something about me<br>
 
 
 let keywords = [
     new KeyWord(new RegExp("help","i"), `Help is on the way...<br>All commands are case-insenstive.<br>${listcommands}`, "cyan", ()=>{console.log("You're welcome");}),
 
-    new KeyWord(new RegExp("education","i"), "Taking you to my institutes...", "custom-color1", ()=>{document.querySelector("#frdBSs").scrollIntoView({block: 'end', behavior: "smooth"});}),
+    new KeyWord(new RegExp("blogs","i"), "Taking you to my blogs...", "custom-color1", ()=>{document.querySelector("#frdBSs").scrollIntoView({block: 'end', behavior: "smooth"});}),
+
+    new KeyWord(new RegExp("extras","i"), "Some of my experiments...", "orangered", ()=>{document.querySelector("#r2kBSs").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
     new KeyWord(new RegExp("projects","i"), "Taking you to my projects...", "lime", ()=>{document.querySelector("#KcajcM").scrollIntoView({block: 'end', behavior: "smooth"});}),
 
